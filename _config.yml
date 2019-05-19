@@ -16,7 +16,7 @@ minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt"
 
 # Site Settings
 locale                   : "en-US"
-title                    : "Stefan Mesken
+title                    : "Stefan Mesken"
 title_separator          : "-"
 name                     : "Stefan Mesken"
 description              : "Data Science"
@@ -110,7 +110,7 @@ author:
   avatar           : "/images/avatar.png" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "Set Theorist and aspiring Data Scientist."
   location         : "Cologne, Germany"
-  email            :
+  email            : "kappadistributive@gmail.com"
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
@@ -126,7 +126,7 @@ author:
       # url: "https://facebook.com/"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      # url: "https://github.com/"
+      url: "https://github.com/KappaDistributive"
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
       # url: "https://instagram.com/"
@@ -293,12 +293,10 @@ defaults:
       comments: # true
       share: true
       related: true
-
   # _pages
   - scope:
       path: ""
       type: pages
     values:
-        layout: single
-        author_profile: true
-
+      layout: single
+      author_profile: true
