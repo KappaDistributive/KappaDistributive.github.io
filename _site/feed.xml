@@ -1,2 +1,125 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-05-20T15:49:57+02:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Stefan Mesken</title><subtitle>Data Science</subtitle><author><name>Stefan Mesken</name><email>kappadistributive@gmail.com</email></author><entry><title type="html">This is a test</title><link href="http://localhost:4000/test/" rel="alternate" type="text/html" title="This is a test" /><published>2019-05-20T00:00:00+02:00</published><updated>2019-05-20T00:00:00+02:00</updated><id>http://localhost:4000/test</id><content type="html" xml:base="http://localhost:4000/test/">&lt;p&gt;$e = mc^2$
-&lt;script type=&quot;math/tex&quot;&gt;e = mc^2&lt;/script&gt;&lt;/p&gt;</content><author><name>Stefan Mesken</name><email>kappadistributive@gmail.com</email></author><summary type="html">$e = mc^2$</summary></entry></feed>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-05-25T22:17:17+02:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Stefan Mesken</title><subtitle>Data Science</subtitle><author><name>Stefan Mesken</name></author><entry><title type="html">How To Beat Kaggle (the Easy Way)</title><link href="http://localhost:4000/how-to-beat-kaggle-(the-easy-way)/" rel="alternate" type="text/html" title="How To Beat Kaggle (the Easy Way)" /><published>2019-05-25T00:00:00+02:00</published><updated>2019-05-25T00:00:00+02:00</updated><id>http://localhost:4000/how-to-beat-kaggle-(the-easy-way)</id><content type="html" xml:base="http://localhost:4000/how-to-beat-kaggle-(the-easy-way)/">&lt;p&gt;A few nights ago, I found myself tinkering with the &lt;a href=&quot;https://www.kaggle.com/c/titanic&quot;&gt;Titanic dataset on Kaggle&lt;/a&gt; and couldn’t help but notice the number of people with a &lt;a href=&quot;https://www.kaggle.com/c/titanic/leaderboard&quot;&gt;perfect score&lt;/a&gt; – many of whom have a single entry.&lt;/p&gt;
+
+&lt;p&gt;So, I thought to myself: “Clearly, they must be cheating. But how do you cheat efficiently?”&lt;/p&gt;
+
+&lt;h2 id=&quot;a-mathematicians-perspective&quot;&gt;A Mathematician’s Perspective&lt;/h2&gt;
+
+&lt;p&gt;The Kaggle competition ‘Titanic: Machine Learning from Disaster’ (and in fact any classification competition on Kaggle) can be modelled as follows:&lt;/p&gt;
+
+&lt;p&gt;Kaggle asks you to find a secret &lt;script type=&quot;math/tex&quot;&gt;n&lt;/script&gt;-dimensional vector &lt;script type=&quot;math/tex&quot;&gt;\vec{k} = (k_1, k_2, \ldots, k_n)&lt;/script&gt; (with &lt;script type=&quot;math/tex&quot;&gt;n=418&lt;/script&gt; for the Titanic dataset) where each number &lt;script type=&quot;math/tex&quot;&gt;k_i&lt;/script&gt; is either &lt;script type=&quot;math/tex&quot;&gt;0&lt;/script&gt; (the passenger with ID &lt;script type=&quot;math/tex&quot;&gt;i&lt;/script&gt; didn’t survive) or &lt;script type=&quot;math/tex&quot;&gt;1&lt;/script&gt; (the passenger with ID &lt;script type=&quot;math/tex&quot;&gt;i&lt;/script&gt; did survive). So all we really have to do is to guess &lt;script type=&quot;math/tex&quot;&gt;\vec{k}&lt;/script&gt; – no need for fancy machine learning techniques!&lt;/p&gt;
+
+&lt;p&gt;There are &lt;script type=&quot;math/tex&quot;&gt;2^n&lt;/script&gt; many possible values for &lt;script type=&quot;math/tex&quot;&gt;\vec{k}&lt;/script&gt; and guessing all of them would be practically impossible. Fortunately, there’s one more ingredient to Kaggle that we can exploit: If we submit a guess &lt;script type=&quot;math/tex&quot;&gt;\vec{g} = (g_1, \ldots, g_n)&lt;/script&gt; to Kaggle, it will return a score – the number of correct guesses. I.e. the number of &lt;script type=&quot;math/tex&quot;&gt;i&lt;/script&gt;s such that &lt;script type=&quot;math/tex&quot;&gt;g_i = k_i&lt;/script&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;a-naive-approach&quot;&gt;A Naive Approach&lt;/h2&gt;
+
+&lt;p&gt;This allows for a naive solution in (at most) &lt;script type=&quot;math/tex&quot;&gt;n+1&lt;/script&gt; many guesses: First guess &lt;script type=&quot;math/tex&quot;&gt;\vec{g}_0 = (0,0, \ldots, 0)&lt;/script&gt; resulting in a score of correct entries &lt;script type=&quot;math/tex&quot;&gt;s_0&lt;/script&gt; and then, for each &lt;script type=&quot;math/tex&quot;&gt;i = 1, \ldots, n&lt;/script&gt; guess &lt;script type=&quot;math/tex&quot;&gt;\vec{g}_i&lt;/script&gt; – the binary vector with only one &lt;script type=&quot;math/tex&quot;&gt;1&lt;/script&gt; in position &lt;script type=&quot;math/tex&quot;&gt;i&lt;/script&gt;. Let &lt;script type=&quot;math/tex&quot;&gt;s_i&lt;/script&gt; be the resulting score. If &lt;script type=&quot;math/tex&quot;&gt;s_i &gt; s_0&lt;/script&gt;, then the &lt;script type=&quot;math/tex&quot;&gt;i&lt;/script&gt;th entry of &lt;script type=&quot;math/tex&quot;&gt;\vec{k}&lt;/script&gt; must be a &lt;script type=&quot;math/tex&quot;&gt;1&lt;/script&gt;. Otherwise it is a &lt;script type=&quot;math/tex&quot;&gt;0&lt;/script&gt;.&lt;/p&gt;
+
+&lt;p&gt;While this is certainly possible to pull off in practice &lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;, it &lt;em&gt;does not&lt;/em&gt; satisfy my urge for efficiency.&lt;/p&gt;
+
+&lt;p&gt;Can we do better?&lt;/p&gt;
+
+&lt;p&gt;Indeed! But making significant progress will require some work.&lt;/p&gt;
+
+&lt;h2 id=&quot;insert-graph-theory&quot;&gt;Insert Graph Theory&lt;/h2&gt;
+
+&lt;h3 id=&quot;definition&quot;&gt;Definition&lt;/h3&gt;
+
+&lt;p&gt;Let &lt;script type=&quot;math/tex&quot;&gt;G = (V;E)&lt;/script&gt; be an undirected &lt;a href=&quot;https://en.wikipedia.org/wiki/Graph_(discrete_mathematics)&quot;&gt;graph&lt;/a&gt;. Let &lt;script type=&quot;math/tex&quot;&gt;u,v \in V&lt;/script&gt; be vertices. The &lt;em&gt;distance &lt;script type=&quot;math/tex&quot;&gt;d_G(v,u)&lt;/script&gt; of &lt;script type=&quot;math/tex&quot;&gt;v&lt;/script&gt; and &lt;script type=&quot;math/tex&quot;&gt;u&lt;/script&gt;&lt;/em&gt; in &lt;script type=&quot;math/tex&quot;&gt;G&lt;/script&gt; (in symbols &lt;script type=&quot;math/tex&quot;&gt;d_G(u,v)&lt;/script&gt;) is the length of the minimal path of edges in &lt;script type=&quot;math/tex&quot;&gt;G&lt;/script&gt; that connects &lt;script type=&quot;math/tex&quot;&gt;v&lt;/script&gt; and &lt;script type=&quot;math/tex&quot;&gt;u&lt;/script&gt;. If no such path exists, we let &lt;script type=&quot;math/tex&quot;&gt;d_G(v,u) := \infty&lt;/script&gt;. &lt;sup id=&quot;fnref:2&quot;&gt;&lt;a href=&quot;#fn:2&quot; class=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+
+&lt;figure&gt;
+  &lt;img src=&quot;/images/diagrams/distance.png&quot; alt=&quot;distance of two nodes in a graph&quot; /&gt;
+  &lt;figcaption&gt;A shortest path of length 2 between u and v&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;h3 id=&quot;definition-1&quot;&gt;Definition&lt;/h3&gt;
+
+&lt;p&gt;Let &lt;script type=&quot;math/tex&quot;&gt;G = (V;E)&lt;/script&gt; be an undirected graph and let &lt;script type=&quot;math/tex&quot;&gt;R \subseteq V&lt;/script&gt; be a set of vertices. &lt;em&gt;&lt;script type=&quot;math/tex&quot;&gt;R = \{r_1, \ldots, r_k \}&lt;/script&gt; resolves &lt;script type=&quot;math/tex&quot;&gt;G&lt;/script&gt;&lt;/em&gt; if every vertex &lt;script type=&quot;math/tex&quot;&gt;v \in V&lt;/script&gt; is uniquely determined by its vector of distances to members of &lt;script type=&quot;math/tex&quot;&gt;R&lt;/script&gt;. To put it in mathematical terms: &lt;script type=&quot;math/tex&quot;&gt;R&lt;/script&gt; resolves &lt;script type=&quot;math/tex&quot;&gt;G&lt;/script&gt; if the function&lt;/p&gt;
+
+&lt;p&gt;\[
+d_R \colon V \to [0, \infty]^k, v \mapsto (d_G(v,r_1), d_G(v,r_2), \ldots, d_G(v,r_k))
+\]&lt;/p&gt;
+
+&lt;p&gt;is &lt;a href=&quot;https://en.wikipedia.org/wiki/Injective_function&quot;&gt;injective&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Note that &lt;script type=&quot;math/tex&quot;&gt;R = V = \{ v_1, \ldots, v_n \}&lt;/script&gt; trivially resolves &lt;script type=&quot;math/tex&quot;&gt;G&lt;/script&gt; as every &lt;script type=&quot;math/tex&quot;&gt;v \in V&lt;/script&gt; is uniquely determined by &lt;script type=&quot;math/tex&quot;&gt;i \in \{1, \ldots, n \}&lt;/script&gt; with &lt;script type=&quot;math/tex&quot;&gt;d_G(v,v_i) = 0&lt;/script&gt; since in this case we have &lt;script type=&quot;math/tex&quot;&gt;v = v_i&lt;/script&gt;.&lt;/p&gt;
+
+&lt;p&gt;Consider the following example:&lt;/p&gt;
+
+&lt;figure&gt;
+  &lt;img src=&quot;/images/diagrams/resolving_set.png&quot; alt=&quot;a resolving set of size 4 for H(3)&quot; /&gt;
+  &lt;figcaption&gt;A resolving set of size 3 for H(3)&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Here, the vertex &lt;script type=&quot;math/tex&quot;&gt;(0,1,1)&lt;/script&gt; is uniquely identified by having distance &lt;script type=&quot;math/tex&quot;&gt;2&lt;/script&gt; to  &lt;script type=&quot;math/tex&quot;&gt;r_1 = (0,0,0)&lt;/script&gt;, distance &lt;script type=&quot;math/tex&quot;&gt;3&lt;/script&gt; to &lt;script type=&quot;math/tex&quot;&gt;r_2 = (1,0,0)&lt;/script&gt; and distance &lt;script type=&quot;math/tex&quot;&gt;2&lt;/script&gt; to &lt;script type=&quot;math/tex&quot;&gt;r_3 = (1,1,0)&lt;/script&gt;. In other words, &lt;script type=&quot;math/tex&quot;&gt;(0,1,1)&lt;/script&gt; is the unique vertex with distance vector &lt;script type=&quot;math/tex&quot;&gt;d_R(0,1,1) = (2,3,2)&lt;/script&gt; to the highlighted resolving set.&lt;/p&gt;
+
+&lt;p&gt;I encourage the reader to check that &lt;script type=&quot;math/tex&quot;&gt;R = \{ (0,0,0), (1,0,0), (1,1,0) \}&lt;/script&gt; is indeed a resolving set for &lt;script type=&quot;math/tex&quot;&gt;H(3)&lt;/script&gt; to get a better feel for this rather abstract concept before moving on.&lt;/p&gt;
+
+&lt;h3 id=&quot;definition-2&quot;&gt;Definition&lt;/h3&gt;
+
+&lt;p&gt;Let &lt;script type=&quot;math/tex&quot;&gt;G = (V;E)&lt;/script&gt; be an undirected graph. The &lt;em&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Metric_dimension_(graph_theory)&quot;&gt;metric dimension&lt;/a&gt; of &lt;script type=&quot;math/tex&quot;&gt;G&lt;/script&gt;&lt;/em&gt;  is the minimal size of some &lt;script type=&quot;math/tex&quot;&gt;R \subseteq V&lt;/script&gt; that resolves &lt;script type=&quot;math/tex&quot;&gt;G&lt;/script&gt;.&lt;/p&gt;
+
+&lt;p&gt;Returning to our example &lt;script type=&quot;math/tex&quot;&gt;H(3)&lt;/script&gt;: We’ve already found a resolving set of size &lt;script type=&quot;math/tex&quot;&gt;3&lt;/script&gt; and a bit of computation confirms that there is no resolving set of size &lt;script type=&quot;math/tex&quot;&gt;2&lt;/script&gt;. Therefore the metric dimension of &lt;script type=&quot;math/tex&quot;&gt;H(3)&lt;/script&gt; is &lt;script type=&quot;math/tex&quot;&gt;3&lt;/script&gt;.&lt;/p&gt;
+
+&lt;p&gt;It is now time to meet the hero of our advanced guessing strategy.&lt;/p&gt;
+
+&lt;h3 id=&quot;definition-3&quot;&gt;Definition&lt;/h3&gt;
+
+&lt;p&gt;The &lt;em&gt;&lt;script type=&quot;math/tex&quot;&gt;n&lt;/script&gt;-dimensional &lt;a href=&quot;https://en.wikipedia.org/wiki/Hamming_graph&quot;&gt;Hamming graph&lt;/a&gt;&lt;/em&gt; is the undirected graph &lt;script type=&quot;math/tex&quot;&gt;H(n) = (V;E)&lt;/script&gt; whose vertices are all &lt;script type=&quot;math/tex&quot;&gt;n&lt;/script&gt;-dimensional binary vectors &lt;script type=&quot;math/tex&quot;&gt;\vec{v} = (v_1, \ldots, v_n)&lt;/script&gt; such that &lt;script type=&quot;math/tex&quot;&gt;\{\vec{v},\vec{u}\} \in E&lt;/script&gt; iff they differ in exactly one position, i.e.&lt;/p&gt;
+
+&lt;p&gt;\[
+E = \{ \{ \vec{v}, \vec{u} \} \mid \{i \mid v_i \neq u_i \} \text{ has size 1 } \}.
+\]&lt;/p&gt;
+
+&lt;p&gt;If you look back to the diagram of &lt;script type=&quot;math/tex&quot;&gt;H(3)&lt;/script&gt;, you will see that this is indeed the &lt;script type=&quot;math/tex&quot;&gt;3&lt;/script&gt;-dimensional Hamming graph. Its vertices are binary vectors of length &lt;script type=&quot;math/tex&quot;&gt;3&lt;/script&gt; and they are connected via a single edge if and only if they differ in exactly one coordinate.&lt;/p&gt;
+
+&lt;h2 id=&quot;a-graph-theoretic-guessing-strategy&quot;&gt;A Graph Theoretic Guessing Strategy&lt;/h2&gt;
+
+&lt;p&gt;Here is our graph theoretic guessing strategy: Let &lt;script type=&quot;math/tex&quot;&gt;R&lt;/script&gt; be a small resolving set for &lt;script type=&quot;math/tex&quot;&gt;H(n)&lt;/script&gt;. Submit each &lt;script type=&quot;math/tex&quot;&gt;\vec{r} \in R&lt;/script&gt; as a guess to Kaggle which sends back its score &lt;script type=&quot;math/tex&quot;&gt;s(\vec{r})&lt;/script&gt;. If &lt;script type=&quot;math/tex&quot;&gt;s(\vec{r}) = n&lt;/script&gt; for some &lt;script type=&quot;math/tex&quot;&gt;\vec{r}&lt;/script&gt;, we’ve achieved a perfect score and are done with this competition. Otherwise, since &lt;script type=&quot;math/tex&quot;&gt;R&lt;/script&gt; is a resolving set, there is a unique vertex &lt;script type=&quot;math/tex&quot;&gt;\vec{g}&lt;/script&gt; in &lt;script type=&quot;math/tex&quot;&gt;H(n)&lt;/script&gt; such that&lt;/p&gt;
+
+&lt;p&gt;\[
+d_{H(n)}(\vec{g},\vec{r}) = n - s(\vec{r})
+\]&lt;/p&gt;
+
+&lt;p&gt;for all &lt;script type=&quot;math/tex&quot;&gt;\vec{r} \in R&lt;/script&gt;.&lt;/p&gt;
+
+&lt;p&gt;However, by the construction of &lt;script type=&quot;math/tex&quot;&gt;H(n)&lt;/script&gt;, we have &lt;script type=&quot;math/tex&quot;&gt;d_{H(n)} (\vec{k},\vec{r}) = n - s(\vec{r})&lt;/script&gt; (where &lt;script type=&quot;math/tex&quot;&gt;\vec{k}&lt;/script&gt; is Kaggle’s secret solution vector) for all &lt;script type=&quot;math/tex&quot;&gt;\vec{r} \in R&lt;/script&gt;.&lt;/p&gt;
+
+&lt;p&gt;Since &lt;script type=&quot;math/tex&quot;&gt;\vec{g}&lt;/script&gt; is the &lt;em&gt;unique&lt;/em&gt; vector with this property, we must have that &lt;script type=&quot;math/tex&quot;&gt;\vec{g} = \vec{k}&lt;/script&gt; is the desired solution. This strategy therefore guarantees a perfect score in at most &lt;script type=&quot;math/tex&quot;&gt;\mathrm{size(R)} + 1&lt;/script&gt; many submissions!&lt;/p&gt;
+
+&lt;p&gt;Now, because &lt;script type=&quot;math/tex&quot;&gt;H(n)&lt;/script&gt; has a metric dimension of &lt;script type=&quot;math/tex&quot;&gt;\frac{(2+ o(1))n}{\log_2(n)}&lt;/script&gt;, we will be able to crack the Titanic dataset in &lt;script type=&quot;math/tex&quot;&gt;\sim 97&lt;/script&gt; &lt;sup id=&quot;fnref:3&quot;&gt;&lt;a href=&quot;#fn:3&quot; class=&quot;footnote&quot;&gt;3&lt;/a&gt;&lt;/sup&gt; submissions and furthermore, if we commit to submitting all but the final guess at once, this is known to be an optimal guessing strategy.&lt;/p&gt;
+
+&lt;h2 id=&quot;confessions&quot;&gt;Confessions&lt;/h2&gt;
+
+&lt;p&gt;While this graph theoretic approach to beat Kaggle, from a purely mathematical point of view, is very pleasing, it doesn’t seem that practical after all. For instance, while the metric dimension of &lt;script type=&quot;math/tex&quot;&gt;H(n)&lt;/script&gt; is known asymptotically, &lt;a href=&quot;https://mathoverflow.net/questions/332434/explicit-small-resolving-sets-for-hamming-graphs&quot;&gt;it’s not clear to me how to find small resolving sets for &lt;script type=&quot;math/tex&quot;&gt;H(n)&lt;/script&gt; in practice&lt;/a&gt;. Furthermore, even if you were given a small resolving set &lt;script type=&quot;math/tex&quot;&gt;R&lt;/script&gt;, calculating &lt;script type=&quot;math/tex&quot;&gt;\vec{k}&lt;/script&gt; from &lt;script type=&quot;math/tex&quot;&gt;\{ d_{H(n)}(\vec{k}, \vec{r}) \mid \vec{r} \in R \}&lt;/script&gt; requires some serious computational power. Granted, it doesn’t increase the number of guesses required, the metric I’ve chosen to optimize for, but it still results in so much computational overhead that the naive approach will win out.&lt;/p&gt;
+
+&lt;p&gt;What’s worse: We are not taking full advantage of Kaggle’s feedback to our guesses. When guessing the entries of our resolving set one by one, we don’t use the information gained to guide our future guesses. Instead we could just as well have submitted them all in one go, collect the scores and then compute the correct solution. If we add this further restriction, the solution presented here is optimal. However, without this artificial restriction, I suspect that a better performing, general solution should be possible and I’d very much like to find one.&lt;/p&gt;
+
+&lt;p&gt;In practice, if you want to do better than this graph theoretic guessing strategy, I’d suggest cooking up a reasonably well-performing model. You then adapt the naive approach by prioritizing those bits that your model is least certain about. This, if I had to guess, is what people actually do to obtain perfect scores. Finally, to get a perfect score with a single entry, just calculate the solution on a different account and, once you’ve obtained it, submit it on your main account.&lt;/p&gt;
+
+&lt;p&gt;From Kaggle’s point of view, at least in the case of the Titanic dataset, this attack vector is pretty much impossible to defend against. For larger datasets, on the other hand, there certainly is a lot they can do to prevent successful guessing strategies. That, however, is a story for another day…&lt;/p&gt;
+
+&lt;h2 id=&quot;sources&quot;&gt;Sources&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://mathoverflow.net/questions/58600&quot;&gt;Math Overflow. Guessing a subset of &lt;script type=&quot;math/tex&quot;&gt;\{1, \ldots, N \}&lt;/script&gt;&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://epubs.siam.org/doi/pdf/10.1137/1.9781611975482.74&quot;&gt;Jian, Polyanskii. How to guess an &lt;script type=&quot;math/tex&quot;&gt;n&lt;/script&gt;-digit number&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://arxiv.org/pdf/1712.02723.pdf&quot;&gt;Jian, Polyanksii. On the metric dimension of Cartesian powers of a graph&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://arxiv.org/pdf/math/0507527.pdf&quot;&gt;Caceres, Puertas. ON THE METRIC DIMENSION OFCARTESIAN PRODUCTS OF GRAPHS&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://arxiv.org/pdf/math/0507527.pdf&quot;&gt;Caceres, Hernando, Mora, Pelayo, Puertas, Seara and Wood. ON THE METRIC DIMENSION OF CARTESIAN PRODUCTS OF GRAPHS&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Bernt Lindström.  On a combinatory detection problem. I (Magyar Tud. Akad.Mat. Kutato Int. Közl., 9:195–207, 1964)&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://mathoverflow.net/questions/332434/explicit-small-resolving-sets-for-hamming-graphs&quot;&gt;Math Overflow. Explicit, small resolving sets for Hamming graphs&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;footnotes&quot;&gt;
+  &lt;ol&gt;
+    &lt;li id=&quot;fn:1&quot;&gt;
+      &lt;p&gt;Kaggle’s daily submission limit poses only the tiniest of hurdles to any programmer… &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:2&quot;&gt;
+      &lt;p&gt;&lt;script type=&quot;math/tex&quot;&gt;d_G&lt;/script&gt; is the usual &lt;a href=&quot;https://en.wikipedia.org/wiki/Distance_(graph_theory)&quot;&gt;graph metric&lt;/a&gt; &lt;a href=&quot;#fnref:2&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:3&quot;&gt;
+      &lt;p&gt;The exact number depends on the precise metric dimension of &lt;script type=&quot;math/tex&quot;&gt;H(418)&lt;/script&gt; which I do not yet know at the time of writing this post. All I know for certain is that it is &lt;script type=&quot;math/tex&quot;&gt;\le 418&lt;/script&gt;. &lt;a href=&quot;#fnref:3&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;</content><author><name>Stefan Mesken</name></author><summary type="html">A few nights ago, I found myself tinkering with the Titanic dataset on Kaggle and couldn’t help but notice the number of people with a perfect score – many of whom have a single entry.</summary></entry></feed>

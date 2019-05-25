@@ -1,0 +1,532 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.16.3 by Michael Rose
+  Copyright 2013-2019 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>How To Beat Kaggle (the Easy Way) - Stefan Mesken</title>
+<meta name="description" content="A few nights ago, I found myself tinkering with the Titanic dataset on Kaggle and couldn’t help but notice the number of people with a perfect score – many of whom have a single entry.">
+
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Stefan Mesken">
+<meta property="og:title" content="How To Beat Kaggle (the Easy Way)">
+<meta property="og:url" content="http://localhost:4000/how-to-beat-kaggle-(the-easy-way)/">
+
+
+  <meta property="og:description" content="A few nights ago, I found myself tinkering with the Titanic dataset on Kaggle and couldn’t help but notice the number of people with a perfect score – many of whom have a single entry.">
+
+
+
+
+
+  <meta name="twitter:site" content="@mesken_stefan">
+  <meta name="twitter:title" content="How To Beat Kaggle (the Easy Way)">
+  <meta name="twitter:description" content="A few nights ago, I found myself tinkering with the Titanic dataset on Kaggle and couldn’t help but notice the number of people with a perfect score – many of whom have a single entry.">
+  <meta name="twitter:url" content="http://localhost:4000/how-to-beat-kaggle-(the-easy-way)/">
+
+  
+    <meta name="twitter:card" content="summary">
+    
+  
+
+  
+
+
+
+  <meta property="article:published_time" content="2019-05-25T00:00:00+02:00">
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="http://localhost:4000/how-to-beat-kaggle-(the-easy-way)/">
+
+
+
+
+
+
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Stefan Mesken",
+      "url": "http://localhost:4000",
+      "sameAs": null
+    }
+  </script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Stefan Mesken Feed">
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<!--[if IE ]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/">Stefan Mesken</a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/blog/" >Blog</a>
+            </li><li class="masthead__menu-item">
+              <a href="/about.html" >About</a>
+            </li></ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="https://schema.org/Person">
+
+  
+    <div class="author__avatar">
+      
+
+      
+        <img src="/images/avatar.png" alt="Stefan Mesken" itemprop="image">
+      
+    </div>
+  
+
+  <div class="author__content">
+    
+      <h3 class="author__name" itemprop="name">Stefan Mesken</h3>
+    
+    
+      <p class="author__bio" itemprop="description">
+        Mathematician and aspiring Data Scientist.
+      </p>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+        <li itemprop="homeLocation" itemscope itemtype="https://schema.org/Place">
+          <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name">Cologne, Germany</span>
+        </li>
+      
+
+      
+        
+          
+        
+          
+        
+          
+            <li><a href="https://twitter.com/mesken_stefan" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i> Twitter</a></li>
+          
+        
+          
+        
+          
+            <li><a href="https://github.com/KappaDistributive" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+          
+        
+          
+        
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="How To Beat Kaggle (the Easy Way)">
+    <meta itemprop="description" content="A few nights ago, I found myself tinkering with the Titanic dataset on Kaggle and couldn’t help but notice the number of people with a perfect score – many of whom have a single entry.">
+    <meta itemprop="datePublished" content="May 25, 2019">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">How To Beat Kaggle (the Easy Way)
+</h1>
+          
+            <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  6 minute read
+</p>
+          
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+        <p>A few nights ago, I found myself tinkering with the <a href="https://www.kaggle.com/c/titanic">Titanic dataset on Kaggle</a> and couldn’t help but notice the number of people with a <a href="https://www.kaggle.com/c/titanic/leaderboard">perfect score</a> – many of whom have a single entry.</p>
+
+<p>So, I thought to myself: “Clearly, they must be cheating. But how do you cheat efficiently?”</p>
+
+<h2 id="a-mathematicians-perspective">A Mathematician’s Perspective</h2>
+
+<p>The Kaggle competition ‘Titanic: Machine Learning from Disaster’ (and in fact any classification competition on Kaggle) can be modelled as follows:</p>
+
+<p>Kaggle asks you to find a secret <script type="math/tex">n</script>-dimensional vector <script type="math/tex">\vec{k} = (k_1, k_2, \ldots, k_n)</script> (with <script type="math/tex">n=418</script> for the Titanic dataset) where each number <script type="math/tex">k_i</script> is either <script type="math/tex">0</script> (the passenger with ID <script type="math/tex">i</script> didn’t survive) or <script type="math/tex">1</script> (the passenger with ID <script type="math/tex">i</script> did survive). So all we really have to do is to guess <script type="math/tex">\vec{k}</script> – no need for fancy machine learning techniques!</p>
+
+<p>There are <script type="math/tex">2^n</script> many possible values for <script type="math/tex">\vec{k}</script> and guessing all of them would be practically impossible. Fortunately, there’s one more ingredient to Kaggle that we can exploit: If we submit a guess <script type="math/tex">\vec{g} = (g_1, \ldots, g_n)</script> to Kaggle, it will return a score – the number of correct guesses. I.e. the number of <script type="math/tex">i</script>s such that <script type="math/tex">g_i = k_i</script>.</p>
+
+<h2 id="a-naive-approach">A Naive Approach</h2>
+
+<p>This allows for a naive solution in (at most) <script type="math/tex">n+1</script> many guesses: First guess <script type="math/tex">\vec{g}_0 = (0,0, \ldots, 0)</script> resulting in a score of correct entries <script type="math/tex">s_0</script> and then, for each <script type="math/tex">i = 1, \ldots, n</script> guess <script type="math/tex">\vec{g}_i</script> – the binary vector with only one <script type="math/tex">1</script> in position <script type="math/tex">i</script>. Let <script type="math/tex">s_i</script> be the resulting score. If <script type="math/tex">s_i > s_0</script>, then the <script type="math/tex">i</script>th entry of <script type="math/tex">\vec{k}</script> must be a <script type="math/tex">1</script>. Otherwise it is a <script type="math/tex">0</script>.</p>
+
+<p>While this is certainly possible to pull off in practice <sup id="fnref:1"><a href="#fn:1" class="footnote">1</a></sup>, it <em>does not</em> satisfy my urge for efficiency.</p>
+
+<p>Can we do better?</p>
+
+<p>Indeed! But making significant progress will require some work.</p>
+
+<h2 id="insert-graph-theory">Insert Graph Theory</h2>
+
+<h3 id="definition">Definition</h3>
+
+<p>Let <script type="math/tex">G = (V;E)</script> be an undirected <a href="https://en.wikipedia.org/wiki/Graph_(discrete_mathematics)">graph</a>. Let <script type="math/tex">u,v \in V</script> be vertices. The <em>distance <script type="math/tex">d_G(v,u)</script> of <script type="math/tex">v</script> and <script type="math/tex">u</script></em> in <script type="math/tex">G</script> (in symbols <script type="math/tex">d_G(u,v)</script>) is the length of the minimal path of edges in <script type="math/tex">G</script> that connects <script type="math/tex">v</script> and <script type="math/tex">u</script>. If no such path exists, we let <script type="math/tex">d_G(v,u) := \infty</script>. <sup id="fnref:2"><a href="#fn:2" class="footnote">2</a></sup></p>
+
+<figure>
+  <img src="/images/diagrams/distance.png" alt="distance of two nodes in a graph" />
+  <figcaption>A shortest path of length 2 between u and v</figcaption>
+</figure>
+
+<h3 id="definition-1">Definition</h3>
+
+<p>Let <script type="math/tex">G = (V;E)</script> be an undirected graph and let <script type="math/tex">R \subseteq V</script> be a set of vertices. <em><script type="math/tex">R = \{r_1, \ldots, r_k \}</script> resolves <script type="math/tex">G</script></em> if every vertex <script type="math/tex">v \in V</script> is uniquely determined by its vector of distances to members of <script type="math/tex">R</script>. To put it in mathematical terms: <script type="math/tex">R</script> resolves <script type="math/tex">G</script> if the function</p>
+
+<p>\[
+d_R \colon V \to [0, \infty]^k, v \mapsto (d_G(v,r_1), d_G(v,r_2), \ldots, d_G(v,r_k))
+\]</p>
+
+<p>is <a href="https://en.wikipedia.org/wiki/Injective_function">injective</a>.</p>
+
+<p>Note that <script type="math/tex">R = V = \{ v_1, \ldots, v_n \}</script> trivially resolves <script type="math/tex">G</script> as every <script type="math/tex">v \in V</script> is uniquely determined by <script type="math/tex">i \in \{1, \ldots, n \}</script> with <script type="math/tex">d_G(v,v_i) = 0</script> since in this case we have <script type="math/tex">v = v_i</script>.</p>
+
+<p>Consider the following example:</p>
+
+<figure>
+  <img src="/images/diagrams/resolving_set.png" alt="a resolving set of size 4 for H(3)" />
+  <figcaption>A resolving set of size 3 for H(3)</figcaption>
+</figure>
+
+<p>Here, the vertex <script type="math/tex">(0,1,1)</script> is uniquely identified by having distance <script type="math/tex">2</script> to  <script type="math/tex">r_1 = (0,0,0)</script>, distance <script type="math/tex">3</script> to <script type="math/tex">r_2 = (1,0,0)</script> and distance <script type="math/tex">2</script> to <script type="math/tex">r_3 = (1,1,0)</script>. In other words, <script type="math/tex">(0,1,1)</script> is the unique vertex with distance vector <script type="math/tex">d_R(0,1,1) = (2,3,2)</script> to the highlighted resolving set.</p>
+
+<p>I encourage the reader to check that <script type="math/tex">R = \{ (0,0,0), (1,0,0), (1,1,0) \}</script> is indeed a resolving set for <script type="math/tex">H(3)</script> to get a better feel for this rather abstract concept before moving on.</p>
+
+<h3 id="definition-2">Definition</h3>
+
+<p>Let <script type="math/tex">G = (V;E)</script> be an undirected graph. The <em><a href="https://en.wikipedia.org/wiki/Metric_dimension_(graph_theory)">metric dimension</a> of <script type="math/tex">G</script></em>  is the minimal size of some <script type="math/tex">R \subseteq V</script> that resolves <script type="math/tex">G</script>.</p>
+
+<p>Returning to our example <script type="math/tex">H(3)</script>: We’ve already found a resolving set of size <script type="math/tex">3</script> and a bit of computation confirms that there is no resolving set of size <script type="math/tex">2</script>. Therefore the metric dimension of <script type="math/tex">H(3)</script> is <script type="math/tex">3</script>.</p>
+
+<p>It is now time to meet the hero of our advanced guessing strategy.</p>
+
+<h3 id="definition-3">Definition</h3>
+
+<p>The <em><script type="math/tex">n</script>-dimensional <a href="https://en.wikipedia.org/wiki/Hamming_graph">Hamming graph</a></em> is the undirected graph <script type="math/tex">H(n) = (V;E)</script> whose vertices are all <script type="math/tex">n</script>-dimensional binary vectors <script type="math/tex">\vec{v} = (v_1, \ldots, v_n)</script> such that <script type="math/tex">\{\vec{v},\vec{u}\} \in E</script> iff they differ in exactly one position, i.e.</p>
+
+<p>\[
+E = \{ \{ \vec{v}, \vec{u} \} \mid \{i \mid v_i \neq u_i \} \text{ has size 1 } \}.
+\]</p>
+
+<p>If you look back to the diagram of <script type="math/tex">H(3)</script>, you will see that this is indeed the <script type="math/tex">3</script>-dimensional Hamming graph. Its vertices are binary vectors of length <script type="math/tex">3</script> and they are connected via a single edge if and only if they differ in exactly one coordinate.</p>
+
+<h2 id="a-graph-theoretic-guessing-strategy">A Graph Theoretic Guessing Strategy</h2>
+
+<p>Here is our graph theoretic guessing strategy: Let <script type="math/tex">R</script> be a small resolving set for <script type="math/tex">H(n)</script>. Submit each <script type="math/tex">\vec{r} \in R</script> as a guess to Kaggle which sends back its score <script type="math/tex">s(\vec{r})</script>. If <script type="math/tex">s(\vec{r}) = n</script> for some <script type="math/tex">\vec{r}</script>, we’ve achieved a perfect score and are done with this competition. Otherwise, since <script type="math/tex">R</script> is a resolving set, there is a unique vertex <script type="math/tex">\vec{g}</script> in <script type="math/tex">H(n)</script> such that</p>
+
+<p>\[
+d_{H(n)}(\vec{g},\vec{r}) = n - s(\vec{r})
+\]</p>
+
+<p>for all <script type="math/tex">\vec{r} \in R</script>.</p>
+
+<p>However, by the construction of <script type="math/tex">H(n)</script>, we have <script type="math/tex">d_{H(n)} (\vec{k},\vec{r}) = n - s(\vec{r})</script> (where <script type="math/tex">\vec{k}</script> is Kaggle’s secret solution vector) for all <script type="math/tex">\vec{r} \in R</script>.</p>
+
+<p>Since <script type="math/tex">\vec{g}</script> is the <em>unique</em> vector with this property, we must have that <script type="math/tex">\vec{g} = \vec{k}</script> is the desired solution. This strategy therefore guarantees a perfect score in at most <script type="math/tex">\mathrm{size(R)} + 1</script> many submissions!</p>
+
+<p>Now, because <script type="math/tex">H(n)</script> has a metric dimension of <script type="math/tex">\frac{(2+ o(1))n}{\log_2(n)}</script>, we will be able to crack the Titanic dataset in <script type="math/tex">\sim 97</script> <sup id="fnref:3"><a href="#fn:3" class="footnote">3</a></sup> submissions and furthermore, if we commit to submitting all but the final guess at once, this is known to be an optimal guessing strategy.</p>
+
+<h2 id="confessions">Confessions</h2>
+
+<p>While this graph theoretic approach to beat Kaggle, from a purely mathematical point of view, is very pleasing, it doesn’t seem that practical after all. For instance, while the metric dimension of <script type="math/tex">H(n)</script> is known asymptotically, <a href="https://mathoverflow.net/questions/332434/explicit-small-resolving-sets-for-hamming-graphs">it’s not clear to me how to find small resolving sets for <script type="math/tex">H(n)</script> in practice</a>. Furthermore, even if you were given a small resolving set <script type="math/tex">R</script>, calculating <script type="math/tex">\vec{k}</script> from <script type="math/tex">\{ d_{H(n)}(\vec{k}, \vec{r}) \mid \vec{r} \in R \}</script> requires some serious computational power. Granted, it doesn’t increase the number of guesses required, the metric I’ve chosen to optimize for, but it still results in so much computational overhead that the naive approach will win out.</p>
+
+<p>What’s worse: We are not taking full advantage of Kaggle’s feedback to our guesses. When guessing the entries of our resolving set one by one, we don’t use the information gained to guide our future guesses. Instead we could just as well have submitted them all in one go, collect the scores and then compute the correct solution. If we add this further restriction, the solution presented here is optimal. However, without this artificial restriction, I suspect that a better performing, general solution should be possible and I’d very much like to find one.</p>
+
+<p>In practice, if you want to do better than this graph theoretic guessing strategy, I’d suggest cooking up a reasonably well-performing model. You then adapt the naive approach by prioritizing those bits that your model is least certain about. This, if I had to guess, is what people actually do to obtain perfect scores. Finally, to get a perfect score with a single entry, just calculate the solution on a different account and, once you’ve obtained it, submit it on your main account.</p>
+
+<p>From Kaggle’s point of view, at least in the case of the Titanic dataset, this attack vector is pretty much impossible to defend against. For larger datasets, on the other hand, there certainly is a lot they can do to prevent successful guessing strategies. That, however, is a story for another day…</p>
+
+<h2 id="sources">Sources</h2>
+
+<ul>
+  <li><a href="https://mathoverflow.net/questions/58600">Math Overflow. Guessing a subset of <script type="math/tex">\{1, \ldots, N \}</script></a></li>
+  <li><a href="https://epubs.siam.org/doi/pdf/10.1137/1.9781611975482.74">Jian, Polyanskii. How to guess an <script type="math/tex">n</script>-digit number</a></li>
+  <li><a href="https://arxiv.org/pdf/1712.02723.pdf">Jian, Polyanksii. On the metric dimension of Cartesian powers of a graph</a></li>
+  <li><a href="https://arxiv.org/pdf/math/0507527.pdf">Caceres, Puertas. ON THE METRIC DIMENSION OFCARTESIAN PRODUCTS OF GRAPHS</a></li>
+  <li><a href="https://arxiv.org/pdf/math/0507527.pdf">Caceres, Hernando, Mora, Pelayo, Puertas, Seara and Wood. ON THE METRIC DIMENSION OF CARTESIAN PRODUCTS OF GRAPHS</a></li>
+  <li>Bernt Lindström.  On a combinatory detection problem. I (Magyar Tud. Akad.Mat. Kutato Int. Közl., 9:195–207, 1964)</li>
+  <li><a href="https://mathoverflow.net/questions/332434/explicit-small-resolving-sets-for-hamming-graphs">Math Overflow. Explicit, small resolving sets for Hamming graphs</a></li>
+</ul>
+
+<div class="footnotes">
+  <ol>
+    <li id="fn:1">
+      <p>Kaggle’s daily submission limit poses only the tiniest of hurdles to any programmer… <a href="#fnref:1" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:2">
+      <p><script type="math/tex">d_G</script> is the usual <a href="https://en.wikipedia.org/wiki/Distance_(graph_theory)">graph metric</a> <a href="#fnref:2" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:3">
+      <p>The exact number depends on the precise metric dimension of <script type="math/tex">H(418)</script> which I do not yet know at the time of writing this post. All I know for certain is that it is <script type="math/tex">\le 418</script>. <a href="#fnref:3" class="reversefootnote">&#8617;</a></p>
+    </li>
+  </ol>
+</div>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2019-05-25T00:00:00+02:00">May 25, 2019</time></p>
+        
+      </footer>
+
+      <section class="page__share">
+  
+    <h4 class="page__share-title">Share on</h4>
+  
+
+  <a href="https://twitter.com/intent/tweet?via=mesken_stefan&text=How+To+Beat+Kaggle+%28the+Easy+Way%29%20http%3A%2F%2Flocalhost%3A4000%2Fhow-to-beat-kaggle-%28the-easy-way%29%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A4000%2Fhow-to-beat-kaggle-%28the-easy-way%29%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Flocalhost%3A4000%2Fhow-to-beat-kaggle-%28the-easy-way%29%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+
+      
+    </div>
+
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      <h4 class="page__related-title">You may also enjoy</h4>
+      <div class="grid__wrapper">
+        
+          
+            
+      </div>
+    </div>
+  
+</div>
+
+    </div>
+
+    
+
+    <div class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+
+    <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2019 Stefan Mesken. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+  <script defer src="https://use.fontawesome.com/releases/v5.8.1/js/all.js" integrity="sha384-g5uSoOSBd7KkhAMlnQILrecXvzst9TdC09/VM+pjDTCM+1il8RHz5fKANTFFb+gQ" crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" async
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+
+
+  </body>
+</html>
