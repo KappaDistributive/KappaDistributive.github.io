@@ -1,6 +1,8 @@
 ---
 layout: single
 mathjax: true
+category: Machine Learning
+tags: [machine learning, mathematics, graph theory]
 ---
 A few nights ago, I found myself tinkering with the [Titanic dataset on Kaggle](https://www.kaggle.com/c/titanic) and couldn't help but notice the number of people with a [perfect score](https://www.kaggle.com/c/titanic/leaderboard) -- many of whom have a single entry.
 
