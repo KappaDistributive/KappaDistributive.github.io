@@ -4254,12 +4254,19 @@ commander	_site/package-lock.json	/^        "commander": "~2.17.1",$/;"	s	object
 commander	_site/package-lock.json	/^    "commander": {$/;"	o	object:dependencies
 commander	package-lock.json	/^        "commander": "~2.17.1",$/;"	s	object:dependencies.uglify-js.requires
 commander	package-lock.json	/^    "commander": {$/;"	o	object:dependencies
+comment-form-email	_includes/_site/comments.html	/^                <input type="email" id="comment-form-email" name="fields[email]" tabindex="3" \//;"	I
 comment-form-email	_includes/comments.html	/^                <input type="email" id="comment-form-email" name="fields[email]" tabindex="3" \//;"	I
+comment-form-location	_includes/_site/comments.html	/^                <input type="text" id="comment-form-location" name="fields[hidden]" autocomplete/;"	I
 comment-form-location	_includes/comments.html	/^                <input type="text" id="comment-form-location" name="fields[hidden]" autocomplete/;"	I
+comment-form-message	_includes/_site/comments.html	/^                <textarea type="text" rows="3" id="comment-form-message" name="fields[message]" /;"	I
 comment-form-message	_includes/comments.html	/^                <textarea type="text" rows="3" id="comment-form-message" name="fields[message]" /;"	I
+comment-form-name	_includes/_site/comments.html	/^                <input type="text" id="comment-form-name" name="fields[name]" tabindex="2" \/>$/;"	I
 comment-form-name	_includes/comments.html	/^                <input type="text" id="comment-form-name" name="fields[name]" tabindex="2" \/>$/;"	I
+comment-form-submit	_includes/_site/comments.html	/^                <button type="submit" id="comment-form-submit" tabindex="5" class="btn btn--prim/;"	I
 comment-form-submit	_includes/comments.html	/^                <button type="submit" id="comment-form-submit" tabindex="5" class="btn btn--prim/;"	I
+comment-form-url	_includes/_site/comments.html	/^                <input type="url" id="comment-form-url" name="fields[url]" tabindex="4"\/>$/;"	I
 comment-form-url	_includes/comments.html	/^                <input type="url" id="comment-form-url" name="fields[url]" tabindex="4"\/>$/;"	I
+comment{{ include.index }}	_includes/_site/comment.html	/^<article id="comment{{ include.index }}" class="js-comment comment" itemprop="comment" itemscope/;"	I
 comment{{ include.index }}	_includes/comment.html	/^<article id="comment{{ include.index }}" class="js-comment comment" itemprop="comment" itemscope/;"	I
 complete	_site/assets/js/lunr/lunr.js	/^lunr.Set.complete = {$/;"	c	class:lunr.Set
 complete	_site/assets/js/lunr/lunr.min.js	/^!function(){var t,l,c,e,r,h,d,f,p,y,m,g,x,v,w,Q,k,S,E,L,b,P,T,O,I,i,n,s,z=function(e){var t=new /;"	c	class:z.Set
@@ -4348,8 +4355,10 @@ cross-spawn	package-lock.json	/^        "cross-spawn": "^6.0.0",$/;"	s	object:de
 cross-spawn	package-lock.json	/^        "cross-spawn": "^6.0.5",$/;"	s	object:dependencies.npm-run-all.requires
 cross-spawn	package-lock.json	/^        "cross-spawn": {$/;"	o	object:dependencies.npm-run-all.dependencies
 cross-spawn	package-lock.json	/^    "cross-spawn": {$/;"	o	object:dependencies
+cse-search-box-form-id	_includes/_site/search/search_form.html	/^    <form onsubmit="return googleCustomSearchExecute();" id="cse-search-box-form-id">$/;"	I
 cse-search-box-form-id	_includes/search/search_form.html	/^    <form onsubmit="return googleCustomSearchExecute();" id="cse-search-box-form-id">$/;"	I
 cse-search-box-form-id	_layouts/search.html	/^        <form onsubmit="return googleCustomSearchExecute();" id="cse-search-box-form-id">$/;"	I
+cse-search-input-box-id	_includes/_site/search/search_form.html	/^    <input type="search" id="cse-search-input-box-id" aria-placeholder="{{ site.data.ui-text[sit/;"	I
 cse-search-input-box-id	_includes/search/search_form.html	/^    <input type="search" id="cse-search-input-box-id" aria-placeholder="{{ site.data.ui-text[sit/;"	I
 cse-search-input-box-id	_layouts/search.html	/^        <input type="text" id="cse-search-input-box-id" class="search-input" tabindex="-1" place/;"	I
 cssHooks	_site/assets/js/main.min.js	/^return i(e,0,o)}):i}},pseudos:{not:r(function(e){var t=[],n=[],o=A(e.replace(ue,"$1"));return o[/;"	c	class:Ee
@@ -4357,6 +4366,7 @@ cssHooks	assets/js/main.min.js	/^return i(e,0,o)}):i}},pseudos:{not:r(function(e
 cssHooks	assets/js/vendor/jquery/jquery-3.4.1.js	/^	jQuery.cssHooks[ prefix + suffix ] = {$/;"	c	class:jQuery
 cssObj	assets/js/plugins/jquery.magnific-popup.js	/^              cssObj = {$/;"	c	class:AnonymousFunctionfcc5ed3c4000
 curCSS	assets/js/vendor/jquery/jquery-3.4.1.js	/^function curCSS( elem, name, computed ) {$/;"	f
+custom-comments	_includes/_site/comments.html	/^      <section id="custom-comments"><\/section>$/;"	I
 custom-comments	_includes/comments.html	/^      <section id="custom-comments"><\/section>$/;"	I
 customEasing	_site/assets/js/main.min.js	/^t.bgOverlay.attr("class","mfp-bg"),t.container.attr("class","mfp-container"),!t.st.showCloseBtn|/;"	p	class:AnonymousFunction92cdadd823600.t
 customEasing	assets/js/main.min.js	/^t.bgOverlay.attr("class","mfp-bg"),t.container.attr("class","mfp-container"),!t.st.showCloseBtn|/;"	p	class:AnonymousFunctiond0380e1523600.t
@@ -5079,7 +5089,9 @@ dev	package-lock.json	/^      "dev": true,$/;"	b	object:dependencies.validate-np
 dev	package-lock.json	/^      "dev": true,$/;"	b	object:dependencies.which
 devDependencies	package.json	/^  "devDependencies": {$/;"	o
 disableScript	assets/js/vendor/jquery/jquery-3.4.1.js	/^function disableScript( elem ) {$/;"	f
+discourse-comments	_includes/_site/comments.html	/^      <section id="discourse-comments"><\/section>$/;"	I
 discourse-comments	_includes/comments.html	/^      <section id="discourse-comments"><\/section>$/;"	I
+disqus_thread	_includes/_site/comments.html	/^      <section id="disqus_thread"><\/section>$/;"	I
 disqus_thread	_includes/comments.html	/^      <section id="disqus_thread"><\/section>$/;"	I
 div.highlighter-rouge	_site/assets/css/main.css	/^*\/.mfp-counter{font-family:Georgia,Times,serif}.mfp-bg{top:0;left:0;width:100%;height:100%;z-in/;"	c
 div.highlighter-rouge pre.highlight	_site/assets/css/main.css	/^*\/.mfp-counter{font-family:Georgia,Times,serif}.mfp-bg{top:0;left:0;width:100%;height:100%;z-in/;"	c
@@ -5233,6 +5245,7 @@ f	assets/js/lunr/lunr.min.js	/^!function(){var t,l,c,e,r,h,d,f,p,y,m,g,x,v,w,Q,k
 f	assets/js/main.min.js	/^!function(e,t){"use strict";"object"==typeof module&&"object"==typeof module.exports?module.expo/;"	f	function:AnonymousFunctiond0380e150100
 f	assets/js/main.min.js	/^!function(e,t){"use strict";"object"==typeof module&&"object"==typeof module.exports?module.expo/;"	f	function:AnonymousFunctiond0380e153300
 f	assets/js/main.min.js	/^return i(e,0,o)}):i}},pseudos:{not:r(function(e){var t=[],n=[],o=A(e.replace(ue,"$1"));return o[/;"	f	function:AnonymousFunctiond0380e15bb00.o.then.i.AnonymousFunctiond0380e15be00
+fb-root	_includes/_site/comments-providers/facebook.html	/^<div id="fb-root"><\/div>$/;"	I
 fb-root	_includes/comments-providers/facebook.html	/^<div id="fb-root"><\/div>$/;"	I
 fcamelCase	assets/js/vendor/jquery/jquery-3.4.1.js	/^function fcamelCase( all, letter ) {$/;"	f
 field	_site/assets/js/lunr/lunr.js	/^        var field = clause.fields[k]$/;"	v
@@ -6631,6 +6644,7 @@ nested	assets/js/plugins/gumshoe.js	/^		nested: false,$/;"	p	class:AnonymousFunc
 nestedClass	_site/assets/js/main.min.js	/^t.bgOverlay.attr("class","mfp-bg"),t.container.attr("class","mfp-container"),!t.st.showCloseBtn|/;"	p	class:AnonymousFunction92cdadd823e00.t
 nestedClass	assets/js/main.min.js	/^t.bgOverlay.attr("class","mfp-bg"),t.container.attr("class","mfp-container"),!t.st.showCloseBtn|/;"	p	class:AnonymousFunctiond0380e1523e00.t
 nestedClass	assets/js/plugins/gumshoe.js	/^		nestedClass: 'active',$/;"	p	class:AnonymousFunction8d83d1c70200.defaults
+new_comment	_includes/_site/comments.html	/^            <form id="new_comment" class="page__comments-form js-form form" method="post" action/;"	I
 new_comment	_includes/comments.html	/^            <form id="new_comment" class="page__comments-form js-form form" method="post" action/;"	I
 next	_site/assets/js/lunr/lunr.js	/^lunr.QueryLexer.prototype.next = function () {$/;"	m	class:lunr.QueryLexer
 next	_site/assets/js/lunr/lunr.min.js	/^!function(){var t,l,c,e,r,h,d,f,p,y,m,g,x,v,w,Q,k,S,E,L,b,P,T,O,I,i,n,s,z=function(e){var t=new /;"	m	class:z.QueryLexer
@@ -6888,6 +6902,7 @@ p>code:after	_site/assets/css/main.css	/^*\/.mfp-counter{font-family:Georgia,Tim
 p>code:before	_site/assets/css/main.css	/^*\/.mfp-counter{font-family:Georgia,Times,serif}.mfp-bg{top:0;left:0;width:100%;height:100%;z-in/;"	s
 padStart	_site/banner.js	/^const padStart = str => ("0" + str).slice(-2);$/;"	C
 padStart	banner.js	/^const padStart = str => ("0" + str).slice(-2);$/;"	C
+page-title	_includes/_site/page__hero.html	/^      <h1 id="page-title" class="page__title" itemprop="headline">$/;"	I
 page-title	_includes/page__hero.html	/^      <h1 id="page-title" class="page__title" itemprop="headline">$/;"	I
 page-title	_layouts/archive.html	/^      <h1 id="page-title" class="page__title">{{ page.title }}<\/h1>$/;"	I
 page-title	_layouts/search.html	/^      <h1 id="page-title" class="page__title">{{ page.title }}<\/h1>$/;"	I
@@ -7823,6 +7838,8 @@ resolved	package-lock.json	/^      "resolved": "https:\/\/registry.npmjs.org\/ut
 resolved	package-lock.json	/^      "resolved": "https:\/\/registry.npmjs.org\/validate-npm-package-license\/-\/validate-npm-p/;"	s	object:dependencies.validate-npm-package-license
 resolved	package-lock.json	/^      "resolved": "https:\/\/registry.npmjs.org\/which\/-\/which-1.3.0.tgz",$/;"	s	object:dependencies.which
 restoreScript	assets/js/vendor/jquery/jquery-3.4.1.js	/^function restoreScript( elem ) {$/;"	f
+results	_includes/_site/search/search_form.html	/^    <div id="results" class="results">$/;"	I
+results	_includes/_site/search/search_form.html	/^    <div id="results" class="results"><\/div>$/;"	I
 results	_includes/search/search_form.html	/^    <div id="results" class="results">$/;"	I
 results	_includes/search/search_form.html	/^    <div id="results" class="results"><\/div>$/;"	I
 results	_layouts/search.html	/^        <div id="results" class="results">$/;"	I
@@ -7909,6 +7926,7 @@ script	_site/banner.js	/^const script = fs.readFileSync(filename);$/;"	C
 script	banner.js	/^const script = fs.readFileSync(filename);$/;"	C
 scripts	package.json	/^  "scripts": {$/;"	o
 scrollHandler	assets/js/plugins/gumshoe.js	/^		var scrollHandler = function (event) {$/;"	f	function:AnonymousFunction8d83d1c70200.Constructor
+search	_includes/_site/search/search_form.html	/^    <input type="search" id="search" aria-placeholder="{{ site.data.ui-text[site.locale].search_/;"	I
 search	_includes/search/search_form.html	/^    <input type="search" id="search" aria-placeholder="{{ site.data.ui-text[site.locale].search_/;"	I
 search	_layouts/search.html	/^        <input type="text" id="search" class="search-input" tabindex="-1" placeholder="{{ site.d/;"	I
 search	_site/assets/js/lunr/lunr.js	/^lunr.Index.prototype.search = function (queryString) {$/;"	m	class:lunr.Index
@@ -7989,6 +8007,7 @@ similarity	_site/assets/js/lunr/lunr.js	/^lunr.Vector.prototype.similarity = fun
 similarity	_site/assets/js/lunr/lunr.min.js	/^!function(){var t,l,c,e,r,h,d,f,p,y,m,g,x,v,w,Q,k,S,E,L,b,P,T,O,I,i,n,s,z=function(e){var t=new /;"	m	class:z.Vector
 similarity	assets/js/lunr/lunr.js	/^lunr.Vector.prototype.similarity = function (otherVector) {$/;"	m	class:lunr.Vector
 similarity	assets/js/lunr/lunr.min.js	/^!function(){var t,l,c,e,r,h,d,f,p,y,m,g,x,v,w,Q,k,S,E,L,b,P,T,O,I,i,n,s,z=function(e){var t=new /;"	m	class:z.Vector
+site-nav	_includes/_site/masthead.html	/^      <nav id="site-nav" class="greedy-nav">$/;"	I
 site-nav	_includes/masthead.html	/^      <nav id="site-nav" class="greedy-nav">$/;"	I
 site-nav	_site/404.html	/^      <nav id="site-nav" class="greedy-nav">$/;"	I
 site-nav	_site/about.html	/^      <nav id="site-nav" class="greedy-nav">$/;"	I
@@ -8097,6 +8116,7 @@ src	docs/assets/images/manifest.json	/^			"src": "\\\/images\\\/android-chrome-9
 state	_site/assets/js/main.min.js	/^return i(e,0,o)}):i}},pseudos:{not:r(function(e){var t=[],n=[],o=A(e.replace(ue,"$1"));return o[/;"	m	class:AnonymousFunction92cdadd8bb00.o
 state	assets/js/main.min.js	/^return i(e,0,o)}):i}},pseudos:{not:r(function(e){var t=[],n=[],o=A(e.replace(ue,"$1"));return o[/;"	m	class:AnonymousFunctiond0380e15bb00.o
 state	assets/js/vendor/jquery/jquery-3.4.1.js	/^				state: function() {$/;"	m	class:AnonymousFunctiond20cc84b9b00.promise
+static-comments	_includes/_site/comments.html	/^      <section id="static-comments">$/;"	I
 static-comments	_includes/comments.html	/^      <section id="static-comments">$/;"	I
 static-extend	_site/package-lock.json	/^        "static-extend": "^0.1.1"$/;"	s	object:dependencies.class-utils.requires
 static-extend	_site/package-lock.json	/^    "static-extend": {$/;"	o	object:dependencies
@@ -8431,6 +8451,7 @@ util-deprecate	package-lock.json	/^        "util-deprecate": "~1.0.1"$/;"	s	obje
 util-deprecate	package-lock.json	/^        "util-deprecate": {$/;"	o	object:dependencies.fsevents.dependencies
 util-deprecate	package-lock.json	/^    "util-deprecate": {$/;"	o	object:dependencies
 utterances comments	docs/_docs/05-configuration.md	/^#### utterances comments$/;"	t
+utterances-comments	_includes/_site/comments.html	/^      <section id="utterances-comments"><\/section>$/;"	I
 utterances-comments	_includes/comments.html	/^      <section id="utterances-comments"><\/section>$/;"	I
 v	_site/assets/js/lunr/lunr.min.js	/^!function(){var t,l,c,e,r,h,d,f,p,y,m,g,x,v,w,Q,k,S,E,L,b,P,T,O,I,i,n,s,z=function(e){var t=new /;"	v
 v	_site/assets/js/main.min.js	/^!function(e,t){"use strict";"object"==typeof module&&"object"==typeof module.exports?module.expo/;"	f	function:AnonymousFunction92cdadd80100
@@ -9062,9 +9083,14 @@ z	assets/js/main.min.js	/^!function(e,t){"use strict";"object"==typeof module&&"
 zIndex	_site/assets/js/main.min.js	/^t.bgOverlay.attr("class","mfp-bg"),t.container.attr("class","mfp-container"),!t.st.showCloseBtn|/;"	p	class:AnonymousFunction92cdadd820a00.l.o
 zIndex	assets/js/main.min.js	/^t.bgOverlay.attr("class","mfp-bg"),t.container.attr("class","mfp-container"),!t.st.showCloseBtn|/;"	p	class:AnonymousFunctiond0380e1520a00.l.o
 zIndex	assets/js/plugins/jquery.magnific-popup.js	/^                zIndex: 9999,$/;"	p	class:AnonymousFunctionfcc5ed3c4000.cssObj
+{% if paginator and site.paginate_show_page_num %} {{ site.title }}{% unless paginator.page == 1 %} {{ site.data.ui-text[site.locale].page | default: "Page" }} {{ paginator.page }}{% endunless %} {% else %} {{ page.title | default: site.title | markdownify | remove: "" | remove: "" }} {% endif %}	_includes/_site/page__hero.html	/^      <\/h1>$/;"	h
 {% if paginator and site.paginate_show_page_num %} {{ site.title }}{% unless paginator.page == 1 %} {{ site.data.ui-text[site.locale].page | default: "Page" }} {{ paginator.page }}{% endunless %} {% else %} {{ page.title | default: site.title | markdownify | remove: "" | remove: "" }} {% endif %}	_includes/page__hero.html	/^      <\/h1>$/;"	h
+{% if post.link %} {{ title }} Permalink {% else %} {{ title }} {% endif %}	_includes/_site/archive-single.html	/^    <\/h2>$/;"	i
 {% if post.link %} {{ title }} Permalink {% else %} {{ title }} {% endif %}	_includes/archive-single.html	/^    <\/h2>$/;"	i
+{% unless include.url == blank %} {{ include.name }} {% else %} {{ include.name }} {% endunless %}	_includes/_site/comment.html	/^    <\/h3>$/;"	j
 {% unless include.url == blank %} {{ include.name }} {% else %} {{ include.name }} {% endunless %}	_includes/comment.html	/^    <\/h3>$/;"	j
+{{ author.name }}	_includes/_site/author-profile.html	/^      <a href="{{ author_link }}"><h3 class="author__name" itemprop="name">{{ author.name }}<\/h/;"	j
+{{ author.name }}	_includes/_site/author-profile.html	/^      <h3 class="author__name" itemprop="name">{{ author.name }}<\/h3>$/;"	j
 {{ author.name }}	_includes/author-profile.html	/^      <a href="{{ author_link }}"><h3 class="author__name" itemprop="name">{{ author.name }}<\/h/;"	j
 {{ author.name }}	_includes/author-profile.html	/^      <h3 class="author__name" itemprop="name">{{ author.name }}<\/h3>$/;"	j
 {{ category[0] | slugify | downcase }}	_layouts/categories.html	/^      <section id="{{ category[0] | slugify | downcase }}" class="taxonomy__section">$/;"	I
@@ -9077,6 +9103,7 @@ zIndex	assets/js/plugins/jquery.magnific-popup.js	/^                zIndex: 9999
 {{ page.title }}	_layouts/archive-taxonomy.html	/^    <h1 class="page__title">{{ page.title }}<\/h1>$/;"	h
 {{ page.title }}	_layouts/archive.html	/^      <h1 id="page-title" class="page__title">{{ page.title }}<\/h1>$/;"	h
 {{ page.title }}	_layouts/search.html	/^      <h1 id="page-title" class="page__title">{{ page.title }}<\/h1>$/;"	h
+{{ s.title }}	_includes/_site/sidebar.html	/^      {% if s.title %}<h3>{{ s.title }}<\/h3>{% endif %}$/;"	j
 {{ s.title }}	_includes/sidebar.html	/^      {% if s.title %}<h3>{{ s.title }}<\/h3>{% endif %}$/;"	j
 {{ site.data.ui-text[site.locale].recent_posts | default: "Recent Posts" }}	_layouts/home.html	/^<h3 class="archive__subtitle">{{ site.data.ui-text[site.locale].recent_posts | default: "Recent /;"	j
 {{ tag[0] | slugify | downcase }}	_layouts/tags.html	/^      <section id="{{ tag[0] | slugify | downcase }}" class="taxonomy__section">$/;"	I
