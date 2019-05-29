@@ -108,7 +108,7 @@ analytics:
 author:
   name             : "Stefan Mesken"
   avatar           : "/images/avatar.png" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "Mathematician and aspiring Data Scientist."
+  bio              : "Mathematician and Data Scientist."
   location         : "Cologne, Germany"
   links:
     - label: "Email"
