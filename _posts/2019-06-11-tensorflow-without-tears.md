@@ -12,7 +12,7 @@ I'm not complaining -- the last couple of months have been immensely enjoyable (
 
 # TensorFlow 2
 
-Instead, to finally return the ball of machine learning conversation to my readers, I'd like to share my excitement about [TensorFlow 2](https://www.tensorflow.org/beta/). The beta of TF2 has been announced 4 days ago and while I didn't take part in the alpha at all, I've reserved a bit of time over the weekend to play around with the newly released beta. And it's been incredibly exciting!
+Instead, to finally return the ball of machine learning conversation to my readers, I'd like to share my excitement about [TensorFlow 2](https://www.tensorflow.org/beta/). The beta of TF2 has been announced 4 days ago and while I didn't take part in the alpha at all, I've set aside a bit of time over the weekend to play around with the newly released beta. And it's been incredibly exciting!
 
 See, what often sets me apart in a group of people is that I really like to get down to the nuts and bolts of anything I lay my hands on. As a young child I've disassembled pretty much every electronic device in our household, I've worked on [charmingly simple cars](https://en.wikipedia.org/wiki/Trabant) by the time I graduated from kindergarten, I've spent most of my childhood in the workshop of my grandfather. This hands-on, detail-focused, borderline obsessive personality trait never left me.
 
