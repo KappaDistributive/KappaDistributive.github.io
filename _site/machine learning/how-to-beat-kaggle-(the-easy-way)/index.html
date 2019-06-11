@@ -10,7 +10,7 @@
     <meta charset="utf-8">
 
 <!-- begin _includes/seo.html --><title>How To Beat Kaggle (the Easy Way) - Stefan Mesken</title>
-<meta name="description" content="A few nights ago, I found myself tinkering with the Titanic dataset on Kaggle and couldn’t help but notice the number of people with a perfect score – many of whom have a single entry.">
+<meta name="description" content="A few nights ago, I found myself tinkering with the Titanic data set on Kaggle and couldn’t help but notice the number of people with a perfect score – many of whom have a single entry.">
 
 
 
@@ -21,7 +21,7 @@
 <meta property="og:url" content="http://localhost:4000/machine%20learning/how-to-beat-kaggle-(the-easy-way)/">
 
 
-  <meta property="og:description" content="A few nights ago, I found myself tinkering with the Titanic dataset on Kaggle and couldn’t help but notice the number of people with a perfect score – many of whom have a single entry.">
+  <meta property="og:description" content="A few nights ago, I found myself tinkering with the Titanic data set on Kaggle and couldn’t help but notice the number of people with a perfect score – many of whom have a single entry.">
 
 
 
@@ -29,7 +29,7 @@
 
   <meta name="twitter:site" content="@mesken_stefan">
   <meta name="twitter:title" content="How To Beat Kaggle (the Easy Way)">
-  <meta name="twitter:description" content="A few nights ago, I found myself tinkering with the Titanic dataset on Kaggle and couldn’t help but notice the number of people with a perfect score – many of whom have a single entry.">
+  <meta name="twitter:description" content="A few nights ago, I found myself tinkering with the Titanic data set on Kaggle and couldn’t help but notice the number of people with a perfect score – many of whom have a single entry.">
   <meta name="twitter:url" content="http://localhost:4000/machine%20learning/how-to-beat-kaggle-(the-easy-way)/">
 
   
@@ -41,7 +41,7 @@
 
 
 
-  <meta property="article:published_time" content="2019-05-25T00:00:00+02:00">
+  <meta property="article:published_time" content="2019-05-25T00:00:00+00:00">
 
 
 
@@ -199,7 +199,7 @@
     
     
       <p class="author__bio" itemprop="description">
-        Mathematician and aspiring Data Scientist.
+        Mathematician and Data Scientist.
       </p>
     
   </div>
@@ -298,7 +298,7 @@
 
   <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
     <meta itemprop="headline" content="How To Beat Kaggle (the Easy Way)">
-    <meta itemprop="description" content="A few nights ago, I found myself tinkering with the Titanic dataset on Kaggle and couldn’t help but notice the number of people with a perfect score – many of whom have a single entry.">
+    <meta itemprop="description" content="A few nights ago, I found myself tinkering with the Titanic data set on Kaggle and couldn’t help but notice the number of people with a perfect score – many of whom have a single entry.">
     <meta itemprop="datePublished" content="May 25, 2019">
     
 
@@ -321,7 +321,7 @@
 
       <section class="page__content" itemprop="text">
         
-        <p>A few nights ago, I found myself tinkering with the <a href="https://www.kaggle.com/c/titanic">Titanic dataset on Kaggle</a> and couldn’t help but notice the number of people with a <a href="https://www.kaggle.com/c/titanic/leaderboard">perfect score</a> – many of whom have a single entry.</p>
+        <p>A few nights ago, I found myself tinkering with the <a href="https://www.kaggle.com/c/titanic">Titanic data set on Kaggle</a> and couldn’t help but notice the number of people with a <a href="https://www.kaggle.com/c/titanic/leaderboard">perfect score</a> – many of whom have a single entry.</p>
 
 <p>So, I thought to myself: “Clearly, they must be cheating. But how do you cheat efficiently?”</p>
 
@@ -329,7 +329,7 @@
 
 <p>The Kaggle competition ‘Titanic: Machine Learning from Disaster’ (and in fact any classification competition on Kaggle) can be modelled as follows:</p>
 
-<p>Kaggle asks you to find a secret <script type="math/tex">n</script>-dimensional vector <script type="math/tex">\vec{k} = (k_1, k_2, \ldots, k_n)</script> (with <script type="math/tex">n=418</script> for the Titanic dataset) where each number <script type="math/tex">k_i</script> is either <script type="math/tex">0</script> (the passenger with ID <script type="math/tex">i</script> didn’t survive) or <script type="math/tex">1</script> (the passenger with ID <script type="math/tex">i</script> did survive). So all we really have to do is to guess <script type="math/tex">\vec{k}</script> – no need for fancy machine learning techniques!</p>
+<p>Kaggle asks you to find a secret <script type="math/tex">n</script>-dimensional vector <script type="math/tex">\vec{k} = (k_1, k_2, \ldots, k_n)</script> (with <script type="math/tex">n=418</script> for the Titanic data set) where each number <script type="math/tex">k_i</script> is either <script type="math/tex">0</script> (the passenger with ID <script type="math/tex">i</script> didn’t survive) or <script type="math/tex">1</script> (the passenger with ID <script type="math/tex">i</script> did survive). So all we really have to do is to guess <script type="math/tex">\vec{k}</script> – no need for fancy machine learning techniques!</p>
 
 <p>There are <script type="math/tex">2^n</script> many possible values for <script type="math/tex">\vec{k}</script> and guessing all of them would be practically impossible. Fortunately, there’s one more ingredient to Kaggle that we can exploit: If we submit a guess <script type="math/tex">\vec{g} = (g_1, \ldots, g_n)</script> to Kaggle, it will return a score – the number of correct guesses. I.e. the number of <script type="math/tex">i</script>s such that <script type="math/tex">g_i = k_i</script>.</p>
 
@@ -502,7 +502,7 @@ d_{H(n)}(\vec{g},\vec{r}) = n - s(\vec{r})
 
 
         
-          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2019-05-25T00:00:00+02:00">May 25, 2019</time></p>
+          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2019-05-25T00:00:00+00:00">May 25, 2019</time></p>
         
       </footer>
 
@@ -520,6 +520,16 @@ d_{H(n)}(\vec{g},\vec{r}) = n - s(\vec{r})
 
 
       
+  <nav class="pagination">
+    
+      <a href="#" class="pagination--pager disabled">Previous</a>
+    
+    
+      <a href="/machine%20learning/tensorflow-without-tears/" class="pagination--pager" title="TensorFlow Without Tears
+">Next</a>
+    
+  </nav>
+
     </div>
 
     
@@ -532,9 +542,63 @@ d_{H(n)}(\vec{g},\vec{r}) = n - s(\vec{r})
       <div class="grid__wrapper">
         
           
-            
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/tf2-hello-world/" rel="permalink">Tf2 Hello World
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  less than 1 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/machine%20learning/tensorflow-without-tears/" rel="permalink">TensorFlow Without Tears
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  5 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">Life is pretty crazy right now. Finishing a PhD, changing from set theory to applied data science, forming connections to other data scientists, learning as ...</p>
+  </article>
+</div>
+
+        
       </div>
     </div>
+  
   
 </div>
 

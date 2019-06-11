@@ -4,7 +4,7 @@ mathjax: true
 category: Machine Learning
 tags: [machine learning, mathematics, graph theory]
 ---
-A few nights ago, I found myself tinkering with the [Titanic dataset on Kaggle](https://www.kaggle.com/c/titanic) and couldn't help but notice the number of people with a [perfect score](https://www.kaggle.com/c/titanic/leaderboard) -- many of whom have a single entry.
+A few nights ago, I found myself tinkering with the [Titanic data set on Kaggle](https://www.kaggle.com/c/titanic) and couldn't help but notice the number of people with a [perfect score](https://www.kaggle.com/c/titanic/leaderboard) -- many of whom have a single entry.
 
 So, I thought to myself: "Clearly, they must be cheating. But how do you cheat efficiently?"
 
@@ -12,7 +12,7 @@ So, I thought to myself: "Clearly, they must be cheating. But how do you cheat e
 
 The Kaggle competition 'Titanic: Machine Learning from Disaster' (and in fact any classification competition on Kaggle) can be modelled as follows: 
 
-Kaggle asks you to find a secret $$n$$-dimensional vector $$\vec{k} = (k_1, k_2, \ldots, k_n)$$ (with $$n=418$$ for the Titanic dataset) where each number $$k_i$$ is either $$0$$ (the passenger with ID $$i$$ didn't survive) or $$1$$ (the passenger with ID $$i$$ did survive). So all we really have to do is to guess $$\vec{k}$$ -- no need for fancy machine learning techniques!
+Kaggle asks you to find a secret $$n$$-dimensional vector $$\vec{k} = (k_1, k_2, \ldots, k_n)$$ (with $$n=418$$ for the Titanic data set) where each number $$k_i$$ is either $$0$$ (the passenger with ID $$i$$ didn't survive) or $$1$$ (the passenger with ID $$i$$ did survive). So all we really have to do is to guess $$\vec{k}$$ -- no need for fancy machine learning techniques!
 
 There are $$2^n$$ many possible values for $$\vec{k}$$ and guessing all of them would be practically impossible. Fortunately, there's one more ingredient to Kaggle that we can exploit: If we submit a guess $$\vec{g} = (g_1, \ldots, g_n)$$ to Kaggle, it will return a score -- the number of correct guesses. I.e. the number of $$i$$s such that $$g_i = k_i$$.
 

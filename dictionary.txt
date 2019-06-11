@@ -1,0 +1,19 @@
+personal_ws-1.1 en 18 utf-8
+vec
+dataflow
+Keras
+Jupyter
+png
+mapsto
+mathjax
+Kaggle
+subseteq
+APIs
+img
+performant
+src
+TF
+ldots
+undirected
+figcaption
+infty

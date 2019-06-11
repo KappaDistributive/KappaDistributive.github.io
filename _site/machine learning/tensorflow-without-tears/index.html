@@ -1,0 +1,642 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.16.3 by Michael Rose
+  Copyright 2013-2019 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>TensorFlow Without Tears - Stefan Mesken</title>
+<meta name="description" content="Life is pretty crazy right now. Finishing a PhD, changing from set theory to applied data science, forming connections to other data scientists, learning as much about machine learning (both theory and practice) as I possibly can, finding a new apartment and preparing to move, dealing with German bureaucracy… This doesn’t leave a lot of spare time. Truth be told, it doesn’t leave any.">
+
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Stefan Mesken">
+<meta property="og:title" content="TensorFlow Without Tears">
+<meta property="og:url" content="http://localhost:4000/machine%20learning/tensorflow-without-tears/">
+
+
+  <meta property="og:description" content="Life is pretty crazy right now. Finishing a PhD, changing from set theory to applied data science, forming connections to other data scientists, learning as much about machine learning (both theory and practice) as I possibly can, finding a new apartment and preparing to move, dealing with German bureaucracy… This doesn’t leave a lot of spare time. Truth be told, it doesn’t leave any.">
+
+
+
+
+
+  <meta name="twitter:site" content="@mesken_stefan">
+  <meta name="twitter:title" content="TensorFlow Without Tears">
+  <meta name="twitter:description" content="Life is pretty crazy right now. Finishing a PhD, changing from set theory to applied data science, forming connections to other data scientists, learning as much about machine learning (both theory and practice) as I possibly can, finding a new apartment and preparing to move, dealing with German bureaucracy… This doesn’t leave a lot of spare time. Truth be told, it doesn’t leave any.">
+  <meta name="twitter:url" content="http://localhost:4000/machine%20learning/tensorflow-without-tears/">
+
+  
+    <meta name="twitter:card" content="summary">
+    
+  
+
+  
+
+
+
+  <meta property="article:published_time" content="2019-06-11T00:00:00+00:00">
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="http://localhost:4000/machine%20learning/tensorflow-without-tears/">
+
+
+
+
+
+
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Stefan Mesken",
+      "url": "http://localhost:4000",
+      "sameAs": null
+    }
+  </script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Stefan Mesken Feed">
+
+<!-- ****** faviconit.com favicons ****** -->
+	<link rel="shortcut icon" href="/assets/favicon/favicon.ico">
+	<link rel="icon" sizes="16x16 32x32 64x64" href="/assets/favicon/favicon.ico">
+	<link rel="icon" type="image/png" sizes="196x196" href="/assets/favicon/favicon-192.png">
+	<link rel="icon" type="image/png" sizes="160x160" href="/assets/favicon/favicon-160.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="/assets/favicon/favicon-96.png">
+	<link rel="icon" type="image/png" sizes="64x64" href="/assets/favicon/favicon-64.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16.png">
+	<link rel="apple-touch-icon" href="/assets/favicon/favicon-57.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="/assets/favicon/favicon-114.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="/assets/favicon/favicon-72.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="/assets/favicon/favicon-144.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="/assets/favicon/favicon-60.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="/assets/favicon/favicon-120.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="/assets/favicon/favicon-76.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="/assets/favicon/favicon-152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/favicon-180.png">
+	<meta name="msapplication-TileColor" content="#FFFFFF">
+	<meta name="msapplication-TileImage" content="/assets/favicon/favicon-144.png">
+	<meta name="msapplication-config" content="/assets/favicon/browserconfig.xml">
+	<!-- ****** faviconit.com favicons ****** -->
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<!--[if IE ]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/">Stefan Mesken</a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/blog/" >Blog</a>
+            </li><li class="masthead__menu-item">
+              <a href="/about.html" >About</a>
+            </li></ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="https://schema.org/Person">
+
+  
+    <div class="author__avatar">
+      
+
+      
+        <img src="/images/avatar.png" alt="Stefan Mesken" itemprop="image">
+      
+    </div>
+  
+
+  <div class="author__content">
+    
+      <h3 class="author__name" itemprop="name">Stefan Mesken</h3>
+    
+    
+      <p class="author__bio" itemprop="description">
+        Mathematician and Data Scientist.
+      </p>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+        <li itemprop="homeLocation" itemscope itemtype="https://schema.org/Place">
+          <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name">Cologne, Germany</span>
+        </li>
+      
+
+      
+        
+          
+        
+          
+        
+          
+            <li><a href="https://twitter.com/mesken_stefan" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i> Twitter</a></li>
+          
+        
+          
+        
+          
+            <li><a href="https://github.com/KappaDistributive" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+          
+        
+          
+        
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="TensorFlow Without Tears">
+    <meta itemprop="description" content="Life is pretty crazy right now. Finishing a PhD, changing from set theory to applied data science, forming connections to other data scientists, learning as much about machine learning (both theory and practice) as I possibly can, finding a new apartment and preparing to move, dealing with German bureaucracy… This doesn’t leave a lot of spare time. Truth be told, it doesn’t leave any.">
+    <meta itemprop="datePublished" content="June 11, 2019">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">TensorFlow Without Tears
+</h1>
+          
+            <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  5 minute read
+</p>
+          
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+        <p>Life is pretty crazy right now. Finishing a PhD, changing from set theory to applied data science, forming connections to other data scientists, learning as much about machine learning (both theory and practice) as I possibly can, finding a new apartment and preparing to move, dealing with German bureaucracy… This doesn’t leave a lot of spare time. Truth be told, it doesn’t leave any.</p>
+
+<p>I’m not complaining – the last couple of months have been immensely enjoyable (well, except for the bureaucracy part). But being pressed for time also made me decide to postpone my planned blog series on the importance of probability distributions in machine learning as I’m currently lacking the spare mental capacity to do this rather broad, open-ended topic justice.</p>
+
+<h1 id="tensorflow-2">TensorFlow 2</h1>
+
+<p>Instead, to finally return the ball of machine learning conversation to my readers, I’d like to share my excitement about <a href="https://www.tensorflow.org/beta/">TensorFlow 2</a>. The beta of TF2 has been announced 4 days ago and while I didn’t take part in the alpha at all, I’ve reserved a bit of time over the weekend to play around with the newly released beta. And it’s been incredibly exciting!</p>
+
+<p>See, what often sets me apart in a group of people is that I really like to get down to the nuts and bolts of anything I lay my hands on. As a young child I’ve disassembled pretty much every electronic device in our household, I’ve worked on <a href="https://en.wikipedia.org/wiki/Trabant">charmingly simple cars</a> by the time I graduated from kindergarten, I’ve spent most of my childhood in the workshop of my grandfather. This hands-on, detail-focused, borderline obsessive personality trait never left me.</p>
+
+<p>And it’s precisely what made me fall in love with TF1 when I first discovered it. TF1, at least to me, isn’t really a machine learning framework at heart. Admittedly, it has a bunch of utilities built into it that are useful in machine learning applications, but what TF1 does at its core is to provide a framework for the manipulation of dataflow graphs. This philosophy makes TF1 very versatile, performant and transparent. But it also sets up a learning curve that, especially to someone without a background in mathematics or computer science, looks more like a learning wall. And like so many other learning walls (vi anyone?), it naturally turns away a lot of people. Especially those people that I’ve benefited the most from during my entire life: People who, unlike me, don’t care much about bolts and nuts but who naturally focus much more on the greater picture, who provide a sense of style, a desire for polish that benefits the entire community.</p>
+
+<p><a href="https://keras.io/">Keras</a> has done a lot to attract a more diverse group of users to TensorFlow 1. To quote their <a href="https://keras.io/why-use-keras/">FAQ</a>:</p>
+
+<blockquote>
+  <p><strong>Keras prioritizes developer experience</strong></p>
+
+  <ul>
+    <li>Keras is an API designed for human beings, not machines. Keras follows best practices for reducing cognitive load: it offers consistent &amp; simple APIs, it minimizes the number of user actions required for common use cases, and it provides clear and actionable feedback upon user error.</li>
+    <li>This makes Keras easy to learn and easy to use. As a Keras user, you are more productive, allowing you to try more ideas than your competition, faster – which in turn helps you win machine learning competitions.</li>
+    <li>This ease of use does not come at the cost of reduced flexibility: because Keras integrates with lower-level deep learning languages (in particular TensorFlow), it enables you to implement anything you could have built in the base language. In particular, as tf.keras, the Keras API integrates seamlessly with your TensorFlow workflows.</li>
+  </ul>
+</blockquote>
+
+<p>This amazing body of work has enabled TF2 to pull off what so rarely seems attainable: By embracing Keras’ philosophy, TF2 became a piece of software that is both user-friendly and still provides all the functionality, all the performance and all the transparency any user could ask for. This almost never happens but when it does, it makes me really, really happy.</p>
+
+<h1 id="hello-im-tensorflow">Hello, I’m TensorFlow.</h1>
+
+<p>In an effort to invite as many people as possible to share my excitement about TF2 and join the discussion, I’d like to end this post with a very simple regression task completed in TensorFlow 2. We aim to approximate the function <script type="math/tex">\sin \colon [0, 2 \pi] \to [-1, 1], x \mapsto \sin (x)</script> with a neural network. You can find the <a href="https://colab.research.google.com/drive/1b1Lil2bfpT--axFKgd2z-2LeIkCv0z5Y">interactive Jupyter notebook over at Google Colaboratory</a> or just continue reading for a slighly more verbose version.</p>
+
+<p>The first part of any machine learning project is to load our dependencies.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">!</span><span class="n">pip</span> <span class="n">install</span> <span class="n">tf</span><span class="o">-</span><span class="n">nightly</span><span class="o">-</span><span class="mf">2.0</span><span class="o">-</span><span class="n">preview</span>
+<span class="kn">import</span> <span class="nn">tensorflow</span> <span class="k">as</span> <span class="n">tf</span>
+
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="n">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="n">plt</span>
+</code></pre></div></div>
+
+<p>Next, we load our data. In this case, to keep things as simple as possible, we will simply create the sine function on the interval <script type="math/tex">[0, 2 \pi]</script> and approximate it.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">,</span> <span class="mi">2</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span> <span class="o">/</span> <span class="mi">10000</span><span class="p">)</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>When possible, it’s always a good idea to look at a visual representation of your data. This serves as a baseline sanity check to ensure there is no immediately obvious problem.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">)</span>
+</code></pre></div></div>
+
+<figure style="align: center">
+  <img src="/images/diagrams/sine.png" style="max-width: 400px;" alt="graph of the sine function" />
+</figure>
+
+<p>That looks okay, so let’s continue by building our neural network. The integration of Keras makes this very simple:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Build a neural network with 2 hidden layers, each of size 128
+</span><span class="n">model</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">keras</span><span class="o">.</span><span class="n">models</span><span class="o">.</span><span class="n">Sequential</span><span class="p">([</span>
+    <span class="n">tf</span><span class="o">.</span><span class="n">keras</span><span class="o">.</span><span class="n">layers</span><span class="o">.</span><span class="n">Dense</span><span class="p">(</span><span class="mi">128</span><span class="p">,</span> <span class="n">activation</span><span class="o">=</span><span class="s">'relu'</span><span class="p">,</span> <span class="n">input_shape</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">]),</span>
+    <span class="n">tf</span><span class="o">.</span><span class="n">keras</span><span class="o">.</span><span class="n">layers</span><span class="o">.</span><span class="n">Dense</span><span class="p">(</span><span class="mi">128</span><span class="p">,</span> <span class="n">activation</span><span class="o">=</span><span class="s">'relu'</span><span class="p">),</span>
+    <span class="n">tf</span><span class="o">.</span><span class="n">keras</span><span class="o">.</span><span class="n">layers</span><span class="o">.</span><span class="n">Dense</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">activation</span><span class="o">=</span><span class="s">'linear'</span><span class="p">)</span>
+<span class="p">])</span>
+</code></pre></div></div>
+
+<p>Compiling the model is similarly trivial.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">model</span><span class="o">.</span><span class="nb">compile</span><span class="p">(</span><span class="n">optimizer</span><span class="o">=</span><span class="s">'adam'</span><span class="p">,</span>
+              <span class="n">loss</span><span class="o">=</span><span class="s">'mean_squared_error'</span><span class="p">,</span>
+              <span class="n">metrics</span><span class="o">=</span><span class="p">[</span><span class="s">'accuracy'</span><span class="p">])</span>
+</code></pre></div></div>
+
+<p>Finally, let’s fit the neural network to our training data.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span> <span class="n">epochs</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+</code></pre></div></div>
+
+<blockquote>
+  <p>Train on 10000 samples</p>
+
+  <p>Epoch 1/5
+10000/10000 [==============================] - 1s 72us/sample - loss: 0.1698 - accuracy: 2.0000e-04</p>
+
+  <p>Epoch 2/5
+10000/10000 [==============================] - 1s 61us/sample - loss: 0.0904 - accuracy: 2.0000e-04</p>
+
+  <p>Epoch 3/5
+10000/10000 [==============================] - 1s 58us/sample - loss: 0.0415 - accuracy: 2.0000e-04</p>
+
+  <p>Epoch 4/5
+10000/10000 [==============================] - 1s 53us/sample - loss: 0.0109 - accuracy: 2.0000e-04</p>
+
+  <p>Epoch 5/5
+10000/10000 [==============================] - 1s 52us/sample - loss: 0.0023 - accuracy: 2.0000e-04</p>
+
+  <p>&lt;tensorflow.python.keras.callbacks.History at 0x7fa30305c5f8&gt;</p>
+</blockquote>
+
+<p>That’s it! We’ve created and successfully trained a neural network to approximate the sine function on <script type="math/tex">[0, 2 \pi]</script> and the training output seems encouraging. All that’s left to do is to visualize how well we’ve done:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">pred</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">pred</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s">'model prediction'</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+</code></pre></div></div>
+
+<figure style="align: center">
+  <img src="/images/diagrams/since_prediction.png" style="max-width: 400px;" alt="prediction of the sine function" />
+</figure>
+
+<p>Not bad, not bad at all! The interval <script type="math/tex">[5,2 \pi]</script> needs some work (and I encourage you to think about why our model performed so much worse on that section) but other than that, I’d say that our model does know how to create a sine wave.</p>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+  
+
+
+  
+  
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="/tags/#machine-learning" class="page__taxonomy-item" rel="tag">machine learning</a>
+    
+    </span>
+  </p>
+
+
+
+
+  
+
+
+  
+  
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> Categories: </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="/categories/#machine-learning" class="page__taxonomy-item" rel="tag">Machine Learning</a>
+    
+    </span>
+  </p>
+
+
+        
+          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2019-06-11T00:00:00+00:00">June 11, 2019</time></p>
+        
+      </footer>
+
+      <section class="page__share">
+  
+    <h4 class="page__share-title">Share on</h4>
+  
+
+  <a href="https://twitter.com/intent/tweet?via=mesken_stefan&text=TensorFlow+Without+Tears%20http%3A%2F%2Flocalhost%3A4000%2Fmachine%2520learning%2Ftensorflow-without-tears%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A4000%2Fmachine%2520learning%2Ftensorflow-without-tears%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Flocalhost%3A4000%2Fmachine%2520learning%2Ftensorflow-without-tears%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+
+      
+  <nav class="pagination">
+    
+      <a href="/machine%20learning/how-to-beat-kaggle-(the-easy-way)/" class="pagination--pager" title="How To Beat Kaggle (the Easy Way)
+">Previous</a>
+    
+    
+      <a href="/tf2-hello-world/" class="pagination--pager" title="Tf2 Hello World
+">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      <h4 class="page__related-title">You may also enjoy</h4>
+      <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/tf2-hello-world/" rel="permalink">Tf2 Hello World
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  less than 1 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/machine%20learning/how-to-beat-kaggle-(the-easy-way)/" rel="permalink">How To Beat Kaggle (the Easy Way)
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  6 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">A few nights ago, I found myself tinkering with the Titanic data set on Kaggle and couldn’t help but notice the number of people with a perfect score – many ...</p>
+  </article>
+</div>
+
+        
+      </div>
+    </div>
+  
+  
+</div>
+
+    </div>
+
+    
+
+    <div class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+
+    <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2019 Stefan Mesken. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+  <script defer src="https://use.fontawesome.com/releases/v5.8.1/js/all.js" integrity="sha384-g5uSoOSBd7KkhAMlnQILrecXvzst9TdC09/VM+pjDTCM+1il8RHz5fKANTFFb+gQ" crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" async
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+
+
+  </body>
+</html>

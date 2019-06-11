@@ -2878,6 +2878,7 @@ Bug Fix	CHANGELOG.md	/^### Bug Fix$/;"	S
 Bug Fix	docs/_docs/18-history.md	/^### Bug Fix$/;"	S
 Bug Fixes	CHANGELOG.md	/^### Bug Fixes$/;"	S
 Bug Fixes	docs/_docs/18-history.md	/^### Bug Fixes$/;"	S
+Build a neural network with 2 hidden layers, each of size 128	_posts/2019-06-11-tensorflow-without-tears.md	/^# Build a neural network with 2 hidden layers, each of size 128$/;"	c
 Build process	docs/_docs/17-javascript.md	/^## Build process$/;"	s
 Builder	_site/assets/js/lunr/lunr.js	/^lunr.Builder = function () {$/;"	c	class:lunr
 Builder	_site/assets/js/lunr/lunr.js	/^lunr.TokenSet.Builder = function () {$/;"	c	class:lunr.TokenSet
@@ -3050,6 +3051,7 @@ Google Analytics and Webmaster Tools	docs/_docs/20-docs-2-2.md	/^#### Google Ana
 Google Custom Search Engine	docs/_docs/05-configuration.md	/^#### Google Custom Search Engine$/;"	t
 Google Drive	docs/_docs/14-helpers.md	/^### Google Drive$/;"	S
 Google Search Console	docs/_docs/05-configuration.md	/^#### Google Search Console$/;"	t
+Gradient Descent	_site/drafts/2019-06-02-gradient-descent/index.html	/^<h1 id="gradient-descent"><a href="https:\/\/en.wikipedia.org\/wiki\/Gradient_descent">Gradient /;"	h
 Grid view	docs/_docs/10-layouts.md	/^### Grid view$/;"	S
 Group by array	docs/_docs/14-helpers.md	/^## Group by array$/;"	s
 H	_site/assets/js/main.min.js	/^!function(e,t){"use strict";"object"==typeof module&&"object"==typeof module.exports?module.expo/;"	f
@@ -3089,6 +3091,8 @@ Header two	test/_pages/archive-layout-with-content.md	/^## Header two$/;"	s
 Header two	test/_posts/2013-01-11-markup-html-tags-and-formatting.md	/^## Header two$/;"	s
 Headers	docs/_docs/10-layouts.md	/^## Headers$/;"	s
 Hello! This is where you manage which Jekyll version is used to run.	docs/_docs/03-installation.md	/^# Hello! This is where you manage which Jekyll version is used to run.$/;"	c
+Hello, I'm TensorFlow.	_posts/2019-06-11-tensorflow-without-tears.md	/^# Hello, I'm TensorFlow.$/;"	c
+Hello, I’m TensorFlow.	_site/machine learning/tensorflow-without-tears/index.html	/^<h1 id="hello-im-tensorflow">Hello, I’m TensorFlow.<\/h1>$/;"	h
 Home page layout	docs/_docs/10-layouts.md	/^## Home page layout$/;"	s
 Hoodie Duis	docs/_posts/2012-03-15-layout-header-image-text-readability.md	/^## Hoodie Duis$/;"	s
 Hoodie Duis	docs/_posts/2012-05-22-markup-text-readability-wide-page.md	/^## Hoodie Duis$/;"	s
@@ -3098,6 +3102,8 @@ Hoodie Duis	test/_posts/2012-05-22-markup-text-readability-wide-page.md	/^## Hoo
 Hoodie Duis	test/_posts/2012-05-22-markup-text-readability.md	/^## Hoodie Duis$/;"	s
 How To Beat Kaggle (the Easy Way)	_site/index.html	/^    <\/h2>$/;"	i
 How To Beat Kaggle (the Easy Way)	_site/machine learning/how-to-beat-kaggle-(the-easy-way)/index.html	/^<\/h1>$/;"	h
+How To Beat Kaggle (the Easy Way)	_site/machine learning/tensorflow-without-tears/index.html	/^    <\/h2>$/;"	i
+How To Beat Kaggle (the Easy Way)	_site/tf2-hello-world/index.html	/^    <\/h2>$/;"	i
 I	_site/assets/js/lunr/lunr.min.js	/^!function(){var t,l,c,e,r,h,d,f,p,y,m,g,x,v,w,Q,k,S,E,L,b,P,T,O,I,i,n,s,z=function(e){var t=new /;"	v
 I	_site/assets/js/main.min.js	/^!function(e,t){"use strict";"object"==typeof module&&"object"==typeof module.exports?module.expo/;"	f
 I	assets/js/lunr/lunr.min.js	/^!function(){var t,l,c,e,r,h,d,f,p,y,m,g,x,v,w,Q,k,S,E,L,b,P,T,O,I,i,n,s,z=function(e){var t=new /;"	v
@@ -3355,8 +3361,12 @@ Staticman v3	docs/_docs/05-configuration.md	/^###### Staticman v3$/;"	u
 Stefan Mesken	_site/404.html	/^      <h3 class="author__name" itemprop="name">Stefan Mesken<\/h3>$/;"	j
 Stefan Mesken	_site/about.html	/^      <h3 class="author__name" itemprop="name">Stefan Mesken<\/h3>$/;"	j
 Stefan Mesken	_site/blog/index.html	/^      <h3 class="author__name" itemprop="name">Stefan Mesken<\/h3>$/;"	j
+Stefan Mesken	_site/drafts/2019-06-02-gradient-descent/index.html	/^      <h3 class="author__name" itemprop="name">Stefan Mesken<\/h3>$/;"	j
+Stefan Mesken	_site/drafts/2019-06-06-distribution-matter-part-1/index.html	/^      <h3 class="author__name" itemprop="name">Stefan Mesken<\/h3>$/;"	j
 Stefan Mesken	_site/index.html	/^      <h3 class="author__name" itemprop="name">Stefan Mesken<\/h3>$/;"	j
 Stefan Mesken	_site/machine learning/how-to-beat-kaggle-(the-easy-way)/index.html	/^      <h3 class="author__name" itemprop="name">Stefan Mesken<\/h3>$/;"	j
+Stefan Mesken	_site/machine learning/tensorflow-without-tears/index.html	/^      <h3 class="author__name" itemprop="name">Stefan Mesken<\/h3>$/;"	j
+Stefan Mesken	_site/tf2-hello-world/index.html	/^      <h3 class="author__name" itemprop="name">Stefan Mesken<\/h3>$/;"	j
 Step 1: Remove Theme Files	docs/_posts/2016-09-21-gemified-theme-alpha.md	/^## Step 1: Remove Theme Files $/;"	s
 Step 1: Remove Theme Files	docs/_posts/2016-10-06-gemified-theme-beta.md	/^## Step 1: Remove Theme Files $/;"	s
 Step 2: Update `Gemfile`	docs/_posts/2016-09-21-gemified-theme-alpha.md	/^## Step 2: Update `Gemfile`$/;"	s
@@ -3407,7 +3417,17 @@ Tables	test/_posts/2013-01-11-markup-html-tags-and-formatting.md	/^## Tables$/;"
 Task Lists	docs/_posts/2009-05-15-edge-case-nested-and-mixed-lists.md	/^### Task Lists$/;"	S
 Task Lists	test/_posts/2009-05-15-edge-case-nested-and-mixed-lists.md	/^### Task Lists$/;"	S
 Taxonomy archives	docs/_docs/10-layouts.md	/^## Taxonomy archives$/;"	s
+TensorFlow 2	_posts/2019-06-11-tensorflow-without-tears.md	/^# TensorFlow 2$/;"	c
+TensorFlow 2	_site/machine learning/tensorflow-without-tears/index.html	/^<h1 id="tensorflow-2">TensorFlow 2<\/h1>$/;"	h
+TensorFlow Without Tears	_site/index.html	/^    <\/h2>$/;"	i
+TensorFlow Without Tears	_site/machine learning/how-to-beat-kaggle-(the-easy-way)/index.html	/^    <\/h2>$/;"	i
+TensorFlow Without Tears	_site/machine learning/tensorflow-without-tears/index.html	/^<\/h1>$/;"	h
+TensorFlow Without Tears	_site/tf2-hello-world/index.html	/^    <\/h2>$/;"	i
 Text alignment	docs/_docs/15-utility-classes.md	/^## Text alignment$/;"	s
+Tf2 Hello World	_site/index.html	/^    <\/h2>$/;"	i
+Tf2 Hello World	_site/machine learning/how-to-beat-kaggle-(the-easy-way)/index.html	/^    <\/h2>$/;"	i
+Tf2 Hello World	_site/machine learning/tensorflow-without-tears/index.html	/^    <\/h2>$/;"	i
+Tf2 Hello World	_site/tf2-hello-world/index.html	/^<\/h1>$/;"	h
 The following plugins are automatically loaded by the theme-gem:	docs/_docs/03-installation.md	/^# The following plugins are automatically loaded by the theme-gem:$/;"	c
 Theme	docs/_docs/05-configuration.md	/^### Theme$/;"	S
 Theme migration	docs/_docs/03-installation.md	/^## Theme migration$/;"	s
@@ -3694,6 +3714,7 @@ Z	assets/js/main.min.js	/^!function(e,t){"use strict";"object"==typeof module&&"
 [4.9.0](https://github.com/mmistakes/minimal-mistakes/releases/tag/4.9.0)	docs/_docs/18-history.md	/^## [4.9.0](https:\/\/github.com\/mmistakes\/minimal-mistakes\/releases\/tag\/4.9.0)$/;"	s
 [4.9.1](https://github.com/mmistakes/minimal-mistakes/releases/tag/4.9.1)	CHANGELOG.md	/^## [4.9.1](https:\/\/github.com\/mmistakes\/minimal-mistakes\/releases\/tag\/4.9.1)$/;"	s
 [4.9.1](https://github.com/mmistakes/minimal-mistakes/releases/tag/4.9.1)	docs/_docs/18-history.md	/^## [4.9.1](https:\/\/github.com\/mmistakes\/minimal-mistakes\/releases\/tag\/4.9.1)$/;"	s
+[Gradient Descent](https://en.wikipedia.org/wiki/Gradient_descent)	drafts/2019-06-02-gradient-descent.md	/^# [Gradient Descent](https:\/\/en.wikipedia.org\/wiki\/Gradient_descent)$/;"	c
 [Minimal Mistakes Jekyll theme](https://mmistakes.github.io/minimal-mistakes/)	README.md	/^# [Minimal Mistakes Jekyll theme](https:\/\/mmistakes.github.io\/minimal-mistakes\/)$/;"	c
 _	_site/assets/js/lunr/lunr.min.js	/^!function(){var t,l,c,e,r,h,d,f,p,y,m,g,x,v,w,Q,k,S,E,L,b,P,T,O,I,i,n,s,z=function(e){var t=new /;"	v
 _	_site/assets/js/main.min.js	/^!function(e,t){"use strict";"object"==typeof module&&"object"==typeof module.exports?module.expo/;"	f
@@ -5300,9 +5321,11 @@ fn	assets/js/main.min.js	/^return i(e,0,o)}):i}},pseudos:{not:r(function(e){var 
 fn	assets/js/vendor/jquery/jquery-3.4.1.js	/^				fn = function( elem, key, value ) {$/;"	f	function:AnonymousFunctiond20cc84bab00
 fn	assets/js/vendor/jquery/jquery-3.4.1.js	/^		fn = function( event ) {$/;"	f	function:on
 fn	assets/js/vendor/jquery/jquery-3.4.1.js	/^	jQuery.fn[ name ] = function( until, selector ) {$/;"	f	function:jQuery
+fn:1	_site/drafts/2019-06-02-gradient-descent/index.html	/^    <li id="fn:1">$/;"	I
 fn:1	_site/machine learning/how-to-beat-kaggle-(the-easy-way)/index.html	/^    <li id="fn:1">$/;"	I
 fn:2	_site/machine learning/how-to-beat-kaggle-(the-easy-way)/index.html	/^    <li id="fn:2">$/;"	I
 fn:3	_site/machine learning/how-to-beat-kaggle-(the-easy-way)/index.html	/^    <li id="fn:3">$/;"	I
+fnref:1	_site/drafts/2019-06-02-gradient-descent/index.html	/^    <p>Because Carolin gets to know whether she missed the pocket to the left or right, she will/;"	I
 fnref:1	_site/machine learning/how-to-beat-kaggle-(the-easy-way)/index.html	/^<p>While this is certainly possible to pull off in practice <sup id="fnref:1"><a href="#fn:1" cl/;"	I
 fnref:2	_site/machine learning/how-to-beat-kaggle-(the-easy-way)/index.html	/^<p>Let <script type="math\/tex">G = (V;E)<\/script> be an undirected <a href="https:\/\/en.wikip/;"	I
 fnref:3	_site/machine learning/how-to-beat-kaggle-(the-easy-way)/index.html	/^<p>Now, because <script type="math\/tex">H(n)<\/script> has a metric dimension of <script type="/;"	I
@@ -5444,6 +5467,7 @@ graceful-fs	_site/package-lock.json	/^    "graceful-fs": {$/;"	o	object:dependen
 graceful-fs	package-lock.json	/^        "graceful-fs": "^4.1.11",$/;"	s	object:dependencies.readdirp.requires
 graceful-fs	package-lock.json	/^        "graceful-fs": "^4.1.2",$/;"	s	object:dependencies.load-json-file.requires
 graceful-fs	package-lock.json	/^    "graceful-fs": {$/;"	o	object:dependencies
+gradient-descent	_site/drafts/2019-06-02-gradient-descent/index.html	/^<h1 id="gradient-descent"><a href="https:\/\/en.wikipedia.org\/wiki\/Gradient_descent">Gradient /;"	I
 greekStemmer	_site/assets/js/lunr/lunr-gr.js	/^var greekStemmer = function (token) {$/;"	f
 greekStemmer	assets/js/lunr/lunr-gr.js	/^var greekStemmer = function (token) {$/;"	f
 h	_site/assets/js/lunr/lunr.min.js	/^!function(){var t,l,c,e,r,h,d,f,p,y,m,g,x,v,w,Q,k,S,E,L,b,P,T,O,I,i,n,s,z=function(e){var t=new /;"	v
@@ -5509,6 +5533,7 @@ height	assets/js/main.min.js	/^!function(e,t){"use strict";"object"==typeof modu
 height	assets/js/main.min.js	/^t.bgOverlay.attr("class","mfp-bg"),t.container.attr("class","mfp-container"),!t.st.showCloseBtn|/;"	p	class:AnonymousFunctiond0380e1521400.s
 height	assets/js/plugins/jquery.magnific-popup.js	/^          height: (_isJQ ? el.innerHeight() : el[0].offsetHeight) - paddingBottom - paddingTop$/;"	p	class:AnonymousFunctionfcc5ed3c4b00.obj
 height	assets/js/vendor/jquery/jquery-3.4.1.js	/^		attrs = { height: type };$/;"	p	class:genFx.attrs
+hello-im-tensorflow	_site/machine learning/tensorflow-without-tears/index.html	/^<h1 id="hello-im-tensorflow">Hello, I’m TensorFlow.<\/h1>$/;"	I
 hgroup	_site/assets/css/main.css	/^*\/.mfp-counter{font-family:Georgia,Times,serif}.mfp-bg{top:0;left:0;width:100%;height:100%;z-in/;"	s
 hidden	_site/assets/css/main.css	/^*\/.mfp-counter{font-family:Georgia,Times,serif}.mfp-bg{top:0;left:0;width:100%;height:100%;z-in/;"	s
 homepage	package.json	/^  "homepage": "https:\/\/mmistakes.github.io\/minimal-mistakes\/",$/;"	s
@@ -6485,8 +6510,12 @@ main	_site/404.html	/^<div id="main" role="main">$/;"	I
 main	_site/about.html	/^<div id="main" role="main">$/;"	I
 main	_site/assets/css/main.css	/^*\/.mfp-counter{font-family:Georgia,Times,serif}.mfp-bg{top:0;left:0;width:100%;height:100%;z-in/;"	s
 main	_site/blog/index.html	/^<div id="main" role="main">$/;"	I
+main	_site/drafts/2019-06-02-gradient-descent/index.html	/^<div id="main" role="main">$/;"	I
+main	_site/drafts/2019-06-06-distribution-matter-part-1/index.html	/^<div id="main" role="main">$/;"	I
 main	_site/index.html	/^<div id="main" role="main">$/;"	I
 main	_site/machine learning/how-to-beat-kaggle-(the-easy-way)/index.html	/^<div id="main" role="main">$/;"	I
+main	_site/machine learning/tensorflow-without-tears/index.html	/^<div id="main" role="main">$/;"	I
+main	_site/tf2-hello-world/index.html	/^<div id="main" role="main">$/;"	I
 manipulationTarget	assets/js/vendor/jquery/jquery-3.4.1.js	/^function manipulationTarget( elem, content ) {$/;"	f
 map-cache	_site/package-lock.json	/^        "map-cache": "^0.2.2"$/;"	s	object:dependencies.fragment-cache.requires
 map-cache	_site/package-lock.json	/^        "map-cache": "^0.2.2",$/;"	s	object:dependencies.snapdragon.requires
@@ -6912,6 +6941,8 @@ page-title	_site/about.html	/^      <h1 id="page-title" class="page__title">Abou
 page-title	_site/blog/index.html	/^      <h1 id="page-title" class="page__title">Blog Posts by Tags<\/h1>$/;"	I
 page-title	_site/index.html	/^      <h1 id="page-title" class="page__title"><\/h1>$/;"	I
 page-title	_site/machine learning/how-to-beat-kaggle-(the-easy-way)/index.html	/^          <h1 id="page-title" class="page__title" itemprop="headline">How To Beat Kaggle (the Ea/;"	I
+page-title	_site/machine learning/tensorflow-without-tears/index.html	/^          <h1 id="page-title" class="page__title" itemprop="headline">TensorFlow Without Tears$/;"	I
+page-title	_site/tf2-hello-world/index.html	/^          <h1 id="page-title" class="page__title" itemprop="headline">Tf2 Hello World$/;"	I
 parentOffset	assets/js/vendor/jquery/jquery-3.4.1.js	/^			parentOffset = { top: 0, left: 0 };$/;"	c	class:AnonymousFunctiond20cc84b19800
 parse	_site/assets/js/lunr/lunr.js	/^lunr.QueryParser.prototype.parse = function () {$/;"	m	class:lunr.QueryParser
 parse	_site/assets/js/lunr/lunr.min.js	/^!function(){var t,l,c,e,r,h,d,f,p,y,m,g,x,v,w,Q,k,S,E,L,b,P,T,O,I,i,n,s,z=function(e){var t=new /;"	m	class:z.QueryParser
@@ -8012,8 +8043,12 @@ site-nav	_includes/masthead.html	/^      <nav id="site-nav" class="greedy-nav">$
 site-nav	_site/404.html	/^      <nav id="site-nav" class="greedy-nav">$/;"	I
 site-nav	_site/about.html	/^      <nav id="site-nav" class="greedy-nav">$/;"	I
 site-nav	_site/blog/index.html	/^      <nav id="site-nav" class="greedy-nav">$/;"	I
+site-nav	_site/drafts/2019-06-02-gradient-descent/index.html	/^      <nav id="site-nav" class="greedy-nav">$/;"	I
+site-nav	_site/drafts/2019-06-06-distribution-matter-part-1/index.html	/^      <nav id="site-nav" class="greedy-nav">$/;"	I
 site-nav	_site/index.html	/^      <nav id="site-nav" class="greedy-nav">$/;"	I
 site-nav	_site/machine learning/how-to-beat-kaggle-(the-easy-way)/index.html	/^      <nav id="site-nav" class="greedy-nav">$/;"	I
+site-nav	_site/machine learning/tensorflow-without-tears/index.html	/^      <nav id="site-nav" class="greedy-nav">$/;"	I
+site-nav	_site/tf2-hello-world/index.html	/^      <nav id="site-nav" class="greedy-nav">$/;"	I
 sizes	docs/assets/images/manifest.json	/^			"sizes": "144x144",$/;"	s	object:icons.4
 sizes	docs/assets/images/manifest.json	/^			"sizes": "192x192",$/;"	s	object:icons.5
 sizes	docs/assets/images/manifest.json	/^			"sizes": "36x36",$/;"	s	object:icons.0
@@ -8204,7 +8239,10 @@ t	assets/js/main.min.js	/^t.bgOverlay.attr("class","mfp-bg"),t.container.attr("c
 t	assets/js/main.min.js	/^t.bgOverlay.attr("class","mfp-bg"),t.container.attr("class","mfp-container"),!t.st.showCloseBtn|/;"	f	function:AnonymousFunctiond0380e1525400
 table	_site/assets/css/main.css	/^*\/.mfp-counter{font-family:Georgia,Times,serif}.mfp-bg{top:0;left:0;width:100%;height:100%;z-in/;"	s
 table+table	_site/assets/css/main.css	/^*\/.mfp-counter{font-family:Georgia,Times,serif}.mfp-bg{top:0;left:0;width:100%;height:100%;z-in/;"	s
+tags: [machine learning, mathematics, distribution]	drafts/2019-06-06-distribution-matter-part-1.md	/^tags: [machine learning, mathematics, distribution]$/;"	s
+tags: [machine learning, mathematics, gradient decent]	drafts/2019-06-02-gradient-descent.md	/^tags: [machine learning, mathematics, gradient decent]$/;"	s
 tags: [machine learning, mathematics, graph theory]	_posts/2019-05-25-how-to-beat-kaggle-(the-easy-way).md	/^tags: [machine learning, mathematics, graph theory]$/;"	s
+tags: [machine learning]	_posts/2019-06-11-tensorflow-without-tears.md	/^tags: [machine learning]$/;"	s
 tar	_site/package-lock.json	/^            "tar": "^4"$/;"	s	object:dependencies.fsevents.dependencies.node-pre-gyp.requires
 tar	_site/package-lock.json	/^        "tar": {$/;"	o	object:dependencies.fsevents.dependencies
 tar	package-lock.json	/^            "tar": "^4"$/;"	s	object:dependencies.fsevents.dependencies.node-pre-gyp.requires
@@ -8223,6 +8261,7 @@ teardown	_site/assets/js/main.min.js	/^for(var n,r=0,o=e.length;o>r;r++)n=e[r],K
 teardown	assets/js/main.min.js	/^for(var n,r=0,o=e.length;o>r;r++)n=e[r],K.tweeners[n]=K.tweeners[n]||[],K.tweeners[n].unshift(t)/;"	m	class:Ee.event.special
 teardown	assets/js/vendor/jquery/jquery-3.4.1.js	/^			teardown: function() {$/;"	m	class:jQuery.event.special
 temp	assets/js/plugins/jquery.magnific-popup.js	/^            var temp = {$/;"	c	class:AnonymousFunctionfcc5ed3c2f00.AnonymousFunctionfcc5ed3c3000
+tensorflow-2	_site/machine learning/tensorflow-without-tears/index.html	/^<h1 id="tensorflow-2">TensorFlow 2<\/h1>$/;"	I
 term	_site/assets/js/lunr/lunr.js	/^lunr.Query.prototype.term = function (term, options) {$/;"	m	class:lunr.Query
 term	_site/assets/js/lunr/lunr.min.js	/^!function(){var t,l,c,e,r,h,d,f,p,y,m,g,x,v,w,Q,k,S,E,L,b,P,T,O,I,i,n,s,z=function(e){var t=new /;"	m	class:z.Query
 term	assets/js/lunr/lunr.js	/^lunr.Query.prototype.term = function (term, options) {$/;"	m	class:lunr.Query
