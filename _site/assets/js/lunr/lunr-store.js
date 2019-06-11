@@ -8,9 +8,4 @@ var store = [{
         "excerpt":"Life is pretty crazy right now. Finishing a PhD, changing from set theory to applied data science, forming connections to other data scientists, learning as much about machine learning (both theory and practice) as I possibly can, finding a new apartment and preparing to move, dealing with German bureaucracy… This...","categories": ["Machine Learning"],
         "tags": ["machine learning"],
         "url": "http://localhost:4000/machine%20learning/tensorflow-without-tears/",
-        "teaser":null},{
-        "title": "Tf2 Hello World",
-        "excerpt":" ","categories": [],
-        "tags": [],
-        "url": "http://localhost:4000/tf2-hello-world/",
         "teaser":null}]

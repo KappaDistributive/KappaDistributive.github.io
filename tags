@@ -3103,7 +3103,6 @@ Hoodie Duis	test/_posts/2012-05-22-markup-text-readability.md	/^## Hoodie Duis$/
 How To Beat Kaggle (the Easy Way)	_site/index.html	/^    <\/h2>$/;"	i
 How To Beat Kaggle (the Easy Way)	_site/machine learning/how-to-beat-kaggle-(the-easy-way)/index.html	/^<\/h1>$/;"	h
 How To Beat Kaggle (the Easy Way)	_site/machine learning/tensorflow-without-tears/index.html	/^    <\/h2>$/;"	i
-How To Beat Kaggle (the Easy Way)	_site/tf2-hello-world/index.html	/^    <\/h2>$/;"	i
 I	_site/assets/js/lunr/lunr.min.js	/^!function(){var t,l,c,e,r,h,d,f,p,y,m,g,x,v,w,Q,k,S,E,L,b,P,T,O,I,i,n,s,z=function(e){var t=new /;"	v
 I	_site/assets/js/main.min.js	/^!function(e,t){"use strict";"object"==typeof module&&"object"==typeof module.exports?module.expo/;"	f
 I	assets/js/lunr/lunr.min.js	/^!function(){var t,l,c,e,r,h,d,f,p,y,m,g,x,v,w,Q,k,S,E,L,b,P,T,O,I,i,n,s,z=function(e){var t=new /;"	v
@@ -3366,7 +3365,6 @@ Stefan Mesken	_site/drafts/2019-06-06-distribution-matter-part-1/index.html	/^  
 Stefan Mesken	_site/index.html	/^      <h3 class="author__name" itemprop="name">Stefan Mesken<\/h3>$/;"	j
 Stefan Mesken	_site/machine learning/how-to-beat-kaggle-(the-easy-way)/index.html	/^      <h3 class="author__name" itemprop="name">Stefan Mesken<\/h3>$/;"	j
 Stefan Mesken	_site/machine learning/tensorflow-without-tears/index.html	/^      <h3 class="author__name" itemprop="name">Stefan Mesken<\/h3>$/;"	j
-Stefan Mesken	_site/tf2-hello-world/index.html	/^      <h3 class="author__name" itemprop="name">Stefan Mesken<\/h3>$/;"	j
 Step 1: Remove Theme Files	docs/_posts/2016-09-21-gemified-theme-alpha.md	/^## Step 1: Remove Theme Files $/;"	s
 Step 1: Remove Theme Files	docs/_posts/2016-10-06-gemified-theme-beta.md	/^## Step 1: Remove Theme Files $/;"	s
 Step 2: Update `Gemfile`	docs/_posts/2016-09-21-gemified-theme-alpha.md	/^## Step 2: Update `Gemfile`$/;"	s
@@ -3422,12 +3420,7 @@ TensorFlow 2	_site/machine learning/tensorflow-without-tears/index.html	/^<h1 id
 TensorFlow Without Tears	_site/index.html	/^    <\/h2>$/;"	i
 TensorFlow Without Tears	_site/machine learning/how-to-beat-kaggle-(the-easy-way)/index.html	/^    <\/h2>$/;"	i
 TensorFlow Without Tears	_site/machine learning/tensorflow-without-tears/index.html	/^<\/h1>$/;"	h
-TensorFlow Without Tears	_site/tf2-hello-world/index.html	/^    <\/h2>$/;"	i
 Text alignment	docs/_docs/15-utility-classes.md	/^## Text alignment$/;"	s
-Tf2 Hello World	_site/index.html	/^    <\/h2>$/;"	i
-Tf2 Hello World	_site/machine learning/how-to-beat-kaggle-(the-easy-way)/index.html	/^    <\/h2>$/;"	i
-Tf2 Hello World	_site/machine learning/tensorflow-without-tears/index.html	/^    <\/h2>$/;"	i
-Tf2 Hello World	_site/tf2-hello-world/index.html	/^<\/h1>$/;"	h
 The following plugins are automatically loaded by the theme-gem:	docs/_docs/03-installation.md	/^# The following plugins are automatically loaded by the theme-gem:$/;"	c
 Theme	docs/_docs/05-configuration.md	/^### Theme$/;"	S
 Theme migration	docs/_docs/03-installation.md	/^## Theme migration$/;"	s
@@ -6515,7 +6508,6 @@ main	_site/drafts/2019-06-06-distribution-matter-part-1/index.html	/^<div id="ma
 main	_site/index.html	/^<div id="main" role="main">$/;"	I
 main	_site/machine learning/how-to-beat-kaggle-(the-easy-way)/index.html	/^<div id="main" role="main">$/;"	I
 main	_site/machine learning/tensorflow-without-tears/index.html	/^<div id="main" role="main">$/;"	I
-main	_site/tf2-hello-world/index.html	/^<div id="main" role="main">$/;"	I
 manipulationTarget	assets/js/vendor/jquery/jquery-3.4.1.js	/^function manipulationTarget( elem, content ) {$/;"	f
 map-cache	_site/package-lock.json	/^        "map-cache": "^0.2.2"$/;"	s	object:dependencies.fragment-cache.requires
 map-cache	_site/package-lock.json	/^        "map-cache": "^0.2.2",$/;"	s	object:dependencies.snapdragon.requires
@@ -6942,7 +6934,6 @@ page-title	_site/blog/index.html	/^      <h1 id="page-title" class="page__title"
 page-title	_site/index.html	/^      <h1 id="page-title" class="page__title"><\/h1>$/;"	I
 page-title	_site/machine learning/how-to-beat-kaggle-(the-easy-way)/index.html	/^          <h1 id="page-title" class="page__title" itemprop="headline">How To Beat Kaggle (the Ea/;"	I
 page-title	_site/machine learning/tensorflow-without-tears/index.html	/^          <h1 id="page-title" class="page__title" itemprop="headline">TensorFlow Without Tears$/;"	I
-page-title	_site/tf2-hello-world/index.html	/^          <h1 id="page-title" class="page__title" itemprop="headline">Tf2 Hello World$/;"	I
 parentOffset	assets/js/vendor/jquery/jquery-3.4.1.js	/^			parentOffset = { top: 0, left: 0 };$/;"	c	class:AnonymousFunctiond20cc84b19800
 parse	_site/assets/js/lunr/lunr.js	/^lunr.QueryParser.prototype.parse = function () {$/;"	m	class:lunr.QueryParser
 parse	_site/assets/js/lunr/lunr.min.js	/^!function(){var t,l,c,e,r,h,d,f,p,y,m,g,x,v,w,Q,k,S,E,L,b,P,T,O,I,i,n,s,z=function(e){var t=new /;"	m	class:z.QueryParser
@@ -8048,7 +8039,6 @@ site-nav	_site/drafts/2019-06-06-distribution-matter-part-1/index.html	/^      <
 site-nav	_site/index.html	/^      <nav id="site-nav" class="greedy-nav">$/;"	I
 site-nav	_site/machine learning/how-to-beat-kaggle-(the-easy-way)/index.html	/^      <nav id="site-nav" class="greedy-nav">$/;"	I
 site-nav	_site/machine learning/tensorflow-without-tears/index.html	/^      <nav id="site-nav" class="greedy-nav">$/;"	I
-site-nav	_site/tf2-hello-world/index.html	/^      <nav id="site-nav" class="greedy-nav">$/;"	I
 sizes	docs/assets/images/manifest.json	/^			"sizes": "144x144",$/;"	s	object:icons.4
 sizes	docs/assets/images/manifest.json	/^			"sizes": "192x192",$/;"	s	object:icons.5
 sizes	docs/assets/images/manifest.json	/^			"sizes": "36x36",$/;"	s	object:icons.0
