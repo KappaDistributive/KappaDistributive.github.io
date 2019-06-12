@@ -327,7 +327,7 @@
 
 <h1 id="tensorflow-2">TensorFlow 2</h1>
 
-<p>Instead, to finally return the ball of machine learning conversation to my readers, I’d like to share my excitement about <a href="https://www.tensorflow.org/beta/">TensorFlow 2</a>. The beta of TF2 has been announced 4 days ago and while I didn’t take part in the alpha at all, I’ve reserved a bit of time over the weekend to play around with the newly released beta. And it’s been incredibly exciting!</p>
+<p>Instead, to finally return the ball of machine learning conversation to my readers, I’d like to share my excitement about <a href="https://www.tensorflow.org/beta/">TensorFlow 2</a>. The beta of TF2 has been announced 4 days ago and while I didn’t take part in the alpha at all, I’ve set aside a bit of time over the weekend to play around with the newly released beta. And it’s been incredibly exciting!</p>
 
 <p>See, what often sets me apart in a group of people is that I really like to get down to the nuts and bolts of anything I lay my hands on. As a young child I’ve disassembled pretty much every electronic device in our household, I’ve worked on <a href="https://en.wikipedia.org/wiki/Trabant">charmingly simple cars</a> by the time I graduated from kindergarten, I’ve spent most of my childhood in the workshop of my grandfather. This hands-on, detail-focused, borderline obsessive personality trait never left me.</p>
 
@@ -430,6 +430,14 @@
 </figure>
 
 <p>Not bad, not bad at all! The interval <script type="math/tex">[5,2 \pi]</script> needs some work (and I encourage you to think about why our model performed so much worse on that section) but other than that, I’d say that our model does know how to create a sine wave.</p>
+
+<p>I’ve decided to give a few hints as to why our model performs worse on the tail end of our data set. Consider the following animation</p>
+
+<figure style="align: center">
+  <img src="/images/diagrams/adam_animation.gif" style="max-width: 400px;" alt="graph of the sine function" />
+</figure>
+
+<p>and keep in mind that we are using the ‘Adam’ optimizer.</p>
 
         
       </section>

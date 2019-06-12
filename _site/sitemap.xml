@@ -23,4 +23,8 @@
 <url>
 <loc>http://localhost:4000/</loc>
 </url>
+<url>
+<loc>http://localhost:4000/drafts/logic_gates/gates.pdf</loc>
+<lastmod>2019-06-11T23:03:30+00:00</lastmod>
+</url>
 </urlset>
