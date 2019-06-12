@@ -125,7 +125,7 @@ plt.legend()
 
 Not bad, not bad at all! The interval $$[5,2 \pi]$$ needs some work (and I encourage you to think about why our model performed so much worse on that section) but other than that, I'd say that our model does know how to create a sine wave.
 
-I've decided to give a few hints as to why our model performs worse on the tail end of our data set. Consider the following animation of the learning process
+I've decided to give a few hints as to why our model performs worse on the tail end of our data set: Consider the following animation of the learning process
 
 <figure style="align: center">
   <img src="/images/diagrams/adam_animation.gif" style="max-width: 400px;" alt="graph of the sine function"/>
