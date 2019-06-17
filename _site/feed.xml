@@ -1,4 +1,207 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-06-12T11:22:17+00:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Stefan Mesken</title><subtitle>Data Science</subtitle><author><name>Stefan Mesken</name></author><entry><title type="html">TensorFlow Without Tears</title><link href="http://localhost:4000/machine%20learning/tensorflow-without-tears/" rel="alternate" type="text/html" title="TensorFlow Without Tears" /><published>2019-06-11T00:00:00+00:00</published><updated>2019-06-11T00:00:00+00:00</updated><id>http://localhost:4000/machine%20learning/tensorflow-without-tears</id><content type="html" xml:base="http://localhost:4000/machine%20learning/tensorflow-without-tears/">&lt;p&gt;Life is pretty crazy right now. Finishing a PhD, changing from set theory to applied data science, forming connections to other data scientists, learning as much about machine learning (both theory and practice) as I possibly can, finding a new apartment and preparing to move, dealing with German bureaucracy… This doesn’t leave a lot of spare time. Truth be told, it doesn’t leave any.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-06-17T00:43:21+00:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Stefan Mesken</title><subtitle>Data Science</subtitle><author><name>Stefan Mesken</name></author><entry><title type="html">An Hommage to Feynman’s Technique</title><link href="http://localhost:4000/machine%20learning/Feynman-technique/" rel="alternate" type="text/html" title="An Hommage to Feynman's Technique" /><published>2019-06-17T00:00:00+00:00</published><updated>2019-06-17T00:00:00+00:00</updated><id>http://localhost:4000/machine%20learning/Feynman-technique</id><content type="html" xml:base="http://localhost:4000/machine%20learning/Feynman-technique/">&lt;h1 id=&quot;fragile-knowledge&quot;&gt;Fragile Knowledge&lt;/h1&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;I don’t know what’s the matter with people: they don’t learn by
+understanding; they learn by some other way - by rote, or
+something. Their knowledge is so fragile!&lt;/p&gt;
+
+  &lt;p&gt;– Richard P. Feynman&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;One key to successfully mastering a new subject, I believe, is to
+connect it to something that you are already deeply familiar
+with. This idea is as old as human learning and a common quality of
+great lecturers is that they fully embrace its logical conclusion:
+When introducing an audience to any novel concept, start out by
+conveying the main ideas in analogies and metaphors rather than
+drowning them in complexities and details.&lt;/p&gt;
+
+&lt;p&gt;And while people tend to agree that this is a good quality in a
+teacher, they often deprive themselves of this luxury when learning on
+their own. Admittedly, explaining a new idea well to yourself requires
+a substantial amount of additional effort. However, I am convinced
+that this overhead is not only economical but of fundamental
+importance if you ever plan to master a new set skills (as opposed to
+gaining the mostly worthless knowledge of sparsely connected facts).&lt;/p&gt;
+
+&lt;h1 id=&quot;case-study-understanding-neural-networks&quot;&gt;Case Study: Understanding Neural Networks&lt;/h1&gt;
+
+&lt;p&gt;So, if you are still with me, I’d like to demonstrate how this might
+look like when first learning about neural networks. Basically I’ll
+try to reconstruct the inner monologue that went through my head when
+I just first learned about neural networks.&lt;/p&gt;
+
+&lt;p&gt;“Neural networks are basically &lt;a href=&quot;https://en.wikipedia.org/wiki/Directed_graph&quot;&gt;directed
+graphs&lt;/a&gt; with
+metadata. Nodes represent neurons, edges represent the data-flow
+between those neurons and the metadata comes in two flavours:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;The weight attached to every edge determines how much of an
+influence its source neuron has in the overall network and&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;An activation function, attached to each neuron, that determines the
+‘shape’ of this neuron’s discharge pattern. &lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;So far, so good. But what does that mean? How can a neural network
+capture information?”&lt;/p&gt;
+
+&lt;p&gt;Stepping out of character for a second: It’s here that you can make
+life very difficult for yourself. Both leaving this question
+unanswered and jumping into some complex example
+(e.g. &lt;a href=&quot;https://arxiv.org/abs/1512.03385&quot;&gt;ResNet&lt;/a&gt;) are, in my opinion,
+terrible mistakes. You want to build a simple example, ideally relying
+only on yourself, for two reasons:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;First and most importantly: This is a litmus test. If you are not
+able to build a basic example of the concept you’ve just learned
+about, you haven’t understood the basics yet and need to revisit
+them. By forcing yourself to sit down and actually spelling out a very
+simple example in detail, you’re making sure that your previous gained
+confidence is justified and that you’re not just fooling yourself.
+    &lt;blockquote&gt;
+      &lt;p&gt;The first principle is that you must not fool yourself – and you are
+the easiest person to fool.&lt;/p&gt;
+
+      &lt;p&gt;– Richard P. Feynman&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;If you want to master any subject, it is my firm opinion that you
+must carry around a large set of examples in your head. These
+examples will not only guide your intuition but they will also
+serve as a more and more elaborate testing ground for new ideas. In
+the future, if someone tells you about some new fancy concept (that
+someone might be you), you can refer to an appropriate example in
+your head and see how it would influence that. If the results don’t
+make sense, something’s wrong! Either you’ve misunderstood what the
+other party is telling you or there is a mistake. If you want this
+conversation to remain meaningful, you need to fix that! This is
+how I, and how I believe most of my colleagues, are able to build
+an appropriate intuition about complex concepts that often run
+counter to any experience you might have had in your daily life.&lt;/p&gt;
+
+    &lt;p&gt;Building a simple example from scratch is your first step
+toward assembling your internal database.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Okay, let’s return to the inner monologue:&lt;/p&gt;
+
+&lt;p&gt;“Is there anything I already know about that could easily be realized
+as a neural network? Actually, yes: Linear functions are of the form
+&lt;script type=&quot;math/tex&quot;&gt;f(x) = a \cdot x + b&lt;/script&gt; and they are represented by the following
+neural network: &lt;sup id=&quot;fnref:2&quot;&gt;&lt;a href=&quot;#fn:2&quot; class=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+
+&lt;figure style=&quot;align: center&quot;&gt;
+  &lt;img src=&quot;/images/diagrams/nn_linear_function.png&quot; style=&quot;max-width: 400px;&quot; alt=&quot;a neural network that represents a linear function&quot; /&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Great, but how about logical connections? If artificially neural
+networks are supposed to model actual neural networks, they certainly
+must be able to capture logic gates, right? Right!&lt;/p&gt;
+
+&lt;figure style=&quot;align: center&quot;&gt;
+  &lt;img src=&quot;/images/diagrams/nn_not.png&quot; style=&quot;max-width: 400px;&quot; alt=&quot;a neural network that represents logical negation&quot; /&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Here &lt;script type=&quot;math/tex&quot;&gt;\chi = \chi_{[0, \infty)}&lt;/script&gt; is the activation function of
+&lt;script type=&quot;math/tex&quot;&gt;a_1&lt;/script&gt; and all you need to know is that &lt;script type=&quot;math/tex&quot;&gt;\chi(z) = 0&lt;/script&gt; for all &lt;script type=&quot;math/tex&quot;&gt;% &lt;![CDATA[
+z
+&lt; 0 %]]&gt;&lt;/script&gt; and &lt;script type=&quot;math/tex&quot;&gt;\chi(z) = 1&lt;/script&gt; for all &lt;script type=&quot;math/tex&quot;&gt;z \ge 0&lt;/script&gt;. So, if we set &lt;script type=&quot;math/tex&quot;&gt;x_1 =
+0&lt;/script&gt;, we get that &lt;script type=&quot;math/tex&quot;&gt;a_1 = \chi(w_0 \cdot x_0 + w_1 \cdot x_1) =
+\chi(0 \cdot 1 + (-1) \cdot 0) = \chi(0) = 0&lt;/script&gt;. On the other hand, if we let
+&lt;script type=&quot;math/tex&quot;&gt;x_1 = 1&lt;/script&gt;, we get that &lt;script type=&quot;math/tex&quot;&gt;a_1 = \chi(0 \cdot 1 + (-1) \cdot 1) = \chi(-1) =
+0&lt;/script&gt;. So this neural network does indeed represent &lt;script type=&quot;math/tex&quot;&gt;\mathrm{NOT}(x_1)&lt;/script&gt;!”&lt;/p&gt;
+
+&lt;p&gt;At this point, you might want to cook up a few more examples and in an
+earlier tweet I demonstrated how to represent other basic logic gates
+(AND, OR, NOR, XOR, XNOR) as neural networks as well. I’d encourage
+you to try it yourself first and then &lt;a href=&quot;https://twitter.com/mesken_stefan/status/1138694458470539264&quot;&gt;hop over to
+Twitter&lt;/a&gt;
+and compare your results with mine. &lt;sup id=&quot;fnref:3&quot;&gt;&lt;a href=&quot;#fn:3&quot; class=&quot;footnote&quot;&gt;3&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+
+&lt;p&gt;Once you’ve done that, you may notice what I’ve noticed: Not only can
+neural networks represent logic gates. &lt;em&gt;Neural networks are nothing
+more than logic gates&lt;/em&gt;, with a few minor adjustments:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;Inputs are allowed to take on any real number as value, not just &lt;script type=&quot;math/tex&quot;&gt;0&lt;/script&gt; and &lt;script type=&quot;math/tex&quot;&gt;1&lt;/script&gt;,&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;We add a restriction that a node’s value is computed by a weighted,
+linear combination of the values to its left followed by an
+activation function and&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;We add an activation functions to our nodes. &lt;sup id=&quot;fnref:4&quot;&gt;&lt;a href=&quot;#fn:4&quot; class=&quot;footnote&quot;&gt;4&lt;/a&gt;&lt;/sup&gt;”&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;It may not seem that way, but this little detour is incredibly
+beneficial to your overall learning strategy. &lt;strong&gt;Ideas and memories die
+in a vacuum&lt;/strong&gt;. If you want them to become lasting and meaningful, you
+need to connect to as many previously established ideas as
+possible. Don’t believe me? Then tell me: What did you have for dinner
+last Wednesday? Unless you are able to connect last Wednesday’s dinner
+to something more meaningful (maybe you happened to be on a first
+date), most of us will struggle mightily with this very simple
+question. And if I ask you about your lunch a year ago, there’s
+basically no chance you’ll be able to remember. On the other hand, if
+I ask you what you did last Christmas (or even better: On your wedding
+day if you happen to be married), the task becomes much easier. You
+either connect ideas and memories or you will lose them –
+quickly. Not only that: Sparsely connected ideas (what Feynman calls
+‘fragile knowledge’) are basically worthless as they’re not readily
+available to be used in similar, but slightly different, settings.&lt;/p&gt;
+
+&lt;h1 id=&quot;what-you-should-take-away-from-this&quot;&gt;What you should take away from this&lt;/h1&gt;
+
+&lt;p&gt;If you make a habit of &lt;em&gt;always&lt;/em&gt; explaining new ideas to yourself until
+you’ve completely broken them down to related concepts, that you’ve
+already mastered, you’ll never have to learn or memorize anything
+truly novel again. And, over time, you’ll gain firm, deeply connected,
+foundational knowledge about seemingly unrelated concepts that will
+not only help you to learn other concepts faster and more efficient
+but, ultimately, also allow you to solve problems in surprising,
+efficient and truly ingenious ways. Being able to do that is, in a
+nutshell, the mark of a true expert.&lt;/p&gt;
+
+&lt;div class=&quot;footnotes&quot;&gt;
+  &lt;ol&gt;
+    &lt;li id=&quot;fn:1&quot;&gt;
+      &lt;p&gt;I think it’s helpful to point out that this is one of the ways
+that artificial neural networks differ from biological
+ones. Biological neurons either fire or they don’t – so, in a
+way, the only activation function they’re allowed to have is the
+&lt;a href=&quot;https://en.wikipedia.org/wiki/Indicator_function&quot;&gt;characteristic
+function&lt;/a&gt;
+&lt;script type=&quot;math/tex&quot;&gt;\chi_{(-\infty, a]}&lt;/script&gt; for some number &lt;script type=&quot;math/tex&quot;&gt;a&lt;/script&gt;. &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:2&quot;&gt;
+      &lt;p&gt;This follows Andrew Ng’s handy convention that any neuron/weight with
+a &lt;script type=&quot;math/tex&quot;&gt;0&lt;/script&gt; as subscript represents a bias component – independent of the input. &lt;a href=&quot;#fnref:2&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:3&quot;&gt;
+      &lt;p&gt;In case you don’t want to use Twitter, you can find my solution &lt;a href=&quot;http://localhost:4000/images/diagrams/nn_logic_gates.png&quot;&gt;here&lt;/a&gt; &lt;a href=&quot;#fnref:3&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:4&quot;&gt;
+      &lt;p&gt;This point, in theory, is incredibly powerful. In fact, it’s too
+powerful. Since neural networks are intended to approximate some
+function &lt;script type=&quot;math/tex&quot;&gt;f&lt;/script&gt; to begin with, we could always achieve this by
+taking &lt;script type=&quot;math/tex&quot;&gt;f&lt;/script&gt; as our activation function. In practice, however,
+&lt;script type=&quot;math/tex&quot;&gt;f&lt;/script&gt; is unknown, we only allow activation functions from a very
+restrictive, simple set of functions and their specific choice, in
+many cases, turns out to be surprisingly irrelevant. &lt;a href=&quot;#fnref:4&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;</content><author><name>Stefan Mesken</name></author><category term="Machine Learning" /><category term="neural networks" /><category term="machine learning" /><category term="human learning" /><summary type="html">Fragile Knowledge</summary></entry><entry><title type="html">TensorFlow Without Tears</title><link href="http://localhost:4000/machine%20learning/tensorflow-without-tears/" rel="alternate" type="text/html" title="TensorFlow Without Tears" /><published>2019-06-11T00:00:00+00:00</published><updated>2019-06-11T00:00:00+00:00</updated><id>http://localhost:4000/machine%20learning/tensorflow-without-tears</id><content type="html" xml:base="http://localhost:4000/machine%20learning/tensorflow-without-tears/">&lt;p&gt;Life is pretty crazy right now. Finishing a PhD, changing from set theory to applied data science, forming connections to other data scientists, learning as much about machine learning (both theory and practice) as I possibly can, finding a new apartment and preparing to move, dealing with German bureaucracy… This doesn’t leave a lot of spare time. Truth be told, it doesn’t leave any.&lt;/p&gt;
 
 &lt;p&gt;I’m not complaining – the last couple of months have been immensely enjoyable (well, except for the bureaucracy part). But being pressed for time also made me decide to postpone my planned blog series on the importance of probability distributions in machine learning as I’m currently lacking the spare mental capacity to do this rather broad, open-ended topic justice.&lt;/p&gt;
 
@@ -108,7 +311,7 @@
 
 &lt;p&gt;Not bad, not bad at all! The interval &lt;script type=&quot;math/tex&quot;&gt;[5,2 \pi]&lt;/script&gt; needs some work (and I encourage you to think about why our model performed so much worse on that section) but other than that, I’d say that our model does know how to create a sine wave.&lt;/p&gt;
 
-&lt;p&gt;I’ve decided to give a few hints as to why our model performs worse on the tail end of our data set. Consider the following animation&lt;/p&gt;
+&lt;p&gt;I’ve decided to give a few hints as to why our model performs worse on the tail end of our data set: Consider the following animation of the learning process&lt;/p&gt;
 
 &lt;figure style=&quot;align: center&quot;&gt;
   &lt;img src=&quot;/images/diagrams/adam_animation.gif&quot; style=&quot;max-width: 400px;&quot; alt=&quot;graph of the sine function&quot; /&gt;

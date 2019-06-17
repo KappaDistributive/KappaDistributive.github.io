@@ -1,13 +1,17 @@
-personal_ws-1.1 en 18 utf-8
+personal_ws-1.1 en 22 utf-8
+hommage
 vec
 dataflow
 Keras
 Jupyter
 png
 mapsto
+mathrm
+cdot
 mathjax
 Kaggle
 subseteq
+ge
 APIs
 img
 performant
