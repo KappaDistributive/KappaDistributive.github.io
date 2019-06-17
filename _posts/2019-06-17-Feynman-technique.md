@@ -26,7 +26,7 @@ teacher, they often deprive themselves of this luxury when learning on
 their own. Admittedly, explaining a new idea well to yourself requires
 a substantial amount of additional effort. However, I am convinced
 that this overhead is not only economical but of fundamental
-importance if you ever plan to master a new set skills (as opposed to
+importance if you ever plan to master a new set  of skills (as opposed to
 gaining the mostly worthless knowledge of sparsely connected facts).
 
 # Case Study: Understanding Neural Networks
