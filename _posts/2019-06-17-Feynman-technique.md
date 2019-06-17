@@ -134,7 +134,7 @@ more than logic gates*, with a few minor adjustments:
 It may not seem that way, but this little detour is incredibly
 beneficial to your overall learning strategy. **Ideas and memories die
 in a vacuum**. If you want them to become lasting and meaningful, you
-need to connect to as many previously established ideas as
+need to them connect to as many previously established ideas as
 possible. Don't believe me? Then tell me: What did you have for dinner
 last Wednesday? Unless you are able to connect last Wednesday's dinner
 to something more meaningful (maybe you happened to be on a first
