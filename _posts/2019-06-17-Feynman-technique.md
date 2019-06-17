@@ -48,7 +48,7 @@ between those neurons and the metadata comes in two flavours:
    'shape' of this neuron's discharge pattern. [^1]
 
 So far, so good. But what does that mean? How can a neural network
-capture information?"
+process information?"
 
 Stepping out of character for a second: It's here that you can make
 life very difficult for yourself. Both leaving this question
