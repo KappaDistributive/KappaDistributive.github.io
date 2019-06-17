@@ -76,7 +76,7 @@ only on yourself, for two reasons:
    someone might be you), you can refer to an appropriate example in
    your head and see how it would influence that. If the results don't
    make sense, something's wrong! Either you've misunderstood what the
-   other party is telling you or there is a mistake. If you want this
+   other party is telling you or there is a mistake. Assuming you want this
    conversation to remain meaningful, you need to fix that! This is
    how I, and how I believe most of my colleagues, are able to build
    an appropriate intuition about complex concepts that often run
