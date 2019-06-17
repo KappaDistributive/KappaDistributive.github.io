@@ -96,7 +96,7 @@ neural network: [^2]
   <img src="/images/diagrams/nn_linear_function.png" style="max-width: 400px;" alt="a neural network that represents a linear function"/>
 </figure>
 
-Great, but how about logical connections? If artificially neural
+Great, but how about logical connections? If artificial neural
 networks are supposed to model actual neural networks, they certainly
 must be able to capture logic gates, right? Right!
 
