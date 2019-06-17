@@ -34,7 +34,7 @@ gaining the mostly worthless knowledge of sparsely connected facts).
 So, if you are still with me, I'd like to demonstrate how this might
 look like when first learning about neural networks. Basically I'll
 try to reconstruct the inner monologue that went through my head when
-I just first learned about neural networks.
+I just first learned about them.
 
 "Neural networks are basically [directed
 graphs](https://en.wikipedia.org/wiki/Directed_graph) with
