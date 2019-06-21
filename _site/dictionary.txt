@@ -1,9 +1,10 @@
-personal_ws-1.1 en 22 utf-8
+personal_ws-1.1 en 24 utf-8
 hommage
 vec
 dataflow
 Keras
 Jupyter
+dataset
 png
 mapsto
 mathrm
@@ -14,6 +15,7 @@ subseteq
 ge
 APIs
 img
+CatSniffer
 performant
 src
 TF
@@ -21,3 +23,5 @@ ldots
 undirected
 figcaption
 infty
+frac
+footguns

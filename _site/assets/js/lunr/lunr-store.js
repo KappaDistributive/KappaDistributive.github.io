@@ -13,4 +13,14 @@ var store = [{
         "excerpt":"Fragile Knowledge I don’t know what’s the matter with people: they don’t learn by understanding; they learn by some other way - by rote, or something. Their knowledge is so fragile! – Richard P. Feynman One key to successfully mastering a new subject, I believe, is to connect it to...","categories": ["Machine Learning"],
         "tags": ["neural networks","machine learning","human learning"],
         "url": "http://localhost:4000/machine%20learning/Feynman-technique/",
+        "teaser":null},{
+        "title": "The Dangers of Performance Metrics",
+        "excerpt":"Full disclosure: I’m not a big fan of one-dimensional metrics when evaluating (binary) classifiers (e.g. a neural network that is supposed to distinguish pictures of cats and dogs). In my opinion, a confusion matrix is, in almost all instances, preferable for data scientists. However, that doesn’t mean there aren’t good...","categories": ["Data-Science"],
+        "tags": ["data science","machine learning","statistics"],
+        "url": "http://localhost:4000/data-science/metrics/",
+        "teaser":null},{
+        "title": "The Dangers of Performance Metrics",
+        "excerpt":"Full disclosure: I'm not a big fan of one-dimensional metrics when evaluating [(binary) classifiers](https://en.wikipedia.org/wiki/Binary_classification) (e.g. a neural network that is supposed to distinguish pictures of cats and dogs). In my opinion, a [confusion matrix](https://en.wikipedia.org/wiki/Confusion_matrix) is, in almost all instances, preferable for data scientists. However, that doesn't mean there aren't good...","categories": ["Data-Science"],
+        "tags": ["data science","machine learning","statistics"],
+        "url": "http://localhost:4000/data-science/metrics.md/",
         "teaser":null}]

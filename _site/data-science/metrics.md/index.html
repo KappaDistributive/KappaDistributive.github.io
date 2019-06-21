@@ -1,0 +1,713 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.16.3 by Michael Rose
+  Copyright 2013-2019 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>The Dangers of Performance Metrics - Stefan Mesken</title>
+<meta name="description" content="Full disclosure: I’m not a big fan of one-dimensional metrics when evaluating (binary) classifiers(e.g. a neural network that is supposed to distinguish pictures of cats and dogs). In my opinion, a confusion matrix is, in almost all instances, preferable for data scientists. However, that doesn’t mean there aren’t good reasons to use one-dimensional performance metrics:">
+
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Stefan Mesken">
+<meta property="og:title" content="The Dangers of Performance Metrics">
+<meta property="og:url" content="http://localhost:4000/data-science/metrics.md/">
+
+
+  <meta property="og:description" content="Full disclosure: I’m not a big fan of one-dimensional metrics when evaluating (binary) classifiers(e.g. a neural network that is supposed to distinguish pictures of cats and dogs). In my opinion, a confusion matrix is, in almost all instances, preferable for data scientists. However, that doesn’t mean there aren’t good reasons to use one-dimensional performance metrics:">
+
+
+
+
+
+  <meta name="twitter:site" content="@mesken_stefan">
+  <meta name="twitter:title" content="The Dangers of Performance Metrics">
+  <meta name="twitter:description" content="Full disclosure: I’m not a big fan of one-dimensional metrics when evaluating (binary) classifiers(e.g. a neural network that is supposed to distinguish pictures of cats and dogs). In my opinion, a confusion matrix is, in almost all instances, preferable for data scientists. However, that doesn’t mean there aren’t good reasons to use one-dimensional performance metrics:">
+  <meta name="twitter:url" content="http://localhost:4000/data-science/metrics.md/">
+
+  
+    <meta name="twitter:card" content="summary">
+    
+  
+
+  
+
+
+
+  <meta property="article:published_time" content="2019-06-21T00:00:00+00:00">
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="http://localhost:4000/data-science/metrics.md/">
+
+
+
+
+
+
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Stefan Mesken",
+      "url": "http://localhost:4000",
+      "sameAs": null
+    }
+  </script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Stefan Mesken Feed">
+
+<!-- ****** faviconit.com favicons ****** -->
+	<link rel="shortcut icon" href="/assets/favicon/favicon.ico">
+	<link rel="icon" sizes="16x16 32x32 64x64" href="/assets/favicon/favicon.ico">
+	<link rel="icon" type="image/png" sizes="196x196" href="/assets/favicon/favicon-192.png">
+	<link rel="icon" type="image/png" sizes="160x160" href="/assets/favicon/favicon-160.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="/assets/favicon/favicon-96.png">
+	<link rel="icon" type="image/png" sizes="64x64" href="/assets/favicon/favicon-64.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16.png">
+	<link rel="apple-touch-icon" href="/assets/favicon/favicon-57.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="/assets/favicon/favicon-114.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="/assets/favicon/favicon-72.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="/assets/favicon/favicon-144.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="/assets/favicon/favicon-60.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="/assets/favicon/favicon-120.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="/assets/favicon/favicon-76.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="/assets/favicon/favicon-152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/favicon-180.png">
+	<meta name="msapplication-TileColor" content="#FFFFFF">
+	<meta name="msapplication-TileImage" content="/assets/favicon/favicon-144.png">
+	<meta name="msapplication-config" content="/assets/favicon/browserconfig.xml">
+	<!-- ****** faviconit.com favicons ****** -->
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<!--[if IE ]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/">Stefan Mesken</a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/blog/" >Blog</a>
+            </li><li class="masthead__menu-item">
+              <a href="/about.html" >About</a>
+            </li></ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="https://schema.org/Person">
+
+  
+    <div class="author__avatar">
+      
+
+      
+        <img src="/images/avatar.png" alt="Stefan Mesken" itemprop="image">
+      
+    </div>
+  
+
+  <div class="author__content">
+    
+      <h3 class="author__name" itemprop="name">Stefan Mesken</h3>
+    
+    
+      <p class="author__bio" itemprop="description">
+        Mathematician and Data Scientist.
+      </p>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+        <li itemprop="homeLocation" itemscope itemtype="https://schema.org/Place">
+          <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name">Cologne, Germany</span>
+        </li>
+      
+
+      
+        
+          
+        
+          
+        
+          
+            <li><a href="https://twitter.com/mesken_stefan" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i> Twitter</a></li>
+          
+        
+          
+        
+          
+            <li><a href="https://github.com/KappaDistributive" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+          
+        
+          
+        
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="The Dangers of Performance Metrics">
+    <meta itemprop="description" content="Full disclosure: I’m not a big fan of one-dimensional metrics when evaluating (binary) classifiers(e.g. a neural network that is supposed to distinguish pictures of cats and dogs). In my opinion, a confusion matrix is, in almost all instances, preferable for data scientists. However, that doesn’t mean there aren’t good reasons to use one-dimensional performance metrics:">
+    <meta itemprop="datePublished" content="June 21, 2019">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">The Dangers of Performance Metrics
+</h1>
+          
+            <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  6 minute read
+</p>
+          
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+        Full disclosure: I'm not a big fan of one-dimensional metrics when evaluating [(binary) classifiers](https://en.wikipedia.org/wiki/Binary_classification)
+(e.g. a neural network that is supposed to distinguish pictures of cats and dogs). In my opinion, a [confusion matrix](https://en.wikipedia.org/wiki/Confusion_matrix) is, in almost all instances, preferable for data scientists. However, that doesn't mean there aren't good reasons to use one-dimensional performance metrics:
+
+- They are (deceptively) simple,
+- Easy to integrate in cross validation and similar automated processes,
+- Can be an excellent communication tool, 
+- ...
+
+My gripe with performance metrics is founded in the observation that they tend to be [footguns](https://en.wiktionary.org/wiki/footgu://en.wiktionary.org/wiki/footgun) in practice -- outside of the academical environment they've been born it:
+
+- Their actual expressive power often isn't clear, 
+- It's remarkably common for people to chase metrics that don't align with their goals,
+- The terminology can be misleading [^1] and
+- Choosing a metric is often less a result of careful consideration than a symptom of [information bias](https://en.wikipedia.org/wiki/Information_bias_(psychology)) or high [uncertainty avoidance](https://en.wikipedia.org/wiki/Uncertainty_avoidance).
+
+Note that none of these points has to do with performance metrics as mathematical concepts -- they are instances of human misconduct. Therefore, instead of continuing my crusade against the status quo, I'd like to take a few minutes to discuss some common metrics and how/when you should pay and, more importantly, when you should not pay attention to them.
+
+# Black or True Black?
+
+Before we can hope to understand accuracy, precision, F1-score etc. we need to talk about True Positives and True Negatives.
+
+<figure style="align: center">
+  <img src="/images/CS8k.png" style="max-width: 400px;" alt="CatSniffer8000"/>
+  <figcaption>CS8k at work</figcaption> 
+</figure>
+
+Suppose we have a binary classifier, call it 'CatSniffer8000' (CS8k), that is supposed to tell us whether a given picture shows a cat or not. We have a test dataset of 1000 pictures, exactly 400 of which show cats, that we ask CS8k to classify. And we end up with the following confusion matrix:
+
+<figure style="align: center">
+  <img src="/images/diagrams/CS8k_confusion_matrix.png" style="max-width: 400px;" alt="Confusion Matrix"/>
+  <figcaption>CS8k's confusion matrix</figcaption> 
+</figure>
+
+There are 400 cat pictures in our training set. These are the *Positives* (P). And, likewise, there are 600 pictures that don't show cats -- the *Negatives* (N).
+
+Out of the 400 pictures that showed cats (our Positives), CS8k correctly labelled 283 as cats. These are the *True Positives* (TP). In other words: True Positives are those instances that are labelled as positive both in our training set and by our classifier.
+
+Similarly, out ouf 600 pictures in our training set that didn't show cats, CS8k correctly labelled 527 as 'non cats'. These are the *True Negatives* (TN).
+
+Futhermore, 73 non-cat pictures got incorrectly labelled as cat picture. This amounts to 73 *False Positives* (FP).
+
+Finally, 117 cat pictures in our dataset received the label 'no cat' by CS8k -- resulting in 117 *False Negatives* (FN).
+
+Note that always 
+
+\#Negatives = \#True Negatives + \#False Positives and 
+
+\#Positives = \#True Positives + \#False Negatives.
+
+This is a good sanity check when filling out a confusion matrix (or interpreting an unlabelled one).
+
+# Accuracy, Recall, Precision and F1-Score 
+
+Now that we know about True/False Positives/Negatives, we can use them to define common performance metrics.
+
+## Accuracy
+
+The one pretty much everyone will have seen is *Accuracy* (ACC). It's defined as
+
+\\[
+\mathrm{ACC} = \frac{\mathrm{TP} + \mathrm{TN}}{\mathrm{P} + \mathrm{N}}
+\\]
+
+but what does it mean? Well, it's the ratio of all instances that have been labelled correctly by our classifier. As such is serves as a good default performance metric for many tasks -- especially if the test set is balanced (i.e. $$\mathrm{P}$$ and $$\mathrm{N}$$ are of similar size) and consists of groups of roughly equal importance to your task.
+
+The accuracy of CS8k is $$\frac{283+527}{400 + 600} = 0.81 = 81 \%$$.
+
+Let's consider an example in which accuracy is a terrible metric: Suppose you decide to build a model that tries to detect breast cancer in women from their X-ray images. Your dataset consists of 100.000 randomly selected images and, as such, only contains 85 Positives. By always guessing 'not breast cancer', your classifier will achieve an accuracy of $$\frac{0 + 99.015}{100000} = 99.015\%$$. And despite this impressive performance metric, you hopefully agree with me that this is an absolutely terrible model. 
+
+## Recall 
+
+To mathematically capture the awfulness of our breast cancer classifier, we should look at its *Recall* or *True Positive Rate* (TPR). It's defined as
+
+\\[
+\mathrm{TPR} = \frac{\mathrm{TP}}{P}
+\\]
+
+and hence turns out to be a whopping $$\frac{0}{85} = 0\%$$ -- truly awful!
+
+Recall measures how many of the Positives got detected as such *and only that*. While it can be a highly relevant piece of information, it is not suitable as your single performance metric. By blindly guessing 'Positive', your model will always have a Recall of $$100\%$$.
+
+## Precision
+
+Contrary to Recall, *Precision* or *Positive Predictive Value* (PPV) measures the ratio of Positives among all those instances that our classifier labelled as positive.
+
+\\[
+\mathrm{PPV} = \frac{\mathrm{TP}}{\mathrm{TP} + \mathrm{FP}}
+\\]
+
+Since $$\mathrm{FP} = 0$$ for our breast cancer classifier, it has perfect precision -- demonstrating that precision alone also isn't suitable as a performance metric.
+
+## F1 Score
+
+This is where the F1-Score (F1) comes into play. It's the harmonic mean of Recall and Precision which makes is much more useful as a performance metric than either of its building blocks. The precise mathematical definition is
+
+\\[
+\mathrm{F1} = \frac{2}{\frac{1}{\mathrm{TPR}} + \frac{1}{\mathrm{PPV}}} = \frac{2 \cdot \mathrm{TP}}{2 \cdot \mathrm{TP} + \mathrm{FP} + \mathrm{FN}}.
+\\]
+
+In order to achieve a high F1-Score, your model must achieve both high Recall and Precision [^2]. Not only that, because of the usage of the harmonic mean, a terrible score in either metric will destroy the F1-Score. In particular, our breast cancer classifier, despite having perfect precision, has an F1-Score of $$\frac{2 \cdot 0}{ 2 \cdot 0 + 0 + 85} = 0$$. 
+
+If your task demands a balance of Recall and Precision (which typically require trade-offs), the F1-Score is a decent choice. However, it's not a silver bullet for your performance metric needs either:
+
+Consider the following scenario: We keep everything as before but flip the labels in our breast cancer example. So the breast cancer instances are now our Negatives and the non-breast cancer instances are now our Positives. Having changed nothing about the quality of our model, this now results in an F1-Score of $$\frac{2 \cdot 99.015}{2 \cdot 99.0815 + 85 + 0 } \sim 0.9996$$ -- a nearly perfect score.
+
+
+There are other issues with these and every other one-dimensional performance metric but I think I've already demanded too much of your attention for now. So let's reserve further criticism for another time...
+
+# Recommended Default 
+
+Let me stress again that metrics are neither good or bad. If handled responsibly, they're powerful tools for data scientists and disregarding their value would be a foolish move. However, as I've tried to argue in this post, I do think that metrics should guide your decision making only after careful evaluation of their appropriateness for the task at hand. I'm not kidding when I'm saying that, in practice, metrics tend to be footguns. It's incredibly easy to misinterpret what a given score/value means in your particular case and how it should (or shouldn't) affect your decisions.
+
+In fact, I'd go as far as to say that the default for data science practitioners should be to *not consider any one-dimensional metric* and instead analyse confusion matrices. They are, without a doubt, less convenient but that actually turns out to be their strength: Being forced to carefully thing through a confusion matrix will save your from making many mistakes that looking at a single, poorly chosen performance metric alone would have nudged you to commit.
+
+
+[^1]: Metrics tend to have names that we attach some intuitive meaning to (like 'accuracy') that doesn't always align with the technical definition.
+[^2]: Not that, altough the F1-Score takes only values between 0 and 1, people don't often view the F1-Score as a percentage. And there are good reasons for that, that I won't get into here.
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+  
+
+
+  
+  
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="/tags/#data-science" class="page__taxonomy-item" rel="tag">data science</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#machine-learning" class="page__taxonomy-item" rel="tag">machine learning</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#statistics" class="page__taxonomy-item" rel="tag">statistics</a>
+    
+    </span>
+  </p>
+
+
+
+
+  
+
+
+  
+  
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> Categories: </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="/categories/#data-science" class="page__taxonomy-item" rel="tag">Data-Science</a>
+    
+    </span>
+  </p>
+
+
+        
+          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2019-06-21T00:00:00+00:00">June 21, 2019</time></p>
+        
+      </footer>
+
+      <section class="page__share">
+  
+    <h4 class="page__share-title">Share on</h4>
+  
+
+  <a href="https://twitter.com/intent/tweet?via=mesken_stefan&text=The+Dangers+of+Performance+Metrics%20http%3A%2F%2Flocalhost%3A4000%2Fdata-science%2Fmetrics.md%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A4000%2Fdata-science%2Fmetrics.md%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Flocalhost%3A4000%2Fdata-science%2Fmetrics.md%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+
+      
+  <nav class="pagination">
+    
+      <a href="/data-science/metrics/" class="pagination--pager" title="The Dangers of Performance Metrics
+">Previous</a>
+    
+    
+      <a href="#" class="pagination--pager disabled">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      <h4 class="page__related-title">You may also enjoy</h4>
+      <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/data-science/metrics/" rel="permalink">The Dangers of Performance Metrics
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  6 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">Full disclosure: I’m not a big fan of one-dimensional metrics when evaluating (binary) classifiers
+(e.g. a neural network that is supposed to distinguish pic...</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/machine%20learning/Feynman-technique/" rel="permalink">An Hommage to Feynman’s Technique
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  6 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">Fragile Knowledge
+
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/machine%20learning/tensorflow-without-tears/" rel="permalink">TensorFlow Without Tears
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  5 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">Life is pretty crazy right now. Finishing a PhD, changing from set theory to applied data science, forming connections to other data scientists, learning as ...</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/machine%20learning/how-to-beat-kaggle-(the-easy-way)/" rel="permalink">How To Beat Kaggle (the Easy Way)
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  6 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">A few nights ago, I found myself tinkering with the Titanic data set on Kaggle and couldn’t help but notice the number of people with a perfect score – many ...</p>
+  </article>
+</div>
+
+        
+      </div>
+    </div>
+  
+  
+</div>
+
+    </div>
+
+    
+
+    <div class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+
+    <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2019 Stefan Mesken. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+  <script defer src="https://use.fontawesome.com/releases/v5.8.1/js/all.js" integrity="sha384-g5uSoOSBd7KkhAMlnQILrecXvzst9TdC09/VM+pjDTCM+1il8RHz5fKANTFFb+gQ" crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" async
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+
+
+  </body>
+</html>
