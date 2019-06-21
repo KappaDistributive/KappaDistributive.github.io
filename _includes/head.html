@@ -18,9 +18,9 @@
       | truncate: 200 }}">
 {% endif %}
 
-{% if page.image.thumb %}
+{% if page.image %}
   <meta name="twitter:image"
-    content="{{ site.urlimg }}{{ page.image.thumb }}">
+    content="{{ site.urlimg }}{{ page.image }}">
 {% else %}
   <meta name="twitter:image"
     content="{{ site.urlimg }}/images/avatar.png">
