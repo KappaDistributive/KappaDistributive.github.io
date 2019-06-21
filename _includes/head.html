@@ -4,6 +4,29 @@
 
 <link href="{% if site.atom_feed.path %}{{ site.atom_feed.path }}{% else %}{{ '/feed.xml' | relative_url }}{% endif %}" type="application/atom+xml" rel="alternate" title="{{ site.title }} Feed">
 
+<!-- ****** Twitter card ****** -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@mesken_stefan">
+<meta name="twitter:title" content="{{ page.title }}">
+
+{% if page.description %}
+  <meta name="twitter:description"
+    content="{{ page.meta_description }}">
+{% else %}
+  <meta name="twitter:description"
+    content="{{ page.content | strip_html | xml_escape
+      | truncate: 200 }}">
+{% endif %}
+
+{% if page.image.thumb %}
+  <meta name="twitter:image"
+    content="{{ site.urlimg }}/{{ page.image.thumb }}">
+{% else %}
+  <meta name="twitter:image"
+    content="{{ site.urlimg }}/path/to/cover.png">
+{% endif %}
+<!-- ****** Twitter card ****** -->
+
 <!-- ****** faviconit.com favicons ****** -->
 	<link rel="shortcut icon" href="/assets/favicon/favicon.ico">
 	<link rel="icon" sizes="16x16 32x32 64x64" href="/assets/favicon/favicon.ico">
