@@ -4,28 +4,25 @@
 
 <link href="{% if site.atom_feed.path %}{{ site.atom_feed.path }}{% else %}{{ '/feed.xml' | relative_url }}{% endif %}" type="application/atom+xml" rel="alternate" title="{{ site.title }} Feed">
 
-<!-- ****** Twitter card ****** -->
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:site" content="@mesken_stefan">
-<meta name="twitter:title" content="{{ page.title }}">
+<!-- Twitter cards -->
+<meta name="twitter:site"    content="@{{ site.twitter_username }}">
+<meta name="twitter:creator" content="@{{ page.author }}">
+<meta name="twitter:title"   content="{{ page.title }}">
 
-{% if page.description %}
-  <meta name="twitter:description"
-    content="{{ page.meta_description }}">
+{% if page.summary %}
+<meta name="twitter:description" content="{{ page.summary }}">
 {% else %}
-  <meta name="twitter:description"
-    content="{{ page.content | strip_html | xml_escape
-      | truncate: 200 }}">
+<meta name="twitter:description" content="{{ site.description }}">
 {% endif %}
 
-{% if page.image.thumb %}
-  <meta name="twitter:image"
-    content="{{ site.urlimg }}/{{ page.image.thumb }}">
+{% if page.image %}
+<meta name="twitter:card"  content="summary_large_image">
+<meta name="twitter:image" content="{{ site.url }}{{ page.image }}">
 {% else %}
-  <meta name="twitter:image"
-    content="{{ site.urlimg }}/path/to/cover.png">
+<meta name="twitter:card"  content="summary">
+<meta name="twitter:image" content="{{ site.title_image }}">
 {% endif %}
-<!-- ****** Twitter card ****** -->
+<!-- end of Twitter cards -->
 
 <!-- ****** faviconit.com favicons ****** -->
 	<link rel="shortcut icon" href="/assets/favicon/favicon.ico">
