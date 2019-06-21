@@ -20,10 +20,10 @@
 
 {% if page.image.thumb %}
   <meta name="twitter:image"
-    content="{{ site.urlimg }}/{{ page.image.thumb }}">
+    content="{{ site.urlimg }}{{ page.image.thumb }}">
 {% else %}
   <meta name="twitter:image"
-    content="{{ site.urlimg }}/{{ page.image }}">
+    content="{{ site.urlimg }}{{ page.image }}">
 {% endif %}
 <!-- end of Twitter cards -->
 
