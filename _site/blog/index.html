@@ -77,6 +77,32 @@
 
 <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Stefan Mesken Feed">
 
+<!-- Twitter cards -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@mesken_stefan">
+<meta name="twitter:title" content="Blog Posts by Tags">
+
+
+  <meta name="twitter:description"
+    content="{% for tag in site.tags %}
+  {% assign t = tag | first %}
+  {% assign posts = tag | last %}
+
+{{ t | downcase }}
+
+{% for post in posts %}
+  {% if post.tags contains t %}
+  
+    {{ post.title }}
+    ...">
+
+
+
+  <meta name="twitter:image"
+    content="https://www.stefanmesken.info/images/avatar_twitter.png">
+
+<!-- end of Twitter cards -->
+
 <!-- ****** faviconit.com favicons ****** -->
 	<link rel="shortcut icon" href="/assets/favicon/favicon.ico">
 	<link rel="icon" sizes="16x16 32x32 64x64" href="/assets/favicon/favicon.ico">
@@ -302,13 +328,6 @@
 
   
   <li>
-    <a href="/data-science/metrics.md/">The Dangers of Performance Metrics</a>
-    <span class="date">June 21, 2019</span>
-  </li>
-  
-
-  
-  <li>
     <a href="/data-science/metrics/">The Dangers of Performance Metrics</a>
     <span class="date">June 21, 2019</span>
   </li>
@@ -390,13 +409,6 @@
 
   
   <li>
-    <a href="/data-science/metrics.md/">The Dangers of Performance Metrics</a>
-    <span class="date">June 21, 2019</span>
-  </li>
-  
-
-  
-  <li>
     <a href="/data-science/metrics/">The Dangers of Performance Metrics</a>
     <span class="date">June 21, 2019</span>
   </li>
@@ -406,13 +418,6 @@
 
 <p>statistics</p>
 <ul>
-
-  
-  <li>
-    <a href="/data-science/metrics.md/">The Dangers of Performance Metrics</a>
-    <span class="date">June 21, 2019</span>
-  </li>
-  
 
   
   <li>

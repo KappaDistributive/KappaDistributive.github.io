@@ -18,9 +18,4 @@ var store = [{
         "excerpt":"Full disclosure: I’m not a big fan of one-dimensional metrics when evaluating (binary) classifiers (e.g. a neural network that is supposed to distinguish pictures of cats and dogs). In my opinion, a confusion matrix is, in almost all instances, preferable for data scientists. However, that doesn’t mean there aren’t good...","categories": ["Data-Science"],
         "tags": ["data science","machine learning","statistics"],
         "url": "http://localhost:4000/data-science/metrics/",
-        "teaser":null},{
-        "title": "The Dangers of Performance Metrics",
-        "excerpt":"Full disclosure: I'm not a big fan of one-dimensional metrics when evaluating [(binary) classifiers](https://en.wikipedia.org/wiki/Binary_classification) (e.g. a neural network that is supposed to distinguish pictures of cats and dogs). In my opinion, a [confusion matrix](https://en.wikipedia.org/wiki/Confusion_matrix) is, in almost all instances, preferable for data scientists. However, that doesn't mean there aren't good...","categories": ["Data-Science"],
-        "tags": ["data science","machine learning","statistics"],
-        "url": "http://localhost:4000/data-science/metrics.md/",
         "teaser":null}]
