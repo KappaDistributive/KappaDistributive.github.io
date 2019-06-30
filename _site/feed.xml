@@ -1,4 +1,105 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-06-21T23:14:21+00:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Stefan Mesken</title><subtitle>Data Science</subtitle><author><name>Stefan Mesken</name></author><entry><title type="html">The Dangers of Performance Metrics</title><link href="http://localhost:4000/data-science/metrics/" rel="alternate" type="text/html" title="The Dangers of Performance Metrics" /><published>2019-06-21T00:00:00+00:00</published><updated>2019-06-21T00:00:00+00:00</updated><id>http://localhost:4000/data-science/metrics</id><content type="html" xml:base="http://localhost:4000/data-science/metrics/">&lt;p&gt;Full disclosure: I’m not a big fan of one-dimensional metrics when evaluating &lt;a href=&quot;https://en.wikipedia.org/wiki/Binary_classification&quot;&gt;(binary) classifiers&lt;/a&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-06-30T04:23:21+00:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Stefan Mesken</title><subtitle>Data Science</subtitle><author><name>Stefan Mesken</name></author><entry><title type="html">Expected Value</title><link href="http://localhost:4000/probability%20theory/expected-value/" rel="alternate" type="text/html" title="Expected Value" /><published>2019-06-30T00:00:00+00:00</published><updated>2019-06-30T00:00:00+00:00</updated><id>http://localhost:4000/probability%20theory/expected-value</id><content type="html" xml:base="http://localhost:4000/probability%20theory/expected-value/">&lt;p&gt;A key realization that I had early in life, although in much more
+primitive terms, is that all you can ever hope to affect is the
+expected value of your decisions. Certainty, no matter how much we
+crave for it, simply isn’t attainable in most real life situations.&lt;/p&gt;
+
+&lt;p&gt;It’s also become obvious to me, gradually over many years, that most
+people never had this realization or, if they did, don’t properly
+incorporate it into their life.&lt;/p&gt;
+
+&lt;p&gt;In fact, many phallacies and cognitive biases are rooted in people
+misunderstanding expected values:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;The &lt;a href=&quot;https://en.wikipedia.org/wiki/Hot-hand_fallac://en.wikipedia.org/wiki/Hot-hand_fallacy&quot;&gt;Hot Hand
+Phallacy&lt;/a&gt;
+– incorreclty assuming that recent successes increase the
+probability for future successes,&lt;/li&gt;
+  &lt;li&gt;The &lt;a href=&quot;https://en.wikipedia.org/wiki/Gambler%27s_fallacy&quot;&gt;Gambler’s
+Phallacy&lt;/a&gt; –
+failing to distinguish between expected values and dependent
+expected values,&lt;/li&gt;
+  &lt;li&gt;The &lt;a href=&quot;https://en.wikipedia.org/wiki/Risk_aversion&quot;&gt;Risk Aversion
+Bias&lt;/a&gt; – the tendency
+for people to trade expected value for a reduced perceived risk,&lt;/li&gt;
+  &lt;li&gt;The &lt;a href=&quot;https://en.wikipedia.org/wiki/Disposition_effect&quot;&gt;Disposition
+Effect&lt;/a&gt; – selling
+assets that have increased in value and keeping assets that have
+dropped in value regardless of the expected value of those
+decisions,&lt;/li&gt;
+  &lt;li&gt;The &lt;a href=&quot;https://en.wikipedia.org/wiki/Information_bias_(psychology)&quot;&gt;Information
+Bias&lt;/a&gt;
+– seeking information when faced with a decision even if the
+potentially gained information won’t affect the expected value of
+any of the options at hand,&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;Loss Aversion&quot;&gt;Loss Aversion&lt;/a&gt; – refusing to take up an opportunity
+of positive expected value because losses are valued more than wins
+of equal magnitude,&lt;/li&gt;
+  &lt;li&gt;…&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;expected-value&quot;&gt;Expected Value&lt;/h1&gt;
+
+&lt;p&gt;Suppose I proposed the following game of chance to you: We flip a fair
+coin and every time it shows heads, you pay me $2. Every time is
+shows tails, I pay you $1.&lt;/p&gt;
+
+&lt;p&gt;In this simple scenario, people know inuitively that they’re very
+likely to lose their money to me and hence correctly refuse to
+play. However, only slighly less obvious rip-offs attract an enormous
+amount of people who happily invest their money (state lotteries, slot
+machines, various unfavorable insurance schemes, …). The expected
+value is a tool to protect us against these schemes and, on the other
+hand, recognize favorable opportunities:&lt;/p&gt;
+
+&lt;p&gt;A (finite &lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;) &lt;em&gt;Stochastic Experiment&lt;/em&gt; consists of a number of
+potential results &lt;script type=&quot;math/tex&quot;&gt;R_1, \ldots, R_n&lt;/script&gt; together with a payoff &lt;script type=&quot;math/tex&quot;&gt;P_i&lt;/script&gt;
+(a real number) and a probability &lt;script type=&quot;math/tex&quot;&gt;P(R_i)&lt;/script&gt; that is associated to
+each &lt;script type=&quot;math/tex&quot;&gt;R_i&lt;/script&gt;. We have&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;script type=&quot;math/tex&quot;&gt;0 \le P(R_i) \le 1&lt;/script&gt; for all &lt;script type=&quot;math/tex&quot;&gt;i&lt;/script&gt;,&lt;/li&gt;
+  &lt;li&gt;&lt;script type=&quot;math/tex&quot;&gt;P(R_1 \ \mathrm{ OR } \ R_2 \ \mathrm{ OR } \ \ldots \mathrm{R_n}) = 1 = 100 \%&lt;/script&gt; &lt;sup id=&quot;fnref:2&quot;&gt;&lt;a href=&quot;#fn:2&quot; class=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt; and&lt;/li&gt;
+  &lt;li&gt;&lt;script type=&quot;math/tex&quot;&gt;P(R_i \ \mathrm{ OR } \ R_j) = P(R_i) + P(R_j)&lt;/script&gt; for &lt;script type=&quot;math/tex&quot;&gt;i \neq j&lt;/script&gt;
+and more generally &lt;script type=&quot;math/tex&quot;&gt;P(\mathrm{OR}_{i \in I} R_i) = \sum_{i \in I}
+P(R_i)&lt;/script&gt; for all &lt;script type=&quot;math/tex&quot;&gt;I \subseteq \{1, \ldots, n\}&lt;/script&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The &lt;em&gt;Expected Value&lt;/em&gt; (EV) of this Stochastic Experiment is the average
+pay-off, calculated as&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;EV = \sum_{i=1}^n P_i \cdot P(R_i).&lt;/script&gt;
+
+&lt;p&gt;In our example above there are two potential results: &lt;script type=&quot;math/tex&quot;&gt;R_1 =
+\mathrm{heads}&lt;/script&gt;, &lt;script type=&quot;math/tex&quot;&gt;R_2 = \mathrm{tails}&lt;/script&gt; with payoffs &lt;script type=&quot;math/tex&quot;&gt;P_1 =
+-\$2&lt;/script&gt;, &lt;script type=&quot;math/tex&quot;&gt;P_2 = +\$1&lt;/script&gt; and &lt;script type=&quot;math/tex&quot;&gt;P(R_1) = P(R_2) = 0.5 = 50\%&lt;/script&gt;. The
+expected value is 
+&lt;script type=&quot;math/tex&quot;&gt;EV = -\$2 \cdot 0.5 + \$1 \cdot 0.5 = -\$0.5.&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;This means that, on average, you will lose &lt;script type=&quot;math/tex&quot;&gt;\$0.5&lt;/script&gt; every time you
+agree to play against me. So, after 100 games, you will, on average,
+have lost &lt;script type=&quot;math/tex&quot;&gt;\$50&lt;/script&gt;.&lt;/p&gt;
+
+&lt;p&gt;There will be fluctuations, of course. And it may be tempting to chase
+your furtune. You might even win the first 10 games and quit –
+leaving you with a profit of &lt;script type=&quot;math/tex&quot;&gt;\$10&lt;/script&gt;. But it’s a &lt;a href=&quot;https://en.wikipedia.org/wiki/Law_of_large_numbers&quot;&gt;mathematical
+fact&lt;/a&gt; that trying
+to beat the expected value is a foolish attempt.&lt;/p&gt;
+
+&lt;p&gt;If that doesn’t convince you, let’s look at a few simulations of your
+overall winnings:&lt;/p&gt;
+
+&lt;div class=&quot;footnotes&quot;&gt;
+  &lt;ol&gt;
+    &lt;li id=&quot;fn:1&quot;&gt;
+      &lt;p&gt;Trying to keep things as simple as possible here… &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:2&quot;&gt;
+      &lt;p&gt;In case this is confusing: There’s nothing magical about the
+&lt;script type=&quot;math/tex&quot;&gt;\%&lt;/script&gt; sign – it just means &lt;script type=&quot;math/tex&quot;&gt;\frac{1}{100}&lt;/script&gt; and &lt;script type=&quot;math/tex&quot;&gt;100 \% = 100 \cdot
+\frac{1}{100} = 1&lt;/script&gt;. &lt;a href=&quot;#fnref:2&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;</content><author><name>Stefan Mesken</name></author><category term="Probability Theory" /><category term="neural networks" /><category term="machine learning" /><category term="human learning" /><summary type="html">A key realization that I had early in life, although in much more primitive terms, is that all you can ever hope to affect is the expected value of your decisions. Certainty, no matter how much we crave for it, simply isn’t attainable in most real life situations.</summary></entry><entry><title type="html">The Dangers of Performance Metrics</title><link href="http://localhost:4000/data-science/metrics/" rel="alternate" type="text/html" title="The Dangers of Performance Metrics" /><published>2019-06-21T00:00:00+00:00</published><updated>2019-06-21T00:00:00+00:00</updated><id>http://localhost:4000/data-science/metrics</id><content type="html" xml:base="http://localhost:4000/data-science/metrics/">&lt;p&gt;Full disclosure: I’m not a big fan of one-dimensional metrics when evaluating &lt;a href=&quot;https://en.wikipedia.org/wiki/Binary_classification&quot;&gt;(binary) classifiers&lt;/a&gt;
 (e.g. a neural network that is supposed to distinguish pictures of cats and dogs). In my opinion, a &lt;a href=&quot;https://en.wikipedia.org/wiki/Confusion_matrix&quot;&gt;confusion matrix&lt;/a&gt; is, in almost all instances, preferable for data scientists. However, that doesn’t mean there aren’t good reasons to use one-dimensional performance metrics:&lt;/p&gt;
 
 &lt;ul&gt;
@@ -21,7 +122,7 @@
 
 &lt;h1 id=&quot;black-or-true-black&quot;&gt;Black or True Black?&lt;/h1&gt;
 
-&lt;p&gt;Before we can hope to understand accuracy, precision, F1-score etc. we need to talk about True Positives and True Negatives.&lt;/p&gt;
+&lt;p&gt;Before we can hope to understand common performance metrics we need to talk about True Positives and True Negatives.&lt;/p&gt;
 
 &lt;figure style=&quot;align: center&quot;&gt;
   &lt;img src=&quot;/images/CS8k.png&quot; style=&quot;max-width: 400px;&quot; alt=&quot;CatSniffer8000&quot; /&gt;

@@ -18,4 +18,9 @@ var store = [{
         "excerpt":"Full disclosure: I’m not a big fan of one-dimensional metrics when evaluating (binary) classifiers (e.g. a neural network that is supposed to distinguish pictures of cats and dogs). In my opinion, a confusion matrix is, in almost all instances, preferable for data scientists. However, that doesn’t mean there aren’t good...","categories": ["Data-Science"],
         "tags": ["data science","machine learning","statistics"],
         "url": "http://localhost:4000/data-science/metrics/",
+        "teaser":null},{
+        "title": "Expected Value",
+        "excerpt":"A key realization that I had early in life, although in much more primitive terms, is that all you can ever hope to affect is the expected value of your decisions. Certainty, no matter how much we crave for it, simply isn’t attainable in most real life situations. It’s also...","categories": ["Probability Theory"],
+        "tags": ["neural networks","machine learning","human learning"],
+        "url": "http://localhost:4000/probability%20theory/expected-value/",
         "teaser":null}]
