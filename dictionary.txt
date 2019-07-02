@@ -1,4 +1,4 @@
-personal_ws-1.1 en 24 utf-8
+personal_ws-1.1 en 26 utf-8
 hommage
 vec
 dataflow
@@ -8,7 +8,9 @@ dataset
 png
 mapsto
 mathrm
+footguns
 cdot
+frac
 mathjax
 Kaggle
 subseteq
@@ -23,5 +25,3 @@ ldots
 undirected
 figcaption
 infty
-frac
-footguns

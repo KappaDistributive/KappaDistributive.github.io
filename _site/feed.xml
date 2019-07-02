@@ -1,4 +1,69 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-07-02T04:28:48+00:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Stefan Mesken</title><subtitle>Data Science</subtitle><author><name>Stefan Mesken</name></author><entry><title type="html">The Dangers of Performance Metrics</title><link href="http://localhost:4000/data-science/metrics/" rel="alternate" type="text/html" title="The Dangers of Performance Metrics" /><published>2019-06-21T00:00:00+00:00</published><updated>2019-06-21T00:00:00+00:00</updated><id>http://localhost:4000/data-science/metrics</id><content type="html" xml:base="http://localhost:4000/data-science/metrics/">&lt;p&gt;Full disclosure: I’m not a big fan of one-dimensional metrics when evaluating &lt;a href=&quot;https://en.wikipedia.org/wiki/Binary_classification&quot;&gt;(binary) classifiers&lt;/a&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-07-02T11:42:06+00:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Stefan Mesken</title><subtitle>Data Science</subtitle><author><name>Stefan Mesken</name></author><entry><title type="html">Machine Learning Golf</title><link href="http://localhost:4000/data-science/machine-learning-golf/" rel="alternate" type="text/html" title="Machine Learning Golf" /><published>2019-07-01T00:00:00+00:00</published><updated>2019-07-01T00:00:00+00:00</updated><id>http://localhost:4000/data-science/machine-learning-golf</id><content type="html" xml:base="http://localhost:4000/data-science/machine-learning-golf/">&lt;p&gt;For the last 5 years or so, I’ve been lurking on the &lt;a href=&quot;https://codegolf.stackexchange.com/&quot;&gt;Code Golf Stackexchange&lt;/a&gt;. Code Golf is the art of solving a given problem, under specified rules, with as little written code as possible. And if you have never encountered ‘golfed code’, I highly recommend taking a look. Not sure about other people but to my nerdy brain, reading the ingenious approaches these incredibly talented and passionate coders come up with, is pure entertainment gold!&lt;/p&gt;
+
+&lt;p&gt;For various reasons, I’ve never gotten into the hobby myself – until last week. While walking my dog, I thought about &lt;a href=&quot;https://www.newscientist.com/article/2205779-creating-an-ai-can-be-five-times-worse-for-the-planet-than-a-car/&quot;&gt;this article on the carbon footprint of machine learning&lt;/a&gt; and it occurred to me that the neural networks I’ve designed and trained are super wasteful in terms of their parameter efficiency – basically the number of free variables during training to adapt them to a given task. So, I thought to myself, what would happen if I added parameter efficiency as an additional metric?&lt;/p&gt;
+
+&lt;h1 id=&quot;machine-learning-golf&quot;&gt;Machine Learning Golf&lt;/h1&gt;
+
+&lt;p&gt;Here’s the elevator pitch for ML Golf: The challenger provides&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;a public training set,&lt;/li&gt;
+  &lt;li&gt;a performance goal that needs to be met on the (unmodified!) training set,&lt;/li&gt;
+  &lt;li&gt;[additional, optional performance goals for bragging rights],&lt;/li&gt;
+  &lt;li&gt;a set of rules that all entries must satisfy and&lt;/li&gt;
+  &lt;li&gt;a scoring system to judge the entries by.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;For logistics and visibility reasons, I suggest posting any such challenge on https://codegolf.stackexchange.com/ under the tag ‘machine-learning’, once that tag exists. &lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+
+&lt;p&gt;Challengers then design and train their models according to the stated rules. Once their model meets the mandatory performance goal, they may submit their model (in a suitable form) and all code necessary to verify their results. As per usual in Code Golf, peers will then vote/comment on their and other submissions, suggest improvements and challengers may update their entries at any point and are free to enter multiple models.&lt;/p&gt;
+
+&lt;h1 id=&quot;whats-the-point&quot;&gt;What’s the point?&lt;/h1&gt;
+
+&lt;p&gt;The initial motivation of ML Golf was to find out how to design machine learning models that are much more parameter efficient. However, I don’t think that this is the most convincing or even relevant argument for you to consider participating.&lt;/p&gt;
+
+&lt;p&gt;Instead, the motivation for ML Golf is pretty much the same as for any other programming competition: My initial trial runs of ML Golfs proved to be highly entertaining, got me thinking about aspects of machine learning I previously hadn’t considered, encourage out-of-the-box thinking and, should the community decide to participate in them, spark the spirited exchange with like-minded people in a casual and safe environment.&lt;/p&gt;
+
+&lt;h1 id=&quot;the-first-challenge&quot;&gt;The First Challenge&lt;/h1&gt;
+
+&lt;p&gt;To kick things off, I’ll propose the first, very simple challenge.&lt;/p&gt;
+
+&lt;p&gt;In the language and framework of your choice, design and train a neural network that, given &lt;script type=&quot;math/tex&quot;&gt;(x_1, x_2)&lt;/script&gt; calculates their product &lt;script type=&quot;math/tex&quot;&gt;x_1 \cdot x_2&lt;/script&gt; for all integers &lt;script type=&quot;math/tex&quot;&gt;x_1, x_2&lt;/script&gt; between (and including) &lt;script type=&quot;math/tex&quot;&gt;-10&lt;/script&gt; and &lt;script type=&quot;math/tex&quot;&gt;10&lt;/script&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;performance-goal&quot;&gt;Performance Goal&lt;/h2&gt;
+
+&lt;p&gt;To qualify, your model may not deviate by more than &lt;script type=&quot;math/tex&quot;&gt;0.5&lt;/script&gt; from the correct result on any of those entries.&lt;/p&gt;
+
+&lt;h2 id=&quot;bonus-goal&quot;&gt;Bonus Goal&lt;/h2&gt;
+
+&lt;p&gt;Achieve a maximal deviation (measured by the Euclidean norm) of &lt;script type=&quot;math/tex&quot;&gt;0.5&lt;/script&gt; for the multiplication of all complex numbers with integer components &lt;script type=&quot;math/tex&quot;&gt;c_1 = (a_1, b_1) = a_1 + b_1 \cdot i, c_2 = (a_2, b_2) = a_2 + b_2 \cdot i&lt;/script&gt; of Euclidean norm &lt;script type=&quot;math/tex&quot;&gt;\le 10&lt;/script&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;rules&quot;&gt;Rules&lt;/h2&gt;
+
+&lt;p&gt;Your model&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;must be a ‘traditional’ neural network (a node’s value is calculated as a weighted linear combination of some of the nodes in the previous layer followed by an activation function),&lt;/li&gt;
+  &lt;li&gt;may only use activation functions listed as such &lt;a href=&quot;https://keras.io/activations/&quot;&gt;in Keras&lt;/a&gt;,&lt;/li&gt;
+  &lt;li&gt;must take &lt;script type=&quot;math/tex&quot;&gt;(x_1, x_2)&lt;/script&gt; either as a tuple/vector/list/… of integers or floats as its only input,&lt;/li&gt;
+  &lt;li&gt;return the answer &lt;script type=&quot;math/tex&quot;&gt;\hat{y}&lt;/script&gt; as an integer, float (or a suitable container, e.g. a vector or list, that contains this answer).&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;scoring&quot;&gt;Scoring&lt;/h2&gt;
+
+&lt;p&gt;The neural network with the &lt;em&gt;smallest number of weights&lt;/em&gt; (including bias weights) wins.&lt;/p&gt;
+
+&lt;p&gt;My best attempt so far uses 43 weights and achieves a maximal deviation of &lt;script type=&quot;math/tex&quot;&gt;0.04786&lt;/script&gt; as witnessed by &lt;script type=&quot;math/tex&quot;&gt;8 \cdot -8 \mapsto -63.521423&lt;/script&gt;. I’m sure there’s plenty of room for improvements and am looking forward to your entries!&lt;/p&gt;
+
+&lt;p&gt;If you want to participate or check my submission, hop over to this &lt;a href=&quot;https://codegolf.stackexchange.com/questions/187562/machine-learning-golf-multiplication&quot;&gt;challenge on Code Golf Stackexchange&lt;/a&gt;.&lt;/p&gt;
+
+&lt;div class=&quot;footnotes&quot;&gt;
+  &lt;ol&gt;
+    &lt;li id=&quot;fn:1&quot;&gt;
+      &lt;p&gt;This, of course, doesn’t mean that ML Golf is limited to this platform – feel free to post your challenges and submissions wherever you want. &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;</content><author><name>Stefan Mesken</name></author><category term="Data-Science" /><category term="machine learning" /><category term="neural networks" /><category term="ml golf" /><summary type="html">For the last 5 years or so, I’ve been lurking on the Code Golf Stackexchange. Code Golf is the art of solving a given problem, under specified rules, with as little written code as possible. And if you have never encountered ‘golfed code’, I highly recommend taking a look. Not sure about other people but to my nerdy brain, reading the ingenious approaches these incredibly talented and passionate coders come up with, is pure entertainment gold!</summary></entry><entry><title type="html">The Dangers of Performance Metrics</title><link href="http://localhost:4000/data-science/metrics/" rel="alternate" type="text/html" title="The Dangers of Performance Metrics" /><published>2019-06-21T00:00:00+00:00</published><updated>2019-06-21T00:00:00+00:00</updated><id>http://localhost:4000/data-science/metrics</id><content type="html" xml:base="http://localhost:4000/data-science/metrics/">&lt;p&gt;Full disclosure: I’m not a big fan of one-dimensional metrics when evaluating &lt;a href=&quot;https://en.wikipedia.org/wiki/Binary_classification&quot;&gt;(binary) classifiers&lt;/a&gt;
 (e.g. a neural network that is supposed to distinguish pictures of cats and dogs). In my opinion, a &lt;a href=&quot;https://en.wikipedia.org/wiki/Confusion_matrix&quot;&gt;confusion matrix&lt;/a&gt; is, in almost all instances, preferable for data scientists. However, that doesn’t mean there aren’t good reasons to use one-dimensional performance metrics:&lt;/p&gt;
 
 &lt;ul&gt;

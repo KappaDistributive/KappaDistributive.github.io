@@ -1,0 +1,678 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.16.3 by Michael Rose
+  Copyright 2013-2019 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Machine Learning Golf - Stefan Mesken</title>
+<meta name="description" content="For the last 5 years or so, I’ve been lurking on the Code Golf Stackexchange. Code Golf is the art of solving a given problem, under specified rules, with as little written code as possible. And if you have never encountered ‘golfed code’, I highly recommend taking a look. Not sure about other people but to my nerdy brain, reading the ingenious approaches these incredibly talented and passionate coders come up with, is pure entertainment gold!">
+
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Stefan Mesken">
+<meta property="og:title" content="Machine Learning Golf">
+<meta property="og:url" content="http://localhost:4000/data-science/machine-learning-golf/">
+
+
+  <meta property="og:description" content="For the last 5 years or so, I’ve been lurking on the Code Golf Stackexchange. Code Golf is the art of solving a given problem, under specified rules, with as little written code as possible. And if you have never encountered ‘golfed code’, I highly recommend taking a look. Not sure about other people but to my nerdy brain, reading the ingenious approaches these incredibly talented and passionate coders come up with, is pure entertainment gold!">
+
+
+
+
+
+  <meta name="twitter:site" content="@mesken_stefan">
+  <meta name="twitter:title" content="Machine Learning Golf">
+  <meta name="twitter:description" content="For the last 5 years or so, I’ve been lurking on the Code Golf Stackexchange. Code Golf is the art of solving a given problem, under specified rules, with as little written code as possible. And if you have never encountered ‘golfed code’, I highly recommend taking a look. Not sure about other people but to my nerdy brain, reading the ingenious approaches these incredibly talented and passionate coders come up with, is pure entertainment gold!">
+  <meta name="twitter:url" content="http://localhost:4000/data-science/machine-learning-golf/">
+
+  
+    <meta name="twitter:card" content="summary">
+    
+  
+
+  
+
+
+
+  <meta property="article:published_time" content="2019-07-01T00:00:00+00:00">
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="http://localhost:4000/data-science/machine-learning-golf/">
+
+
+
+
+
+
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Stefan Mesken",
+      "url": "http://localhost:4000",
+      "sameAs": null
+    }
+  </script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Stefan Mesken Feed">
+
+<!-- Twitter cards -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@mesken_stefan">
+<meta name="twitter:title" content="Machine Learning Golf">
+
+
+  <meta name="twitter:description"
+    content="For the last 5 years or so, I’ve been lurking on the Code Golf Stackexchange. Code Golf is the art of solving a given problem, under specified rules, with as little written code as possible. And if...">
+
+
+
+  <meta name="twitter:image"
+    content="https://www.stefanmesken.info/images/avatar_twitter.png">
+
+<!-- end of Twitter cards -->
+
+<!-- ****** faviconit.com favicons ****** -->
+	<link rel="shortcut icon" href="/assets/favicon/favicon.ico">
+	<link rel="icon" sizes="16x16 32x32 64x64" href="/assets/favicon/favicon.ico">
+	<link rel="icon" type="image/png" sizes="196x196" href="/assets/favicon/favicon-192.png">
+	<link rel="icon" type="image/png" sizes="160x160" href="/assets/favicon/favicon-160.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="/assets/favicon/favicon-96.png">
+	<link rel="icon" type="image/png" sizes="64x64" href="/assets/favicon/favicon-64.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16.png">
+	<link rel="apple-touch-icon" href="/assets/favicon/favicon-57.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="/assets/favicon/favicon-114.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="/assets/favicon/favicon-72.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="/assets/favicon/favicon-144.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="/assets/favicon/favicon-60.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="/assets/favicon/favicon-120.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="/assets/favicon/favicon-76.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="/assets/favicon/favicon-152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/favicon-180.png">
+	<meta name="msapplication-TileColor" content="#FFFFFF">
+	<meta name="msapplication-TileImage" content="/assets/favicon/favicon-144.png">
+	<meta name="msapplication-config" content="/assets/favicon/browserconfig.xml">
+	<!-- ****** faviconit.com favicons ****** -->
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<!--[if IE ]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/">Stefan Mesken</a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/blog/" >Blog</a>
+            </li><li class="masthead__menu-item">
+              <a href="/about.html" >About</a>
+            </li></ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="https://schema.org/Person">
+
+  
+    <div class="author__avatar">
+      
+
+      
+        <img src="/images/avatar.png" alt="Stefan Mesken" itemprop="image">
+      
+    </div>
+  
+
+  <div class="author__content">
+    
+      <h3 class="author__name" itemprop="name">Stefan Mesken</h3>
+    
+    
+      <p class="author__bio" itemprop="description">
+        Mathematician and Data Scientist.
+      </p>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+        <li itemprop="homeLocation" itemscope itemtype="https://schema.org/Place">
+          <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name">Cologne, Germany</span>
+        </li>
+      
+
+      
+        
+          
+        
+          
+        
+          
+            <li><a href="https://twitter.com/mesken_stefan" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i> Twitter</a></li>
+          
+        
+          
+        
+          
+            <li><a href="https://github.com/KappaDistributive" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+          
+        
+          
+        
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Machine Learning Golf">
+    <meta itemprop="description" content="For the last 5 years or so, I’ve been lurking on the Code Golf Stackexchange. Code Golf is the art of solving a given problem, under specified rules, with as little written code as possible. And if you have never encountered ‘golfed code’, I highly recommend taking a look. Not sure about other people but to my nerdy brain, reading the ingenious approaches these incredibly talented and passionate coders come up with, is pure entertainment gold!">
+    <meta itemprop="datePublished" content="July 01, 2019">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">Machine Learning Golf
+</h1>
+          
+            <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  3 minute read
+</p>
+          
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+        <p>For the last 5 years or so, I’ve been lurking on the <a href="https://codegolf.stackexchange.com/">Code Golf Stackexchange</a>. Code Golf is the art of solving a given problem, under specified rules, with as little written code as possible. And if you have never encountered ‘golfed code’, I highly recommend taking a look. Not sure about other people but to my nerdy brain, reading the ingenious approaches these incredibly talented and passionate coders come up with, is pure entertainment gold!</p>
+
+<p>For various reasons, I’ve never gotten into the hobby myself – until last week. While walking my dog, I thought about <a href="https://www.newscientist.com/article/2205779-creating-an-ai-can-be-five-times-worse-for-the-planet-than-a-car/">this article on the carbon footprint of machine learning</a> and it occurred to me that the neural networks I’ve designed and trained are super wasteful in terms of their parameter efficiency – basically the number of free variables during training to adapt them to a given task. So, I thought to myself, what would happen if I added parameter efficiency as an additional metric?</p>
+
+<h1 id="machine-learning-golf">Machine Learning Golf</h1>
+
+<p>Here’s the elevator pitch for ML Golf: The challenger provides</p>
+
+<ul>
+  <li>a public training set,</li>
+  <li>a performance goal that needs to be met on the (unmodified!) training set,</li>
+  <li>[additional, optional performance goals for bragging rights],</li>
+  <li>a set of rules that all entries must satisfy and</li>
+  <li>a scoring system to judge the entries by.</li>
+</ul>
+
+<p>For logistics and visibility reasons, I suggest posting any such challenge on https://codegolf.stackexchange.com/ under the tag ‘machine-learning’, once that tag exists. <sup id="fnref:1"><a href="#fn:1" class="footnote">1</a></sup></p>
+
+<p>Challengers then design and train their models according to the stated rules. Once their model meets the mandatory performance goal, they may submit their model (in a suitable form) and all code necessary to verify their results. As per usual in Code Golf, peers will then vote/comment on their and other submissions, suggest improvements and challengers may update their entries at any point and are free to enter multiple models.</p>
+
+<h1 id="whats-the-point">What’s the point?</h1>
+
+<p>The initial motivation of ML Golf was to find out how to design machine learning models that are much more parameter efficient. However, I don’t think that this is the most convincing or even relevant argument for you to consider participating.</p>
+
+<p>Instead, the motivation for ML Golf is pretty much the same as for any other programming competition: My initial trial runs of ML Golfs proved to be highly entertaining, got me thinking about aspects of machine learning I previously hadn’t considered, encourage out-of-the-box thinking and, should the community decide to participate in them, spark the spirited exchange with like-minded people in a casual and safe environment.</p>
+
+<h1 id="the-first-challenge">The First Challenge</h1>
+
+<p>To kick things off, I’ll propose the first, very simple challenge.</p>
+
+<p>In the language and framework of your choice, design and train a neural network that, given <script type="math/tex">(x_1, x_2)</script> calculates their product <script type="math/tex">x_1 \cdot x_2</script> for all integers <script type="math/tex">x_1, x_2</script> between (and including) <script type="math/tex">-10</script> and <script type="math/tex">10</script>.</p>
+
+<h2 id="performance-goal">Performance Goal</h2>
+
+<p>To qualify, your model may not deviate by more than <script type="math/tex">0.5</script> from the correct result on any of those entries.</p>
+
+<h2 id="bonus-goal">Bonus Goal</h2>
+
+<p>Achieve a maximal deviation (measured by the Euclidean norm) of <script type="math/tex">0.5</script> for the multiplication of all complex numbers with integer components <script type="math/tex">c_1 = (a_1, b_1) = a_1 + b_1 \cdot i, c_2 = (a_2, b_2) = a_2 + b_2 \cdot i</script> of Euclidean norm <script type="math/tex">\le 10</script>.</p>
+
+<h2 id="rules">Rules</h2>
+
+<p>Your model</p>
+
+<ul>
+  <li>must be a ‘traditional’ neural network (a node’s value is calculated as a weighted linear combination of some of the nodes in the previous layer followed by an activation function),</li>
+  <li>may only use activation functions listed as such <a href="https://keras.io/activations/">in Keras</a>,</li>
+  <li>must take <script type="math/tex">(x_1, x_2)</script> either as a tuple/vector/list/… of integers or floats as its only input,</li>
+  <li>return the answer <script type="math/tex">\hat{y}</script> as an integer, float (or a suitable container, e.g. a vector or list, that contains this answer).</li>
+</ul>
+
+<h2 id="scoring">Scoring</h2>
+
+<p>The neural network with the <em>smallest number of weights</em> (including bias weights) wins.</p>
+
+<p>My best attempt so far uses 43 weights and achieves a maximal deviation of <script type="math/tex">0.04786</script> as witnessed by <script type="math/tex">8 \cdot -8 \mapsto -63.521423</script>. I’m sure there’s plenty of room for improvements and am looking forward to your entries!</p>
+
+<p>If you want to participate or check my submission, hop over to this <a href="https://codegolf.stackexchange.com/questions/187562/machine-learning-golf-multiplication">challenge on Code Golf Stackexchange</a>.</p>
+
+<div class="footnotes">
+  <ol>
+    <li id="fn:1">
+      <p>This, of course, doesn’t mean that ML Golf is limited to this platform – feel free to post your challenges and submissions wherever you want. <a href="#fnref:1" class="reversefootnote">&#8617;</a></p>
+    </li>
+  </ol>
+</div>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+  
+
+
+  
+  
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="/tags/#machine-learning" class="page__taxonomy-item" rel="tag">machine learning</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#ml-golf" class="page__taxonomy-item" rel="tag">ml golf</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#neural-networks" class="page__taxonomy-item" rel="tag">neural networks</a>
+    
+    </span>
+  </p>
+
+
+
+
+  
+
+
+  
+  
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> Categories: </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="/categories/#data-science" class="page__taxonomy-item" rel="tag">Data-Science</a>
+    
+    </span>
+  </p>
+
+
+        
+          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2019-07-01T00:00:00+00:00">July 01, 2019</time></p>
+        
+      </footer>
+
+      <section class="page__share">
+  
+    <h4 class="page__share-title">Share on</h4>
+  
+
+  <a href="https://twitter.com/intent/tweet?via=mesken_stefan&text=Machine+Learning+Golf%20http%3A%2F%2Flocalhost%3A4000%2Fdata-science%2Fmachine-learning-golf%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A4000%2Fdata-science%2Fmachine-learning-golf%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Flocalhost%3A4000%2Fdata-science%2Fmachine-learning-golf%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+
+      
+  <nav class="pagination">
+    
+      <a href="/data-science/metrics/" class="pagination--pager" title="The Dangers of Performance Metrics
+">Previous</a>
+    
+    
+      <a href="#" class="pagination--pager disabled">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      <h4 class="page__related-title">You may also enjoy</h4>
+      <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/data-science/metrics/" rel="permalink">The Dangers of Performance Metrics
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  6 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">Full disclosure: I’m not a big fan of one-dimensional metrics when evaluating (binary) classifiers
+(e.g. a neural network that is supposed to distinguish pic...</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/machine%20learning/Feynman-technique/" rel="permalink">An Hommage to Feynman’s Technique
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  6 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">Fragile Knowledge
+
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/machine%20learning/tensorflow-without-tears/" rel="permalink">TensorFlow Without Tears
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  5 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">Life is pretty crazy right now. Finishing a PhD, changing from set theory to applied data science, forming connections to other data scientists, learning as ...</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/machine%20learning/how-to-beat-kaggle-(the-easy-way)/" rel="permalink">How To Beat Kaggle (the Easy Way)
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  6 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">A few nights ago, I found myself tinkering with the Titanic data set on Kaggle and couldn’t help but notice the number of people with a perfect score – many ...</p>
+  </article>
+</div>
+
+        
+      </div>
+    </div>
+  
+  
+</div>
+
+    </div>
+
+    
+
+    <div class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+
+    <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2019 Stefan Mesken. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+  <script defer src="https://use.fontawesome.com/releases/v5.8.1/js/all.js" integrity="sha384-g5uSoOSBd7KkhAMlnQILrecXvzst9TdC09/VM+pjDTCM+1il8RHz5fKANTFFb+gQ" crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" async
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+
+
+  </body>
+</html>

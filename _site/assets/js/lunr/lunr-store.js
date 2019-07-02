@@ -18,4 +18,9 @@ var store = [{
         "excerpt":"Full disclosure: I’m not a big fan of one-dimensional metrics when evaluating (binary) classifiers (e.g. a neural network that is supposed to distinguish pictures of cats and dogs). In my opinion, a confusion matrix is, in almost all instances, preferable for data scientists. However, that doesn’t mean there aren’t good...","categories": ["Data-Science"],
         "tags": ["data science","machine learning","statistics"],
         "url": "http://localhost:4000/data-science/metrics/",
+        "teaser":null},{
+        "title": "Machine Learning Golf",
+        "excerpt":"For the last 5 years or so, I’ve been lurking on the Code Golf Stackexchange. Code Golf is the art of solving a given problem, under specified rules, with as little written code as possible. And if you have never encountered ‘golfed code’, I highly recommend taking a look. Not...","categories": ["Data-Science"],
+        "tags": ["machine learning","neural networks","ml golf"],
+        "url": "http://localhost:4000/data-science/machine-learning-golf/",
         "teaser":null}]
