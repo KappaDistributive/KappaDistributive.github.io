@@ -48,7 +48,7 @@ Achieve a maximal deviation (measured by the Euclidean norm) of $$0.5$$ for the 
 
 Your model
 
-- must be a 'traditional' neural network (a node's value is calculated as a weighted linear combination of some of the nodes in the previous layer followed by an activation function),
+- must be a 'traditional' neural network (a node's value is calculated as a weighted linear combination of some of the nodes in a previous layer followed by an activation function),
 - may only use activation functions listed as such [in Keras](https://keras.io/activations/),
 - must take $$(x_1, x_2)$$ either as a tuple/vector/list/... of integers or floats as its only input,
 - return the answer $$\hat{y}$$ as an integer, float (or a suitable container, e.g. a vector or list, that contains this answer).
