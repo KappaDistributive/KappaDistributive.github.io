@@ -60,6 +60,6 @@ The neural network with the *smallest number of weights* (including bias weights
 
 My best attempt so far uses 43 weights and achieves a maximal deviation of $$0.04786$$ as witnessed by $$8 \cdot -8 \mapsto -63.521423$$. I'm sure there's plenty of room for improvements and am looking forward to your entries!
 
-If you want to participate or check my submission, hop over to [this challenge on Code Golf Stackexchange](https://codegolf.stackexchange.com/questions/187562/machine-learning-golf-multiplication).
+If you want to participate or check out my submission, hop over to [this challenge on Code Golf Stackexchange](https://codegolf.stackexchange.com/questions/187562/machine-learning-golf-multiplication).
 
 [^1]: This, of course, doesn't mean that ML Golf is limited to this platform -- feel free to post your challenges and submissions wherever you want. 
