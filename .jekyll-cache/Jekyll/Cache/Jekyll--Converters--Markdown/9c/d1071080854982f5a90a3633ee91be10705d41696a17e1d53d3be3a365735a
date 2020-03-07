@@ -1,0 +1,3 @@
+I"<p>Full disclosure: I’m not a big fan of one-dimensional metrics when evaluating <a href="https://en.wikipedia.org/wiki/Binary_classification">(binary) classifiers</a>
+(e.g. a neural network that is supposed to distinguish pictures of cats and dogs). In my opinion, a <a href="https://en.wikipedia.org/wiki/Confusion_matrix">confusion matrix</a> is, in almost all instances, preferable for data scientists. However, that doesn’t mean there aren’t good reasons to use one-dimensional performance metrics:</p>
+:ET
