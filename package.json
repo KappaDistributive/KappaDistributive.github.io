@@ -21,8 +21,10 @@
     "node": ">= 0.10.0"
   },
   "devDependencies": {
+    "kind-of": ">=6.0.3",
+    "minimist": ">=1.2.3",
     "npm-run-all": "^4.1.5",
-    "onchange": "^5.1.3",
+    "onchange": "^6.1.0",
     "uglify-js": "^3.4.9"
   },
   "scripts": {
